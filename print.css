@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3{
+    margin-top: .3em;
+}
+.bg div,
+#nav,
+.a11y{
+    display: none;
+}
+img{
+    width: 8em;
+}
+.slide{
+    display: block !important;
+    margin-top: .3em;
+}
+.content{
+    display: flex;    
+}
+#dayan{
+    page-break-after: always;
+}
+.logo{
+    background-color: red;
+    display: grid;
+}
+#markak-section img{
+    float: left;
+}
+#markak-section button{
+    display: none;
+}
+#markak-section .content{
+    display: block !important;
+}
+#markak-section .slide{
+    display: grid !important;
+    grid-template-columns: 8em 1fr 20%;
+}
+#markak-section h3{
+    grid-column: span 3;
+}
+
+#video-section, video, #kezdo-footer{
+    display: none;
+}
+/* TABLE */
+table caption{
+    margin-bottom: .4em;
+}
+table th{
+    border: 1px solid black;
+}
+table td{
+    text-align: right;
+    padding: .4em;
+    border-bottom: 1px solid black;
+    border-right:  1px solid black;
+}
+table .category{
+    text-align: left;
+    border-left: 1px solid black;
+}
+table img{
+    width:  3em;
+    height: 3em;
+    display: inline;
+    margin: 0;
+    vertical-align: middle;
+}
+table{
+    border-spacing: 0;
+}
+#form-section{
+    display: none;
+}

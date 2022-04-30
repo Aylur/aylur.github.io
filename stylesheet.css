@@ -290,7 +290,7 @@ table{
         margin: .5em 0;
     }
     table td::before{
-        content: attr(label);
+        content: attr(data-label);
         position: absolute;
         left: 0;
         width: 30%;
@@ -375,18 +375,18 @@ form .solve{
     gap: .4em;
     grid-template-columns: repeat(4, 1fr);
 }
-@media screen and (max-width: 520px){
+@media screen and (max-width: 579px){
     form .data{
         grid-template-columns: 1fr;
     }
-    label[for=used-method], textarea
+    .used-method, textarea
     { grid-column: span 4;}
     #time
     { grid-column: span 3;}
     label[for=avg], label[for=single], input[type=button], input[type=submit]
     { grid-column: span 2; text-align: center;}
 }
-@media screen and (min-width: 520px){
+@media screen and (min-width: 580px){
     form .solve{
         grid-template-columns: repeat(5, 1fr);
         gap: 1em;
@@ -398,7 +398,6 @@ form .solve{
     #rekordok-main{ display: flex;}
     #form-section{ margin: auto;}
 }
-
 
 .content{
     display: grid;
@@ -523,3 +522,6 @@ p{
     }
 }
 
+#transcript{
+    padding-bottom: .5em;
+}

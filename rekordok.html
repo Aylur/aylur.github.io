@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" media="screen" href="stylesheet.css">
+    <link rel="stylesheet" media="print" href="print.css">
     <script src="script.js"></script>
     <title>Rekordok - Demeter Kristóf honlapja</title>
 </head>
@@ -26,7 +27,7 @@
         <a href="kezdo.html" id="kezdo">Kezdőmetódus</a>
         <a href="halado.html" id="halado">Haladómetódusok</a>
         <a href="rekordok.html" id="rekordok" class="active">Rekordok</a>
-        <a href="javascript:void(0);" class="icon" onclick="navbar()">&#9776;</a>
+        <a href="javascript:void(0);" id="icon" onclick="navbar()">&#9776;</a>
     </nav>
     
     <main id="rekordok-main">
@@ -44,54 +45,56 @@
                         </details>
                     </caption>
                     <thead>
-                        <th>Esemény</th>
-                        <th>Idő</th>
-                        <th>Név</th>
-                        <th>Év</th>
-                        <th>Származás</th>
+                        <tr>
+                            <th>Esemény</th>
+                            <th>Idő</th>
+                            <th>Név</th>
+                            <th>Év</th>
+                            <th>Származás</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="category" label="Esemény" >3x3 Egyedi</td>
-                            <td label="Idő" >3.47</td>
-                            <td label="Név" lang="zh">Yusheng Du <a href="media/records/yusheng-du.jpg"><img src="media/records/yusheng-du.jpg" alt="Yusheng Du és a világrekordot mutató időmérő"></a></td>
-                            <td label="Év" >2019</td>
-                            <td label="Származás" >Kína</td>
+                            <td class="category" data-label="Esemény" >3x3 Egyedi</td>
+                            <td data-label="Idő" >3.47</td>
+                            <td data-label="Név" lang="zh">Yusheng Du <a href="media/records/yusheng-du.jpg"><img src="media/records/yusheng-du.jpg" alt="Yusheng Du és a világrekordot mutató időmérő"></a></td>
+                            <td data-label="Év" >2019</td>
+                            <td data-label="Származás" >Kína</td>
                         </tr>
                         <tr>
-                            <td class="category" label="Esemény" >3x3 Átlag</td>
-                            <td label="Idő" >5.09</td>
-                            <td label="Név" lang="pl">Tymon Kolasiński <a href="media/records/tymon.jpg"><img src="media/records/tymon.jpg" alt="Tymon éppen végez egy kirakással"></a></td>
-                            <td label="Év" >2021</td>
-                            <td label="Származás" >Lengyel</td>
+                            <td class="category" data-label="Esemény" >3x3 Átlag</td>
+                            <td data-label="Idő" >5.09</td>
+                            <td data-label="Név" lang="pl">Tymon Kolasiński <a href="media/records/tymon.jpg"><img src="media/records/tymon.jpg" alt="Tymon éppen végez egy kirakással"></a></td>
+                            <td data-label="Év" >2021</td>
+                            <td data-label="Származás" >Lengyel</td>
                         </tr>
                         <tr>
-                            <td class="category" label="Esemény" >2x2 Egyedi</td>
-                            <td label="Idő" >0.49</td>
-                            <td label="Név" lang="pl">Maciej Czapiewski <a href="media/records/maciej.jpg"><img src="media/records/maciej.jpg" alt="Maciej és a világrekordot mutató időmérő"></a></td>
-                            <td label="Év" >2016</td>
-                            <td label="Származás" >Lengyel</td>
+                            <td class="category" data-label="Esemény" >2x2 Egyedi</td>
+                            <td data-label="Idő" >0.49</td>
+                            <td data-label="Név" lang="pl">Maciej Czapiewski <a href="media/records/maciej.jpg"><img src="media/records/maciej.jpg" alt="Maciej és a világrekordot mutató időmérő"></a></td>
+                            <td data-label="Év" >2016</td>
+                            <td data-label="Származás" >Lengyel</td>
                         </tr>
                         <tr>
-                            <td class="category" label="Esemény" >4x4 Egyedi</td>
-                            <td label="Idő" >16.86</td>
-                            <td label="Név" lang="en">Max Park <a href="media/records/max.jpg"><img src="media/records/max.jpg" alt="Max Park pózol egy Gan kockával"></a> </td>
-                            <td label="Év" >2021</td>
-                            <td label="Származás" >Amerika</td>
+                            <td class="category" data-label="Esemény" >4x4 Egyedi</td>
+                            <td data-label="Idő" >16.86</td>
+                            <td data-label="Név" lang="en">Max Park <a href="media/records/max.jpg"><img src="media/records/max.jpg" alt="Max Park pózol egy Gan kockával"></a> </td>
+                            <td data-label="Év" >2021</td>
+                            <td data-label="Származás" >Amerika</td>
                         </tr>
                         <tr>
-                            <td class="category" label="Esemény" >3x3 Vak Egyedi</td>
-                            <td label="Idő" >14.67</td>
-                            <td label="Név" lang="en">Tommy Cherry <a href="media/records/tommy.jpg"><img src="media/records/tommy.jpg" alt="Tommy ahogy éppen megdöntötte a világrekordot"></a> </td>
-                            <td label="Év" >2021</td>
-                            <td label="Származás" >Amerika</td>
+                            <td class="category" data-label="Esemény" >3x3 Vak Egyedi</td>
+                            <td data-label="Idő" >14.67</td>
+                            <td data-label="Név" lang="en">Tommy Cherry <a href="media/records/tommy.jpg"><img src="media/records/tommy.jpg" alt="Tommy ahogy éppen megdöntötte a világrekordot"></a> </td>
+                            <td data-label="Év" >2021</td>
+                            <td data-label="Származás" >Amerika</td>
                         </tr>
                         <tr>
-                            <td class="category" label="Esemény" >3x3 Egykezes Egyedi</td>
-                            <td label="Idő" >6.82</td>
-                            <td label="Név" lang="en">Max Park <a href="media/records/max.jpg"><img src="media/records/max.jpg" alt="Max Park pózol egy Gan kockával"></a> </td>
-                            <td label="Év" >2021</td>
-                            <td label="Származás" >Amerika</td>
+                            <td class="category" data-label="Esemény" >3x3 Egykezes Egyedi</td>
+                            <td data-label="Idő" >6.82</td>
+                            <td data-label="Név" lang="en">Max Park <a href="media/records/max.jpg"><img src="media/records/max.jpg" alt="Max Park pózol egy Gan kockával"></a> </td>
+                            <td data-label="Év" >2021</td>
+                            <td data-label="Származás" >Amerika</td>
                         </tr>
             
                     </tbody>
@@ -102,7 +105,7 @@
         <section id="form-section">
             <h2>Ürlap</h2>
             <div class="content formcontent">
-                <form action="mailto:demstof@gmail.com" method="post" enctype="text/plain">
+                <form action="mailto:demstof@gmail.com" method="post" enctype="text/plain" id="form">
                     <fieldset class="data">
                         <legend>Adatid</legend>
                         <label for="name">Teljes neved:</label>
@@ -113,13 +116,12 @@
             
                     <fieldset class="solve">
                         <legend>Kirakás</legend>
-        
-                        <label for="used-method">Használt metódus:</label>
-        
-                        <label for="kezdo">Kezdő<input type="checkbox" id="kezdo" name="used-method"></label>
+                        
+                        <span class="used-method">Használt metódus:</span>
+                        <label for="kezdom">Kezdő<input type="checkbox" id="kezdom" name="used-method"></label>
                         <label for="cfop">CFOP<input type="checkbox" id="cfop" name="used-method"></label>
-                        <label for="ROUX">ROUX<input type="checkbox" id="roux" name="used-method"></label>
-                        <label for="ZZ">ZZ<input type="checkbox" id="zz" name="used-method"></label>
+                        <label for="roux">ROUX<input type="checkbox" id="roux" name="used-method"></label>
+                        <label for="zz">ZZ<input type="checkbox" id="zz" name="used-method"></label>
                         
                         <label for="time">Idő:</label>
                         <input type="text" id="time" name="time" size="15" placeholder="idő">
@@ -127,7 +129,7 @@
                         <label for="avg">Átlag<input type="radio" id="avg" name="time"></label>
                         <label for="single">Egyedi<input type="radio" id="single" name="time"></label>
         
-                        <textarea name="comment" form="usrform" rows="5" cols="26" placeholder="Milyen keverés(ek) volt(ak) és hogyan raktad ki (lehetőleg annotációval leírva)"></textarea>
+                        <textarea name="comment" form="form" rows="5" cols="26" placeholder="Milyen keverés(ek) volt(ak) és hogyan raktad ki (lehetőleg annotációval leírva)"></textarea>
         
                         <input type="submit" name="submit" id="submit" value="Beküld">
                         <input type="reset" name="reset" id="reset" value="Alaphelyzet">
@@ -138,7 +140,7 @@
     </main>
 
     <footer>
-        Érdekességnek és egy kis motivációnak tudom ajánlani a <a href="https://www.netflix.com/hu-en/title/81092143"><cite lang="en">Netflix - The Speed Cubers</cite></a> című dokumentumfilmjét, ami <span lang="en">Max Park</span> és <span lang="en">Feliks Zemdegs</span> versengéséről szól.
+        Érdekességnek és egy kis motivációnak tudom ajánlani a <a href="https://www.netflix.com/hu-en/title/81092143" target="_blank" ><cite lang="en">Netflix - The Speed Cubers</cite></a> című dokumentumfilmjét, ami <span lang="en">Max Park</span> és <span lang="en">Feliks Zemdegs</span> versengéséről szól.
     </footer>
 
     <nav class="a11y">

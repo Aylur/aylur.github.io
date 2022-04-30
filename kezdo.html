@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" media="screen" href="stylesheet.css">
+    <link rel="stylesheet" media="print" href="print.css">
     <script src="script.js"></script>
     <title>Kezdőmetódus - Demeter Kristóf honlapja</title>
 </head>
@@ -43,7 +44,7 @@
                     <p>Egy betű a 2-es számmal azt jelenti, hogy az oldalt kétszer el kell forgatni <br>
                     <img src="media/notations/F2R2U2L2B2D2.png" alt="dupla forgatások"></p>
                 </article>
-                <video controls>
+                <video controls poster="media/notations/thumbnail1.png">
                     <source src="media/notations/notations.webm" type="video/webm">
                     <p>A böngészője nem támogatja a videóállomány beágyazott lejátszását.</p>
                     <p><a href="media/notations/notations.webm">A notations.webm állományt letöltheti webm formátumban.</a></p>
@@ -52,16 +53,18 @@
         </section>
     
         <section id="video-section">    
-            <h2>Valami Videjó</h2>
+            <h2>Tanitó videó</h2>
             <div class="content">
-                <video controls>
-                    <source src="media/notations/notations.webm" type="video/webm">
+                <video controls poster="media/notations/thumbnail.jpg">
+                    <source src="media/notations/tutorial.webm" type="video/webm">
                     <p>A böngészője nem támogatja a videóállomány beágyazott lejátszását.</p>
-                    <p><a href="media/notations/notations.webm">A notations.webm állományt letöltheti webm formátumban.</a></p>
+                    <p><a href="media/notations/tutorial.webm">A notations.webm állományt letöltheti webm formátumban.</a></p>
                 </video>
             </div>
         </section>
     </main>
+
+    <footer id="kezdo-footer">Itt elérhető a <a href="transcrpit.html" target="_blank" >videó leírása</a></footer>
 
     <nav class="a11y">
         <a href="#top">Ugrás a lap tetejére</a>

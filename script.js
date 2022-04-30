@@ -109,6 +109,7 @@ function bg(){
   bg.style.flexWrap = "wrap";
   bg.style.gap = "0"
 
+  bg.classList.add("bg");
   document.body.appendChild(bg);
 
   //TILES
