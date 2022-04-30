@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Haladómetódusok - Demeter Kristóf honlapja</title>
+</head>
+<body onload="bg();">
+
+    <header>
+        <h1>Haladó metódusok</h1>
+    </header>
+
+    <nav id="nav" >
+        <a href="index.html" class="rubik">A Rubik Kocka</a>
+        <a href="kezdo.html" class="kezdo">Kezdőmetódus</a>
+        <a href="halado.html" class="halado active">Haladómetódusok</a>
+        <a href="rekordok.html" class="rekordok">Rekordok</a>
+        <a href="javascript:void(0);" class="icon" onclick="navbar()">
+          <i class="fa fa-bars"></i></a>
+    </nav>
+
+    <main class="halado-main">
+        <section class="cfop-section">
+            <h2><dfn><abbr title="Cross F2l Oll Pll">CFOP</abbr></dfn>/Fridrich</h2>
+            <div class="content">
+                <img src="media/methods/cfop.jpg" alt="CFOP"/>
+                <p><span lang="en" xml:lang="en">Cross, <abbr title="First Two Layers">F2L</abbr>, <abbr title="Orient the last layer">Oll</abbr>, <abbr title="Permutate the last layer">Pll</abbr></span><br /> Ez a legjobban elterjedt metódus és a legtöbb világrekordot ezzel a metódussal érték el. A kezdő metódus igazából egy könnyebben megérthető, több lépésre bontot, lebutított <abbr title= "Cross, First Two Layers, Orient the last layer, Permutate the last layer"> CFOP</abbr>. A különbség az, hogy itt a kereszt után az első kettő réteget egyszerre rakjuk ki, majd az utolsó réteg kettő lépésre van bontva: orientáció, vagyis a felső szint – fehér kereszt esetén a sárgát – színre hozzunk és permutáció, vagyis a maradék 8 elemet a megfelelő helyére vigyünk. Az első kettő réteg kirakásához nem szükséges algoritmusokat betanulni, lehet teljesen intuitív, bár kell hozzá egy kis gyakorlás és a kocka mozgásának megértése. Az orientáláshoz 57 algoritmus tartozik, míg a permutáláshoz 21.</p>
+            </div>
+        </section>
+    
+        <section class="roux-section">
+            <h2 lang="fr">ROUX</h2>
+            <div class="content">
+                <img src="media/methods/roux.jpg" alt="Roux"/>
+                <p>A második legjobban elterjedt metódus, világ rekordot még nem döntöttek vele, de a WCA oldalán a legjobb 100 közül van aki <span lang="fr" xml:lang="fr">Roux</span>-t használ. Itt nem a rétegeken van a hangsúly hanem blokképítésen. A kirakás menete a következő: 1x2x3 blokkot kell kirakni, majd még egyet vele szemben. Következő lépés a <abbr title= "Corners Orientation Permutation of Last Layer Ignoring M-Slice"> CMLL</abbr>, ami a maradék 4 sarkot orientálja és permutálja, ez 42 algoritmus. Utolsó lépés pedig <abbr title= "Last Six Edges">LSE/L6E</abbr>, utolsó 6 él, amit kizárólag M és U lépésekkel érdemes kirakni, ezekre lehet algoritmust tanulni, de nem szükséges, intuitívan is ki lehet rakni.</p>
+            </div>
+        </section>
+    
+        <section class="zz-section">
+            <h2>ZZ</h2>
+            <div class="content">
+                <p><img src="media/methods/zz.jpg" alt="ZZ" />A <abbr title="Zbigniew Zborowski">ZZ</abbr> metódus a   <abbr title="Cross F2l Oll Pll">CFOP</abbr> forgatásszámán próbál  javítani, ezt azzal éri el, hogy mielőtt neki állnánk a rétegeknek    előtte megcsináljuk at <abbr title= "Edge Orientation and Line">EOLine-t</abbr>, ami annyit jelent,  hogy orientáljuk az összes élt és a keresztnek kirakjuk a F és B  élét. Ezzel azt lehet elérni, hogy kizárólag R L U lépésekkel ki  lehet rakni a kockát és nem kell átfogni.</p>
+            </div>
+        </section>
+    
+        <section class="petrus-section">
+            <h2 lang="en">Petrus</h2>
+            <div class="content">
+                <p>Ezt a metódust már nem használja senki. Az oka, hogy ez a metódus a legkevesebb forgatást probálja elérni, annak árán, hogy kirakás közben sokat kell megállni gondolkodni. Viszont ma már nem nehéz forgatni a kockát és a többi három sokkal hatékonyabb.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Részletes leírások az algoritmusokról elérhetőek a <a href="https://www.speedsolving.com/wiki/index.php/Main_Page">speedsolving wiki</a>n.
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Kezdőmetódus - Demeter Kristóf honlapja</title>
+</head>
+<body onload="bg();">
+    
+    <header>
+        <h1>Kezdő metódus</h1>
+    </header>
+
+    <nav id="nav" >
+        <a href="index.html" class="rubik">A Rubik Kocka</a>
+        <a href="kezdo.html" class="kezdo active">Kezdőmetódus</a>
+        <a href="halado.html" class="halado">Haladómetódusok</a>
+        <a href="rekordok.html" class="rekordok">Rekordok</a>
+        <a href="javascript:void(0);" class="icon" onclick="navbar()">
+          <i class="fa fa-bars"></i></a>
+    </nav>
+
+    <main class="kezdo-main">
+        <section class="jeloles-section">
+            <h2>Jelölésrendszer</h2>
+            <div class="content">
+                <article>
+                    <h3>Leírva</h3>
+                    <p>Oldalak:<br>R(ight) L(eft) F(ront) B(ack) U(p) D(own)<br>M(iddle) E(quator) S(tanding)</p>
+                    <p>Egy betű önmagában azt jelenti, hogy az oldalt szemből nézve, órairányosan el kell forgatni <br>
+                    <img src="media/notations/FRULBD.png" alt="órairányos forgatások"></p>
+                    <p>Egy betű aposztróffal azt jelenti, hogy az oldalt szemből nézve, órairánnyal ellentétesen el kell forgatni <br>
+                    <img src="media/notations/F'R'U'L'B'D'.png" alt="órairánnyal ellentétes forgatások"></p>
+                    <p>Egy betű a 2-es számmal azt jelenti, hogy az oldalt kétszer el kell forgatni <br>
+                    <img src="media/notations/F2R2U2L2B2D2.png" alt="dupla forgatások"></p>
+                </article>
+                <video controls>
+                    <source src="media/notations/notations.webm" type="video/webm">
+                    <p>A böngészője nem támogatja a videóállomány beágyazott lejátszását.</p>
+                    <p><a href="media/notations/notations.webm">A notations.webm állományt letöltheti webm formátumban.</a></p>
+                </video>
+            </div>
+        </section>
+    
+        <section class="video-section">    
+            <h2>Valami Videjó</h2>
+            <div class="content">
+                <video controls>
+                    <source src="media/notations/notations.webm" type="video/webm">
+                    <p>A böngészője nem támogatja a videóállomány beágyazott lejátszását.</p>
+                    <p><a href="media/notations/notations.webm">A notations.webm állományt letöltheti webm formátumban.</a></p>
+                </video>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
