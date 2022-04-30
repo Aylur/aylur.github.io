@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>A Rubik Kocka - Demeter Kristóf honlapja</title>
 </head>
 <body >
     
-    <nav id="a11y">
+    <nav class="a11y">
+        <h2>Ugrás az oldalon belül</h2>
         <a href="#main">Ugrás a tartalomra</a>
+        <a href="#rubik-section">Ugrás: Rubik Ernő és a bűvös kockája</a>
+        <a href="#kockak-section">Ugrás: Verseny Kockák</a>
+        <a href="#markak-section">Ugrás: Márkák</a>
     </nav>
     
     <header>
@@ -20,17 +23,16 @@
     </header>
 
     <nav id="nav" >
-        <a href="index.html" class="rubik active">A Rubik Kocka</a>
-        <a href="kezdo.html" class="kezdo">Kezdőmetódus</a>
-        <a href="halado.html" class="halado">Haladómetódusok</a>
-        <a href="rekordok.html" class="rekordok">Rekordok</a>
-        <a href="javascript:void(0);" class="icon" onclick="navbar()">
-          <i class="fa fa-bars"></i></a>
+        <a href="index.html" id="rubik" class="active">A Rubik Kocka</a>
+        <a href="kezdo.html" id="kezdo">Kezdőmetódus</a>
+        <a href="halado.html" id="halado">Haladómetódusok</a>
+        <a href="rekordok.html" id="rekordok">Rekordok</a>
+        <a href="javascript:void(0);" id="icon" onclick="navbar()">&#9776;</a>
     </nav>
 
-    <main id="main" class="rubik-main">
+    <main id="rubik-main">
 
-        <section class="rubik-section">
+        <section id="rubik-section">
             <h2>Rubik Ernő és a bűvös kockája</h2>
             <div class="content">
                 <p>
@@ -46,12 +48,8 @@
                 </figure>
             </div>
         </section>
-
-        <nav id="a11y">
-            <a href="#top">Ugrás a lap tetejére</a>
-        </nav>
     
-        <section class="kockak-section">
+        <section id="kockak-section">
             <h2>Verseny Kockák</h2>
             <div class="content">
                 <article>
@@ -70,19 +68,15 @@
                 </article>
             </div>
         </section>
-
-        <nav id="a11y">
-            <a href="#top">Ugrás a lap tetejére</a>
-        </nav>
-
-        <section class="markak-section">
+        
+        <section id="markak-section">
             <h2>Márkák</h2>
             <div class="content">
-                <article class="slide dayan">
+                <article class="slide" id="dayan">
                     <h3 lang="zh">DaYan</h3>
                     <div class="logo">
                         <div class="buttonsContainer">
-                            <button class="btnLeft" onclick="moveSlide(-1)" onmouseover="btnColorL()" onmouseleave="btnColor()">&#9664;</button>
+                            <button class="btnLeft disabled-button" disabled>&#9664;</button>
                             <div><img src="media/rubik/logo/dayan-logo.jpg" alt="DaYan logó"></div>
                             <button class="btnRight" onclick="moveSlide(+1)" onmouseover="btnColorR()" onmouseleave="btnColor()">&#9654;</button>
                         </div>
@@ -98,7 +92,7 @@
                         <figcaption lang="zh">Bao Daqing</figcaption>
                     </figure>
                 </article>
-                <article class="slide moyu">
+                <article class="slide" id="moyu">
                     <h3 lang="zh">MoYu</h3>
                     <div class="logo">
                         <div class="buttonsContainer">
@@ -121,7 +115,7 @@
                         <figcaption>Tervezők</figcaption>
                     </figure>
                 </article>
-                <article class="slide qiyi">
+                <article class="slide" id="qiyi">
                     <h3 lang="zh">QiYi</h3>
                     <div class="logo">
                         <div class="buttonsContainer">
@@ -143,13 +137,13 @@
                         <figcaption>Mats Valk</figcaption>
                     </figure>
                 </article>
-                <article class="slide gan">
+                <article class="slide" id="gan">
                     <h3>Gan</h3>
                     <div class="logo">
                         <div class="buttonsContainer">
                             <button class="btnLeft" onclick="moveSlide(-1)" onmouseover="btnColorL()" onmouseleave="btnColor()">&#9664;</button>
                             <div><img src="media/rubik/logo/gan-logo.jpg" alt="Gan logó"></div>
-                            <button class="btnRight" onclick="moveSlide(+1)" onmouseover="btnColorR()" onmouseleave="btnColor()">&#9654;</button>
+                            <button class="btnRight disabled-button" disabled>&#9654;</button>
                         </div>
                         <aside>
                             A kockák Apple-je: GAN
@@ -171,7 +165,7 @@
         Ha megjött a kedved kockázni, tudom ajánlani ezt a videót, hogy eldönts melyik kockát választod: <a href="https://www.youtube.com/watch?v=io0FkDJu3zw">2022 legjobb kockái</a>. Bár ha kezdő vagy, a YJ RS3M 2020 a legjobb választás.
     </footer>
 
-    <nav id="a11y">
+    <nav class="a11y">
         <a href="#top">Ugrás a lap tetejére</a>
     </nav>
 </body>

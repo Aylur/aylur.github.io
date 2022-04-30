@@ -85,7 +85,7 @@ header h1{
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
     color: black;
 }
-#nav a.icon{
+#nav #icon{
     position: absolute;
     right: .14em;
     display: none;
@@ -93,7 +93,7 @@ header h1{
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
     border-radius: 7px;
 }
-#nav a.icon:hover{
+#nav #icon:hover{
     background-color: #393939;
 }
 @media screen and (max-width: 710px) {
@@ -103,7 +103,7 @@ header h1{
     #nav a:not(.active){
         display: none;
     }
-    #nav a.icon{
+    #nav #icon{
         display: block;
     }
     #nav.opened a{
@@ -111,11 +111,10 @@ header h1{
     }
 }
 
-#a11y{
+.a11y{
     border: 3px solid red;
     position: absolute;
-    left: 0px;
-    display: none;
+    left: -9999px;
 }
 
 /* PAGES */
@@ -198,17 +197,21 @@ footer{
     min-width: 5em;
     min-height: 5em;
 }
-.logo button:hover{
+.logo button:not(.disabled-button):hover{
     background-color: #62a0ea;
 }
-.logo button:active{
+.logo button:not(.disabled-button):active{
     background-color: rgba(255,255,255,0.9);
     color: black;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
-
+.logo .disabled-button{
+    color: rgba(255,255,255,0.4);
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
 /* TABLE */
-.table-section{
+#table-section{
     min-width: 650px;
     max-width: 700px;
     margin: 0 auto;
@@ -260,7 +263,7 @@ table{
     width: 100%;
 }
 @media screen and (max-width: 805px){
-    .table-section{
+    #table-section{
         min-width: 0;
         
     }
@@ -302,7 +305,7 @@ table{
 }
 
 /* FORM */
-.form-section{
+#form-section{
     margin: 0 auto;
     max-width: 700px;
 }
@@ -344,14 +347,19 @@ textarea:focus{
 textarea{
     height: 10em;
 }
-input[type=button],
+input[type=reset],
 input[type=submit]{
-    background-color: #62a0ea;
-    color: black;
+    background-color: rgba(255,255,255,0.06);
+    color: white;
     padding: .4em;
     border-radius: 6px;
     border: none;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+input[type=reset]:hover,
+input[type=submit]:hover{
+    background-color: #62a0ea;
+    color: black;
 }
 input[type=checkbox],
 input[type=radio]{
@@ -387,8 +395,8 @@ form .solve{
     textarea{grid-column: span 5;}
 }
 @media screen and (min-width: 1370px){
-    .desktop{ display: flex;}
-    .form-section{ margin: auto;}
+    #rekordok-main{ display: flex;}
+    #form-section{ margin: auto;}
 }
 
 
@@ -400,20 +408,20 @@ p{
     margin: auto;
 }
 /* PHONE */
-.markak-section .content p img{
+#markak-section .content p img{
     width: 8em;
     float: left;
 }
 @media screen and (min-width: 480px){
-    .rubik-section .content{
+    #rubik-section .content{
         display: grid;
         gap: 1em;
         grid-template-columns: 1fr 1fr;
     }
-    .rubik-section .content p{
+    #rubik-section .content p{
         grid-column: span 2;
     }
-    .kockak-section .content img{
+    #kockak-section .content img{
         float: right;
         width: 40%;
         margin-bottom: 0;
@@ -421,78 +429,78 @@ p{
 }
 /* TABLET */
 @media screen and (min-width: 700px){
-    .rubik-main{
+    #rubik-main{
         display: grid;
         grid-template-columns: 1fr;
     }
-    .rubik-main .kockak-section,
-    .rubik-main .rubik-section{
+    #rubik-main #kockak-section,
+    #rubik-main #rubik-section{
         max-width: 700px;
         margin: auto;
     }
-    .kockak-section .content img{
+    #kockak-section .content img{
         float: right;
         width: 25%;
         margin-bottom: 0;
     }
-    .markak-section .content article{
+    #markak-section .content article{
         display: grid;
         gap: 1em;
         grid-template-columns: 1fr 1fr;
     }
-    .markak-section h3{
+    #markak-section h3{
         grid-column: span 2;
     }
-    .markak-section .logo{
+    #markak-section .logo{
         grid-column: span 2;
         width: 80%;
         margin: auto;
     }
-    .dayan{
+    #dayan{
         grid-template-columns: 1fr 30% !important;
     }
-    .moyu p{
+    #moyu p{
         grid-column: span 2;
     }
-    .moyu figure{
+    #moyu figure{
         grid-column: span 2;
         width: 70%;
     }
-    .jeloles-section .content{
+    #jeloles-section .content{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .halado-main{
+    #halado-main{
         display: grid;
         grid-template-columns: 1fr 45%;
     }
-    .halado-main section{
+    #halado-main section{
         margin: auto;
     }
 }
 /* DESKTOP */
 @media screen and (min-width: 1100px){
-    .rubik-main{
+    #rubik-main{
         grid-template-columns: 1fr 1fr !important;
     }
-    .rubik-main .markak-section{
+    #rubik-main #markak-section{
         grid-column: span 2;
     }
-    .markak-section .content article:not(.dayan){
+    #markak-section .content article:not(#dayan){
         grid-template-columns: 1fr 1fr 1fr !important;
     }
-    .dayan{
+    #dayan{
         grid-template-columns: 1fr 1fr 20% !important;
     }
-    .moyu figure{
+    #moyu figure{
         width: 100%;
     }
-    .markak-section h3{
+    #markak-section h3{
         grid-column: span 3;
     }
-    .markak-section .logo,
-    .markak-section p,
-    .markak-section figure{
+    #markak-section .logo,
+    #markak-section p,
+    #markak-section figure{
         grid-column: span 1;
     }
     .buttonsContainer{
@@ -506,12 +514,12 @@ p{
     .buttonsContainer button{
         margin: 1em;
     }
-    .jeloles-section .content{
+    #jeloles-section .content{
         grid-template-columns: 1fr 35%;
     }
-    .zz-section img{
+    #halado-main .content img{
         float: left;
-        width: 50%;
+        width: 45%;
     }
 }
 

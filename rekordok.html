@@ -6,27 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Rekordok - Demeter Kristóf honlapja</title>
 </head>
 <body onload="bg();">
+    
+    <nav class="a11y">
+        <h2>Ugrás az oldalon belül</h2>
+        <a href="#main">Ugrás a tartalomra</a>
+        <a href="#table-sectipn">Ugrás: WCA rekordok</a>
+        <a href="#form-section">Ugrás: Ürlap</a>
+    </nav>
     
     <header>
         <h1>Rekordok</h1>
     </header>
 
     <nav id="nav" >
-        <a href="index.html" class="rubik">A Rubik Kocka</a>
-        <a href="kezdo.html" class="kezdo">Kezdőmetódus</a>
-        <a href="halado.html" class="halado">Haladómetódusok</a>
-        <a href="rekordok.html" class="rekordok active">Rekordok</a>
-        <a href="javascript:void(0);" class="icon" onclick="navbar()">
-          <i class="fa fa-bars"></i></a>
+        <a href="index.html" id="rubik">A Rubik Kocka</a>
+        <a href="kezdo.html" id="kezdo">Kezdőmetódus</a>
+        <a href="halado.html" id="halado">Haladómetódusok</a>
+        <a href="rekordok.html" id="rekordok" class="active">Rekordok</a>
+        <a href="javascript:void(0);" class="icon" onclick="navbar()">&#9776;</a>
     </nav>
     
-    <main class="desktop">
+    <main id="rekordok-main">
         
-        <section class="table-section">
+        <section id="table-section">
             <h2> <abbr title="World Cube Association">WCA</abbr> rekordok</h2>
             <div class="content tablecontent">
                 <table>
@@ -94,10 +99,10 @@
             </div>
         </section>
     
-        <section class="form-section">
+        <section id="form-section">
             <h2>Ürlap</h2>
             <div class="content formcontent">
-                <form>
+                <form action="mailto:demstof@gmail.com" method="post" enctype="text/plain">
                     <fieldset class="data">
                         <legend>Adatid</legend>
                         <label for="name">Teljes neved:</label>
@@ -125,7 +130,7 @@
                         <textarea name="comment" form="usrform" rows="5" cols="26" placeholder="Milyen keverés(ek) volt(ak) és hogyan raktad ki (lehetőleg annotációval leírva)"></textarea>
         
                         <input type="submit" name="submit" id="submit" value="Beküld">
-                        <input type="button" name="reset" id="reset" value="Alaphelyzet">
+                        <input type="reset" name="reset" id="reset" value="Alaphelyzet">
                     </fieldset>
                 </form>
             </div>
@@ -135,5 +140,9 @@
     <footer>
         Érdekességnek és egy kis motivációnak tudom ajánlani a <a href="https://www.netflix.com/hu-en/title/81092143"><cite lang="en">Netflix - The Speed Cubers</cite></a> című dokumentumfilmjét, ami <span lang="en">Max Park</span> és <span lang="en">Feliks Zemdegs</span> versengéséről szól.
     </footer>
+
+    <nav class="a11y">
+        <a href="#top">Ugrás a lap tetejére</a>
+    </nav>
 </body>
 </html>

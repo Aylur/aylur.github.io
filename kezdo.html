@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Kezdőmetódus - Demeter Kristóf honlapja</title>
 </head>
 <body onload="bg();">
+    
+    <nav class="a11y">
+        <h2>Ugrás az oldalon belül</h2>
+        <a href="#main">Ugrás a tartalomra</a>
+        <a href="#jeloles-section">Ugrás: Jelölésrendszer</a>
+        <a href="video-section">Ugrás a videóra</a>
+    </nav>
     
     <header>
         <h1>Kezdő metódus</h1>
     </header>
 
     <nav id="nav" >
-        <a href="index.html" class="rubik">A Rubik Kocka</a>
-        <a href="kezdo.html" class="kezdo active">Kezdőmetódus</a>
-        <a href="halado.html" class="halado">Haladómetódusok</a>
-        <a href="rekordok.html" class="rekordok">Rekordok</a>
-        <a href="javascript:void(0);" class="icon" onclick="navbar()">
-          <i class="fa fa-bars"></i></a>
+        <a href="index.html" id="rubik">A Rubik Kocka</a>
+        <a href="kezdo.html" id="kezdo" class="active">Kezdőmetódus</a>
+        <a href="halado.html" id="halado">Haladómetódusok</a>
+        <a href="rekordok.html" id="rekordok">Rekordok</a>
+        <a href="javascript:void(0);" id="icon" onclick="navbar()">&#9776;</a>
     </nav>
 
-    <main class="kezdo-main">
-        <section class="jeloles-section">
+    <main id="kezdo-main">
+        <section id="jeloles-section">
             <h2>Jelölésrendszer</h2>
             <div class="content">
                 <article>
@@ -46,7 +51,7 @@
             </div>
         </section>
     
-        <section class="video-section">    
+        <section id="video-section">    
             <h2>Valami Videjó</h2>
             <div class="content">
                 <video controls>
@@ -57,5 +62,9 @@
             </div>
         </section>
     </main>
+
+    <nav class="a11y">
+        <a href="#top">Ugrás a lap tetejére</a>
+    </nav>
 </body>
 </html>
