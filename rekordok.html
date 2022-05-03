@@ -113,9 +113,9 @@
                     <fieldset class="data">
                         <legend>Adatid</legend>
                         <label for="name">Teljes neved:</label>
-                        <input type="text" id="name" name="name" size="22" placeholder=" teljes név">
+                        <input type="text" id="name" name="name" size="22" placeholder=" teljes név" maxlength="40">
                         <label for="since">Mióta kockázol:</label>
-                        <input type="text" id="since" name="since" size="22" placeholder=" mióta kockázol">
+                        <input type="text" id="since" name="since" size="22" placeholder=" mióta kockázol" maxlength="40">
                     </fieldset>
             
                     <fieldset class="solve">
@@ -128,12 +128,12 @@
                         <label for="zz">ZZ<input type="checkbox" id="zz" name="used-method"></label>
                         
                         <label for="time">Idő:</label>
-                        <input type="text" id="time" name="time" size="15" placeholder="idő">
+                        <input type="text" id="time" name="time" size="15" placeholder="idő"  maxlength="10">
         
                         <label for="avg">Átlag<input type="radio" id="avg" name="time"></label>
                         <label for="single">Egyedi<input type="radio" id="single" name="time"></label>
         
-                        <textarea name="comment" form="form" rows="5" cols="26" placeholder="Milyen keverés(ek) volt(ak) és hogyan raktad ki (lehetőleg annotációval leírva)"></textarea>
+                        <textarea name="comment" form="form" rows="5" cols="26" maxlength="600" placeholder="Milyen keverés(ek) volt(ak) és hogyan raktad ki (lehetőleg annotációval leírva)"></textarea>
         
                         <input type="submit" name="submit" id="submit" value="Beküld">
                         <input type="reset" name="reset" id="reset" value="Alaphelyzet">

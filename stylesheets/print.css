@@ -9,7 +9,9 @@ h1,h2,h3{
 .bg div,
 #nav,
 .a11y,
-#allyButtons{
+#allyButtons,
+#normalbetu,
+#nagybetu{
     display: none;
 }
 img{
