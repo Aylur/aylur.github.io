@@ -8,7 +8,8 @@ h1,h2,h3{
 }
 .bg div,
 #nav,
-.a11y{
+.a11y,
+#allyButtons{
     display: none;
 }
 img{

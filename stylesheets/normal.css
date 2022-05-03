@@ -1,3 +1,5 @@
+#normalbetu{ display: none;}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@ html{
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    /* font-size: 16px; */
     box-shadow: 0 0 14px 0 black;
     margin: 2rem auto;
     border-radius: 24px;
@@ -19,38 +21,58 @@ body{
     color: white;
     padding-bottom: .2em;
 }
+a:link{ color: #99c1f1; }
+a:visited{ color: #dc8add; }
+a:link:active, a:visited:active{ color: #8ff0a4;}
 
 
 /* HEADER */
 header{
     border-radius: 21px 21px 0 0;
-    background-image: url("media/title-bg.jpg");
+    background-image: url("/media/title-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: clamp(0, 1em, 2em);
-    text-align: center;
+    padding: 2em;
+    text-align: left;
+    position: relative;
 }
-header h1{
+header h1,
+header button{
     color: white;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(40, 40, 40, 0.8);
     border-radius: 12px;
     display: inline-block;
-    padding: .2em;
-    margin: .4em;
     text-align: center;
-    box-shadow: inset 1px 2px 0 0 rgba(255,255,255,0.08);
+    padding: .2em;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
-@media screen and (min-width: 800px){
+@media screen and (max-width: 700px){
     header{
-        text-align: left;
+        display: grid;
+        gap: 1em;
     }
     header h1{
-        margin: 1em;
-        padding: .4em;
+        grid-row-start: 1;
     }
 }
-
+#a11yButtons{
+    float: right;
+    text-align: center;
+}
+header button{
+    font-size: 1.4em;
+    border: none;
+    display: inline-block;
+}
+header button:hover{
+    background-color: #62a0ea;
+    color: black;
+}
+#nagybetu{}
+#normalbetu{}
+#dark{}
+#light{}
 
 /* NAVIGATION */
 #nav {
@@ -96,7 +118,7 @@ header h1{
 #nav #icon:hover{
     background-color: #393939;
 }
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 750px) {
     #nav{
         flex-flow: column;
     }
@@ -206,7 +228,7 @@ footer{
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .logo .disabled-button{
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.4) !important;
     background-color: transparent !important;
     box-shadow: none !important;
 }
@@ -251,12 +273,53 @@ table td{
 table .category{
     text-align: left;
 }
-table img{
+table .yusheng,
+table .tymon,
+table .maciej,
+table .max,
+table .tommy{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5   );
+    border-radius: 8px;
     width:  3em;
     height: 3em;
-    display: inline;
+    display: inline-block;
     margin: 0;
     vertical-align: middle;
+    overflow: hidden;
+}
+table .yusheng img,
+table .tymon img,
+table .maciej img,
+table .max img,
+table .tommy img{
+    border-radius: 0;
+    object-fit: contain;
+    margin: auto;
+}table .yusheng img{
+    width:  11em;
+    height: 11em;
+    margin-top: -1em;
+    margin-left: -1em;
+}table .tymon img{
+    width:  16em;
+    height: 16em;
+    margin-top: -4em;
+    margin-left: -9em;
+}table .maciej img{
+    width:  10em;
+    height: 10em;
+    margin-top: -2.2em;
+    margin-left: -2em;
+}table .max img{
+    width:  10em;
+    height: 10em;
+    margin-top: -1em;
+    margin-left: -3.6em;
+}table .tommy img{
+    width:  16em;
+    height: 16em;
+    margin-top: -4em;
+    margin-left: -4.6em;
 }
 table{
     border-spacing: .5em;
@@ -383,7 +446,7 @@ form .solve{
     { grid-column: span 4;}
     #time
     { grid-column: span 3;}
-    label[for=avg], label[for=single], input[type=button], input[type=submit]
+    label[for=avg], label[for=single], input[type=reset], input[type=submit]
     { grid-column: span 2; text-align: center;}
 }
 @media screen and (min-width: 580px){
@@ -512,6 +575,7 @@ p{
     }
     .buttonsContainer button{
         margin: 1em;
+        font-size: 1em;
     }
     #jeloles-section .content{
         grid-template-columns: 1fr 35%;
@@ -525,3 +589,4 @@ p{
 #transcript{
     padding-bottom: .5em;
 }
+

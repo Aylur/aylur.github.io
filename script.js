@@ -19,6 +19,11 @@ function navbar(){
   }
 }
 
+// STYLESHEET
+function setStylesheet(sheet){
+  var link = document.getElementsByTagName('link');
+  link[0].setAttribute("href", sheet);
+}
 
 //SLIDE BUTTON COLORS
 var colorIndexL = 0;
@@ -37,6 +42,7 @@ function btnColorL(){
   colorIndexL++;
   for(i=0; i<btn.length; i++){
     btn[i].style.backgroundColor = clr;
+    btn[i].style.color = "black";
   }
 }
 function btnColorR(){
@@ -52,6 +58,7 @@ function btnColorR(){
   colorIndexR++;
   for(i=0; i<btn.length; i++){
     btn[i].style.backgroundColor = clr;
+    btn[i].style.color = "black";
   }
 }
 function btnColor(){
@@ -60,9 +67,11 @@ function btnColor(){
   var i;
   for(i=0; i<btnL.length; i++){
     btnL[i].style.backgroundColor = "rgba(255,255,255,0.12)";
+    btnL[i].style.color = "white";
   }
   for(i=0; i<btnR.length; i++){
     btnR[i].style.backgroundColor = "rgba(255,255,255,0.12)";
+    btnR[i].style.color = "white";
   }
 }
 
@@ -84,10 +93,14 @@ function showDivs(n) {
 }
 
 
+
+var bgExists = 0;
 //BACKGROUND
 function bg(){
+  //CLEAR
+  if(bgExists){ document.getElementById("bg").remove(); }
   //BACKGROUND DIV
-  var cols = Math.floor(innerWidth/72);
+  var cols = Math.floor(innerWidth/76);
   var bg = document.createElement('div');
   bg.style.position = "absolute";
   bg.style.top = "0";
@@ -95,6 +108,7 @@ function bg(){
   bg.style.width = "100%";
   bg.style.zIndex = "-1";
   bg.style.fontSize = "0";
+  bg.setAttribute("onclick", "bg();")
 
   // bg.style.display = "grid";
   // bg.style.gridTemplateColumns = "repeat("+cols+", 1fr)";
@@ -107,22 +121,26 @@ function bg(){
   bg.style.display = "flex";
   bg.style.justifyContent = "space-between";
   bg.style.flexWrap = "wrap";
-  bg.style.gap = "0"
+  // bg.style.gap = "3px"
 
   bg.classList.add("bg");
+  bg.id = "bg";
   document.body.appendChild(bg);
 
   //TILES
-  const times = Math.ceil(document.documentElement.scrollHeight/72) * cols;
+  const times = Math.ceil(document.documentElement.scrollHeight/76) * cols;
+  console.log(innerWidth);
+  console.log(cols);
   var i;
   for(i = 0; i<times; i++){
 
     var tile = document.createElement('div');
-    tile.style.width = "66px";
-    tile.style.height = "66px";
+    tile.style.width = "70px";
+    tile.style.height = "70px";
     tile.style.margin = "3px"
     tile.style.borderRadius = "15%";
     tile.style.borderBottom = "3px solid rgba(0,0,0,0.4)";
+    bg.style.cursor = "pointer";
 
     var rnd = Math.floor(Math.random() * 6);
     if(rnd === 0){ tile.style.backgroundColor = white; }
@@ -134,6 +152,8 @@ function bg(){
 
     bg.appendChild(tile);
   }
+
+  bgExists = 1;
 }
 
 

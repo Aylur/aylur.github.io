@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen" href="stylesheet.css">
-    <link rel="stylesheet" media="print" href="print.css">
+    <link rel="stylesheet" media="screen" href="/stylesheets/normal.css">
+    <link rel="stylesheet" media="print" href="/stylesheets/print.css">
     <script src="script.js"></script>
     <title>Haladómetódusok - Demeter Kristóf honlapja</title>
 </head>
@@ -13,14 +13,18 @@
     
     <nav class="a11y">
         <h2>Ugrás az oldalon belül</h2>
-        <a href="#main">Ugrás a tartalomra</a>
-        <a href="#cfop-section">Ugrás: CFOP</a>
-        <a href="#roux-section">Ugrás: <span lang="fr">Roux</span></a>
-        <a href="#zz-section">Ugrás: ZZ</a>
-        <a href="#petrus-section">Ugrás: <span lang="en">Petrus</span></a>
+        <a accesskey="1" href="#main">Ugrás a tartalomra</a>
+        <a accesskey="2" href="#cfop-section">Ugrás: CFOP</a>
+        <a accesskey="3" href="#roux-section">Ugrás: <span lang="fr">Roux</span></a>
+        <a accesskey="4" href="#zz-section">Ugrás: ZZ</a>
+        <a accesskey="5" href="#petrus-section">Ugrás: <span lang="en">Petrus</span></a>
     </nav>
 
     <header>
+        <div id="a11yButtons">
+            <button id="nagybetu" onclick="setStylesheet('/stylesheets/a11y.css');">Nagybetűs <br> változat</button>
+            <button id="normalbetu" onclick="setStylesheet('/stylesheets/normal.css');">Normásbetűs <br> változat</button>
+        </div>
         <h1>Haladó metódusok</h1>
     </header>
 
