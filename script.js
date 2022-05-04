@@ -110,18 +110,16 @@ function bg(){
   bg.style.fontSize = "0";
   bg.setAttribute("onclick", "bg();")
 
-  // bg.style.display = "grid";
-  // bg.style.gridTemplateColumns = "repeat("+cols+", 1fr)";
-  // bg.style.justifyContent = "sapce-evenly";
-  // bg.style.justifyItems = "center";
-  // bg.style.alignContent = "space-evenly"
-  // bg.style.alignItems = "center";
+  bg.style.display = "grid";
+  bg.style.gridTemplateColumns = "repeat("+cols+", 1fr)";
+  bg.style.justifyContent = "sapce-evenly";
+  bg.style.justifyItems = "center";
+  bg.style.alignContent = "space-evenly"
+  bg.style.alignItems = "center";
 
-
-  bg.style.display = "flex";
-  bg.style.justifyContent = "space-between";
-  bg.style.flexWrap = "wrap";
-  // bg.style.gap = "3px"
+  // bg.style.display = "flex";
+  // bg.style.justifyContent = "space-between";
+  // bg.style.flexWrap = "wrap";
 
   bg.classList.add("bg");
   bg.id = "bg";
