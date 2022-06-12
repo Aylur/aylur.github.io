@@ -1,0 +1,161 @@
+:root{
+    color-scheme: dark light;
+    font-family: Noto;
+    font-size: 1.6em;
+    --items: 8;
+    --base: #c2daf6;
+    --hover: #85b5ef;
+    --active: #3584e4;
+    --gap: 2.4em;
+    --fiter: invert(100%) sepia(0%) saturate(7462%) hue-rotate(34deg) brightness(110%) contrast(105%);
+}
+@font-face {
+    font-family: Noto;
+    src: url(Noto.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (prefers-color-scheme: dark){
+    :root{
+        --bg: #282828;
+        --fg: white;
+        --layer: rgba(255,255,255,0.08);
+        --shadow: rgba(0,0,0,0.3);
+    }
+    #welcome,
+    figcaption,
+    #profileImage,
+    form,
+    a{
+        background-color: var(--layer);
+        border-radius: 12px;
+        box-shadow: 0 4px 5px 0 var(--shadow);
+    }
+    a:hover{
+        background-color: var(--shadow) !important;
+        box-shadow: inset 0 2px 5px 0 var(--shadow);
+    }
+    a:active{background-color: var(--active) !important;}
+    .focused{
+        background-color: var(--shadow);
+        box-shadow: inset 0 2px 5px 0 var(--shadow);
+    }
+}
+@media (prefers-color-scheme: light){
+    :root{
+        --bg: ivory;
+        --fg: black;
+        --layer: rgba(0,0,0,0.08);
+        --shadow: rgba(0,0,0,0.3);
+        /* --filter: invert(0%) sepia(5%) saturate(7482%) hue-rotate(261deg) brightness(98%) contrast(106%); */
+    }
+    #welcome,
+    figcaption,
+    #profileImage,
+    form,
+    a{
+        background-color: var(--base);
+        border-radius: 12px;
+        box-shadow: inset 0 0 0 1px black;
+    }
+    a:hover{box-shadow: inset 0 0 0 3px black;}
+    a:active{background-color: var(--active) !important;}
+    .focused{
+        background-color: var(--hover);
+        box-shadow: inset 0 0 0 3px black;
+    }
+}
+
+/* SKELETON */
+body{
+    height: 100vh;
+    background-color: var(--bg);
+    color: var(--fg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    width: 50em;
+    text-align: center;
+
+    gap: var(--gap);
+}
+#container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+#welcome{
+    padding: 1em;
+    margin: 0 1em;
+}
+figure{width: 5em;}
+figcaption{
+    padding: .2em;
+    margin-top: .4em;
+}
+#profileImage{
+    height: 5em;
+    width: 5em;
+    background-image: url(icons/profile.jpg);
+    background-size: cover;
+}
+form{
+    grid-column: span 2;
+    margin: auto;
+    width: 70%;
+    height: 3.2em;
+    display: flex;
+    justify-content: center;
+    padding: .3em;
+}
+input[type=image]{
+    height: 100%;
+}
+input[type=text]{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    font-size: 1.4em;
+    margin-left: .4em;
+}
+nav{
+    width: 100%;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(var(--items), 1fr);
+}
+a{
+    margin: auto;
+    margin-bottom: 1em;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    width: 1.5em;
+}
+a img{
+    height: .8em;
+    filter: var(--fiter);
+}
+@media screen and (max-width: 1250px){
+    :root{font-size: 1em;}
+}
+@media screen and (max-width: 680px){
+    nav{grid-template-columns: repeat(calc(var(--items)/2), 1fr);}
+}
+@media screen and (max-width: 450px){
+    #container{display: grid;}
+    figure{margin: 0 auto var(--gap) auto;}
+    figure{grid-row-start: -1;}
+    form{width: 90%;}
+}

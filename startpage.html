@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script src="./script.js"></script> 
+    <title> - Startpage</title>
+</head>
+<body onload="main();">
+    <main>
+        <div id="container">
+            <div id="welcome">
+                <h1 id="greet">Welcome back!</h1>
+    
+                <div id="time">
+                    <span id="month">Month</span> 
+                    <span id="date">Date</span> 
+                    <span id="day">Day</span> 
+                    <span id="hour">Hour:Min</span>
+                </div>
+            </div>
+    
+            <figure>
+                <div id="profileImage"></div>
+                <figcaption id="userId">demeter</figcaption>
+            </figure>
+        </div>
+
+        <form id="search" action="https://www.google.com/search" method="get">
+            <input id="inpG" class="button " src="icons/google.svg" name="submit" type="image"/>
+            <input id="inpField" class="searchbox" type="text" name="q" placeholder="Search on oogle"/>
+        </form>
+
+        <nav>
+            <a style="background-color: #ff4500d0;" href="https://www.reddit.com/">         </a>
+            <a style="background-color: #ff0000d0;"       href="https://www.youtube.com/">        </a>
+            <a style="background-color: #bf2b26d0;"   href="https://canvas.elte.hu/belepes/"> <img src="icons/canvas.png" alt="Canvas"></a>
+            <a style="background-color: #ca473ad0;"   href="https://mail.google.com/">        </a>
+            <a style="background-color: #0d2434d0;"   href="https://github.com/">             </a>
+            <a style="background-color: #487300d0;"   href="https://ncore.pro/login.php">     <img src="icons/nCore.svg" alt="nCore"></a>
+            <a style="background-color: #d63600d0;"   href="https://www.1337x.to/">           <img src="icons/1337x.svg" alt="1337"></a>
+            <a style="background-color: #0170ffd0;"   href="https://menetrendek.hu/">         <img src="icons/menetrendek.png" alt=""></a>
+        </nav>
+    </main>
+</body>
+</html>
