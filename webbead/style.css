@@ -98,13 +98,13 @@ input[type="range"]{
     border: 1px solid var(--border-color);
     gap: var(--spacing);
     text-align: center;
+    max-width: calc(var(--board-size) + 1em);
 }
 .dialog p{ word-wrap: break-word; max-width: 70vw;}
 .dialog .sub-text{ font-size: smaller; }
 
 .dialog.description > div{
     text-align: justify;
-    max-width: calc(var(--board-size) + 1em);
 }
 .dialog.description .text{ text-align: center; }
 

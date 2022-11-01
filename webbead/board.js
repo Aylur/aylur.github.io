@@ -8,8 +8,8 @@ class Cell{
 
         this.node = document.createElement('button');
         this.node.classList.add('cell');
-        this.node.style.height = 'auto';
-        this.node.style.width = 'auto';
+        this.node.style.alignSelf = 'stretch';
+        this.node.style.justifySelf = 'stretch';
 
         this.node.obj = this;
     }
