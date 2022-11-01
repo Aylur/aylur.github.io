@@ -202,8 +202,8 @@ class CreatorPage extends Page{
         this.spinBoxes = document.createElement('div');
         this.spinBoxes.style.display = 'grid';
         this.spinBoxes.style.gridTemplateColumns = '1fr 1fr';
-        this.rowSpin = new UI.SpinBox({ min: 1, max: 12, value: 7 });
-        this.colSpin = new UI.SpinBox({ min: 1, max: 12, value: 7 });
+        this.rowSpin = new UI.SpinBox({ text: 'Rows:', min: 1, max: 12, value: 7 });
+        this.colSpin = new UI.SpinBox({ text: 'Cols:', min: 1, max: 12, value: 7 });
         this.spinBoxes.appendChild(this.rowSpin.node);
         this.spinBoxes.appendChild(this.colSpin.node);
         this.rowSpin.node.addEventListener('changed', this._resize.bind(this));

@@ -56,7 +56,6 @@ div{ gap: var(--spacing); }
     border: 1px solid var(--border-color);
     outline: none;
     justify-content: center;
-    min-width: 3em;
     padding-left: calc( var(--padding) * 2);
     padding-right: calc( var(--padding) * 2);
 }
@@ -64,10 +63,8 @@ div{ gap: var(--spacing); }
 .button:active{ background-color: var(--blue2); }
 .button:focus{ box-shadow: inset 0 0 calc( var(--padding) * 4) 0 var(--blue2); }
 .name-input:focus{ box-shadow: inset 0 0 0 2px var(--blue1); }
-
 .name-input{ width: 100%; }
-.button.settings,
-.button.desciption{ min-width: 0; }
+.spin-box .button-bin{ max-width: 2em; }
 
 input[type="range"]{
     max-width: 90%;
@@ -102,6 +99,7 @@ input[type="range"]{
 }
 .dialog p{ word-wrap: break-word; max-width: 70vw;}
 .dialog .sub-text{ font-size: smaller; }
+.dialog .button{ min-width: 3em; }
 
 .dialog.description > div{
     text-align: justify;
@@ -124,6 +122,8 @@ input[type="range"]{
 #header-bar .player-name:active{ background-color: var(--node-bg); }
 #header-bar .clock:focus,
 #header-bar .player-name:focus{ box-shadow: none; }
+#header-bar .player-name,
+#header-bar .clock{ cursor: default; min-width: 4em; }
 
 /* PAGE */
 #page-container{ margin: auto; }

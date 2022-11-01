@@ -13,8 +13,8 @@ class Button{
         this.btn.classList.add('button');
         this.btn.style.display = 'flex';
 
-        this.span = document.createElement('span');
-        this.btn.appendChild(this.span);
+        this._text = document.createElement('span');
+        this.btn.appendChild(this._text);
 
         if(params.style_class) this.btn.classList.add(params.style_class);
         if(params.text) this.text = params.text;
@@ -34,7 +34,7 @@ class Button{
             this.node.appendChild(this.btn);
     }
 
-    set text(text){ this.span.innerHTML = text }
+    set text(text){ this._text.innerHTML = text }
 
     hide(){ this.btn.style.display = 'none' }
     show(){ this.btn.style.display = 'flex' }
@@ -127,14 +127,14 @@ class BoardChooser{
 
         this.node.appendChild(new Button({
             style_class: 'left',
-            text: '⮜',
+            text: '<',
             callback: () => this._cycleBoards('left'),
             }).node
         );
         this.node.appendChild(this.boardContainer);
         this.node.appendChild(new Button({
             style_class: 'right',
-            text: '⮞',
+            text: '>',
             callback: () => this._cycleBoards('right'),
             }).node
         );
@@ -175,30 +175,34 @@ class BoardChooser{
 class SpinBox{
     constructor(params){
 
-        this._value = 0;
-        this.min = 0,
-        this.max = 100;
-
         if(params.value) this._value = params.value;
         if(params.min) this.min = params.min;
         if(params.max) this.max = params.max;
+        params.text ? this.text = params.text : this.text = '';
 
         this.node = document.createElement('div');
         this.node.style.display = 'flex';
+        this.node.style.justifyContent = 'space-around';
+        this.node.style.alignItems = 'center';
+        this.node.classList.add('spin-box');
 
         this.node.appendChild(new Button({
-            text: '⮝',
+            text: '+',
             callback: this._increment.bind(this)
         }).node);
 
-        this.text = document.createElement('span');
-        this.text.innerText = this._value;
-        this.node.appendChild(this.text);
+        this._text = document.createElement('span');
+        this._text.innerText = this._value;
+        this.node.appendChild(this._text);
 
         this.node.appendChild(new Button({
-            text: '⮟',
+            text: '-',
             callback: this._decrement.bind(this)
         }).node);
+
+        this.value = 0;
+        this.min = 0,
+        this.max = 100;
     }
 
     get value(){ return this._value }
@@ -206,22 +210,20 @@ class SpinBox{
     set value(value){
         if(value > this.max || value < this.min) return;
         this._value = value;
-        this.text.innerText = this._value;
+        this._text.innerText = this.text + this._value;
     }
 
     _decrement(){
-        if(this._value-1 < this.min) return
+        if(this._value-1 < this.min) return;
 
-        --this._value;
-        this.text.innerText = this._value;
+        --this.value;
         this.node.dispatchEvent(new Event('changed'));
     }
 
     _increment(){
         if(this._value+1 > this.max) return
 
-        ++this._value;
-        this.text.innerText = this._value;
+        ++this.value;
         this.node.dispatchEvent(new Event('changed'));
     }
 }

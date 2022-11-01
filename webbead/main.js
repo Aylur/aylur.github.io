@@ -66,7 +66,7 @@ class HeaderBar{
         this.node.style.gridTemplateColumns = '1fr 1fr 1fr';
 
         this._backButton = new UI.Button({
-            text: '⮜ Back ',
+            text: 'Back',
             callback: () => this.node.dispatchEvent(new Event('back')),
             x_align: 'start'
         });
