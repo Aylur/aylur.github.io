@@ -1,48 +1,59 @@
-const d = new Date();
+const NUMBER_OF_WALLPAPERS = 15;
 
-const monthNameEng = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const monthNameHun = ["Január","Február","Március","Április","Május","Június","Július","Augusztus","Szeptember","Október","November","December"];
-const dayNameEng = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const dayNameHun = ["Vasárnap","Hétfő","Kedd","Szerda","Csütörtök","Péntek","Szombat"];
+class Wallpaper{
+  constructor(){
+    let imageId = JSON.parse(localStorage.getItem('imageId'));
+    this.imageId = imageId ? imageId : '1';
+    this.node = document.querySelector('#wallpaper');
+    this.node.addEventListener('click', this._clicked.bind(this));
+    this._image();
+  }
 
-function addZero(i) {
-    if (i < 10) {i = "0" + i}
-    return i;
+  _prev(){
+    this.imageId == 1 ?
+      this.imageId = NUMBER_OF_WALLPAPERS :
+      --this.imageId;
+  }
+
+  _next(){
+    this.imageId == NUMBER_OF_WALLPAPERS ?
+      this.imageId = 1 :
+      ++this.imageId;
+  }
+
+  _clicked(event){
+    event.ctrlKey ? this._next() : this._prev();
+    localStorage.setItem('imageId', JSON.stringify(this.imageId));
+    this._image();
+  }
+
+  _image(){
+    this.node.style.backgroundImage = `url('wallpapers/${this.imageId}')`;
+    this.node.style.backgroundSize = 'cover';
+  }
 }
 
-let month = monthNameHun[d.getMonth()];
-let date = d.getDate();
-let day = dayNameHun[d.getDay()];
-let hour = d.getHours(); 
-let min = addZero(d.getMinutes());
+class Clock{
+  constructor(){
+    this.months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    this.days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-function writeDate(){
-    document.getElementById("month").innerHTML = month;
-    document.getElementById("date").innerHTML = date+".";
-    document.getElementById("day").innerHTML = day;
-    document.getElementById("hour").innerHTML = hour +":"+ min;
+    this.clock = document.querySelector('#clock');
+    this.month = document.querySelector('#month');
+    this.date = document.querySelector('#date');
+    setInterval(() => this._update(), 1000);
+    this._update();
+  }
+
+  _update(){
+    let date = new Date();
+    let min = date.getMinutes();
+    let day = date.getDate();
+    this.clock.innerHTML = `${date.getHours()}:${min < 10 ? '0'+min : min}`;
+    this.month.innerHTML = this.months[date.getMonth()];
+    this.date.innerHTML = `${this.days[date.getDay()]} ${day < 10 ? '0'+day : day}.`
+  }
 }
 
-function writeGreet(){
-    let greet = "Good Evening!";
-    if(hour > 6){ greet = "Good Morning!"; }
-    if(hour > 12){greet = "Good Afternoon!";}
-    if(hour > 18){greet = "Good Evening!";}
-    document.getElementById("greet").innerHTML = greet;
-}
-
-function eventListeners(){
-    document.getElementById("inpField").addEventListener("focus", function(){
-        document.getElementById("search").classList.add("focused");
-    })
-    document.getElementById("inpField").addEventListener("blur", function(){
-        document.getElementById("search").classList.remove("focused");
-    })
-}
-
-function main(){
-    writeDate();
-    writeGreet();
-    eventListeners();
-    document.getElementById("inpField").value = "";
-}
+new Wallpaper();
+new Clock();
