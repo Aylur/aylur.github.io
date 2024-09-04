@@ -1,0 +1,1256 @@
+<!--
+SPDX-FileCopyrightText: Aylur
+
+SPDX-License-Identifier: LGPL-2.1
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Astal.Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Astal.Application"/>
+  <meta property="og:description" content="Reference for Astal.Application"/>
+  <meta name="twitter:title" content="Astal.Application"/>
+  <meta name="twitter:description" content="Reference for Astal.Application"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="section namespace">
+        <h3><a href="index.html">Astal</a></h3>
+        <p>API Version: 0.1</p>
+        
+        <p>Library Version: Unknown</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="class.Application.html#description">Application</a>
+  </div>
+</div>
+
+
+  
+<div class="section">
+  <h5>Constructors</h5>
+  <div class="links">
+  
+    <a class="ctor" href="ctor.Application.new.html">new</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Functions</h5>
+  <div class="links">
+  
+    <a class="func" href="type_func.Application.get_instances.html">get_instances</a>
+  
+    <a class="func" href="type_func.Application.quit_instance.html">quit_instance</a>
+  
+    <a class="func" href="type_func.Application.open_inspector.html">open_inspector</a>
+  
+    <a class="func" href="type_func.Application.toggle_window_by_name.html">toggle_window_by_name</a>
+  
+    <a class="func" href="type_func.Application.send_message.html">send_message</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Application.reset_css.html">reset_css</a>
+  
+    <a class="method" href="method.Application.inspector.html">inspector</a>
+  
+    <a class="method" href="method.Application.get_window.html">get_window</a>
+  
+    <a class="method" href="method.Application.toggle_window.html">toggle_window</a>
+  
+    <a class="method" href="method.Application.apply_css.html">apply_css</a>
+  
+    <a class="method" href="method.Application.add_icons.html">add_icons</a>
+  
+    <a class="method" href="method.Application.request.html">request</a>
+  
+    <a class="method" href="method.Application.acquire_socket.html">acquire_socket</a>
+  
+    <a class="method" href="method.Application.message.html">message</a>
+  
+    <a class="method" href="method.Application.quit.html">quit</a>
+  
+    <a class="method" href="method.Application.get_socket_path.html">get_socket_path</a>
+  
+    <a class="method" href="method.Application.get_instance_name.html">get_instance_name</a>
+  
+    <a class="method" href="method.Application.set_instance_name.html">set_instance_name</a>
+  
+    <a class="method" href="method.Application.get_windows.html">get_windows</a>
+  
+    <a class="method" href="method.Application.get_settings.html">get_settings</a>
+  
+    <a class="method" href="method.Application.get_screen.html">get_screen</a>
+  
+    <a class="method" href="method.Application.get_gtk_theme.html">get_gtk_theme</a>
+  
+    <a class="method" href="method.Application.set_gtk_theme.html">set_gtk_theme</a>
+  
+    <a class="method" href="method.Application.get_icon_theme.html">get_icon_theme</a>
+  
+    <a class="method" href="method.Application.set_icon_theme.html">set_icon_theme</a>
+  
+    <a class="method" href="method.Application.get_cursor_theme.html">get_cursor_theme</a>
+  
+    <a class="method" href="method.Application.set_cursor_theme.html">set_cursor_theme</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Properties</h5>
+  <div class="links">
+  
+    <a class="property" href="property.Application.socket-path.html">socket-path</a>
+  
+    <a class="property" href="property.Application.instance-name.html">instance-name</a>
+  
+    <a class="property" href="property.Application.windows.html">windows</a>
+  
+    <a class="property" href="property.Application.settings.html">settings</a>
+  
+    <a class="property" href="property.Application.screen.html">screen</a>
+  
+    <a class="property" href="property.Application.gtk-theme.html">gtk-theme</a>
+  
+    <a class="property" href="property.Application.icon-theme.html">icon-theme</a>
+  
+    <a class="property" href="property.Application.cursor-theme.html">cursor-theme</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.Application.request.html">request</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2023.3</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index.html">Astal</a><span class="sep" role="presentation"></span>Application</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 0.1</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+        </h4>
+
+        <pre><code>class Astal.Application : Gtk.Application
+{
+  /* No available fields */
+}</pre></code>
+
+        <div class="docblock">
+          No description available.
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 0.1</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Application.html" data-namespace="Gtk">GtkApplication</a></li>
+          
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Application.html" data-namespace="Gio">GApplication</a></li>
+          
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.Application.new.html">astal_application_new</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.Application.get_instances.html">astal_application_get_instances</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 0.1</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.Application.quit_instance.html">astal_application_quit_instance</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 0.1</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.Application.open_inspector.html">astal_application_open_inspector</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 0.1</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.Application.toggle_window_by_name.html">astal_application_toggle_window_by_name</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 0.1</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.Application.send_message.html">astal_application_send_message</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 0.1</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.Application.reset_css.html">astal_application_reset_css</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.inspector.html">astal_application_inspector</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_window.html">astal_application_get_window</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.toggle_window.html">astal_application_toggle_window</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.apply_css.html">astal_application_apply_css</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.add_icons.html">astal_application_add_icons</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.request.html">astal_application_request</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.acquire_socket.html">astal_application_acquire_socket</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.message.html">astal_application_message</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.quit.html">astal_application_quit</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_socket_path.html">astal_application_get_socket_path</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_instance_name.html">astal_application_get_instance_name</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_instance_name.html">astal_application_set_instance_name</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_windows.html">astal_application_get_windows</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_settings.html">astal_application_get_settings</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_screen.html">astal_application_get_screen</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_gtk_theme.html">astal_application_get_gtk_theme</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_gtk_theme.html">astal_application_set_gtk_theme</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_icon_theme.html">astal_application_get_icon_theme</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_icon_theme.html">astal_application_set_icon_theme</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_cursor_theme.html">astal_application_get_cursor_theme</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_cursor_theme.html">astal_application_set_cursor_theme</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Application.html" data-namespace="Gtk">GtkApplication</a> (20)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.add_accelerator.html">gtk_application_add_accelerator</a></h6>
+            <div class="docblock">
+              <p>Installs an accelerator that will cause the named action
+to be activated when the key combination specificed by <code>accelerator</code>
+is&nbsp;pressed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem deprecated">deprecated: 3.14</span>&nbsp;<span class="emblem available">since: 3.4</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.add_window.html">gtk_application_add_window</a></h6>
+            <div class="docblock">
+              <p>Adds a window to <code>application</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.0</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.get_accels_for_action.html">gtk_application_get_accels_for_action</a></h6>
+            <div class="docblock">
+              <p>Gets the accelerators that are currently associated with
+the given&nbsp;action.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.12</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.get_actions_for_accel.html">gtk_application_get_actions_for_accel</a></h6>
+            <div class="docblock">
+              <p>Returns the list of actions (possibly empty) that <code>accel</code> maps to.
+Each item in the list is a detailed action name in the usual&nbsp;form.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.14</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.get_active_window.html">gtk_application_get_active_window</a></h6>
+            <div class="docblock">
+              <p>Gets the “active” window for the&nbsp;application.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.6</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.get_app_menu.html">gtk_application_get_app_menu</a></h6>
+            <div class="docblock">
+              <p>Returns the menu model that has been set with&nbsp;gtk_application_set_app_menu().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.4</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.get_menu_by_id.html">gtk_application_get_menu_by_id</a></h6>
+            <div class="docblock">
+              <p>Gets a menu from automatically loaded resources.
+See [Automatic resources][automatic-resources]
+for more&nbsp;information.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.14</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.get_menubar.html">gtk_application_get_menubar</a></h6>
+            <div class="docblock">
+              <p>Returns the menu model that has been set with&nbsp;gtk_application_set_menubar().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.4</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.get_window_by_id.html">gtk_application_get_window_by_id</a></h6>
+            <div class="docblock">
+              <p>Returns the <code>GtkApplicationWindow</code> with the given <span class="caps">ID</span>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.6</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.get_windows.html">gtk_application_get_windows</a></h6>
+            <div class="docblock">
+              <p>Gets a list of the <code>GtkWindows</code> associated with <code>application</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.0</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.inhibit.html">gtk_application_inhibit</a></h6>
+            <div class="docblock">
+              <p>Inform the session manager that certain types of actions should be
+inhibited. This is not guaranteed to work on all platforms and for
+all types of&nbsp;actions.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.4</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.is_inhibited.html">gtk_application_is_inhibited</a></h6>
+            <div class="docblock">
+              <p>Determines if any of the actions specified in <code>flags</code> are
+currently inhibited (possibly by another&nbsp;application).</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.4</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.list_action_descriptions.html">gtk_application_list_action_descriptions</a></h6>
+            <div class="docblock">
+              <p>Lists the detailed action names which have associated accelerators.
+See&nbsp;gtk_application_set_accels_for_action().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.12</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.prefers_app_menu.html">gtk_application_prefers_app_menu</a></h6>
+            <div class="docblock">
+              <p>Determines if the desktop environment in which the application is
+running would prefer an application menu be&nbsp;shown.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.14</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.remove_accelerator.html">gtk_application_remove_accelerator</a></h6>
+            <div class="docblock">
+              <p>Removes an accelerator that has been previously added
+with&nbsp;gtk_application_add_accelerator().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem deprecated">deprecated: 3.14</span>&nbsp;<span class="emblem available">since: 3.4</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.remove_window.html">gtk_application_remove_window</a></h6>
+            <div class="docblock">
+              <p>Remove a window from <code>application</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.0</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.set_accels_for_action.html">gtk_application_set_accels_for_action</a></h6>
+            <div class="docblock">
+              <p>Sets zero or more keyboard accelerators that will trigger the
+given action. The first item in <code>accels</code> will be the primary
+accelerator, which may be displayed in the <span class="caps">UI</span>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.12</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.set_app_menu.html">gtk_application_set_app_menu</a></h6>
+            <div class="docblock">
+              <p>Sets or unsets the application menu for <code>application</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.4</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.set_menubar.html">gtk_application_set_menubar</a></h6>
+            <div class="docblock">
+              <p>Sets or unsets the menubar for windows of <code>application</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.4</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Application.uninhibit.html">gtk_application_uninhibit</a></h6>
+            <div class="docblock">
+              <p>Removes an inhibitor that has been established with gtk_application_inhibit().
+Inhibitors are also cleared when the application&nbsp;exits.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.4</span></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Application.html" data-namespace="Gio">GApplication</a> (36)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Application.html#methods" data-namespace="Gio">GApplication</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.Application.socket-path.html">Astal.Application:socket-path</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.instance-name.html">Astal.Application:instance-name</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.windows.html">Astal.Application:windows</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.settings.html">Astal.Application:settings</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.screen.html">Astal.Application:screen</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.gtk-theme.html">Astal.Application:gtk-theme</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.icon-theme.html">Astal.Application:icon-theme</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.cursor-theme.html">Astal.Application:cursor-theme</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-properties"><h5 style="display:block;">Properties inherited from <a class="external" href="javascript:void(0)" data-link="class.Application.html" data-namespace="Gtk">GtkApplication</a> (5)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="property.Application.active-window.html">Gtk.Application:active-window</a></h6>
+            <div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.0</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="property.Application.app-menu.html">Gtk.Application:app-menu</a></h6>
+            <div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.0</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="property.Application.menubar.html">Gtk.Application:menubar</a></h6>
+            <div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.0</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="property.Application.register-session.html">Gtk.Application:register-session</a></h6>
+            <div class="docblock">
+              <p>Set this property to <code>TRUE</code> to register with the session&nbsp;manager.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.4</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="property.Application.screensaver-active.html">Gtk.Application:screensaver-active</a></h6>
+            <div class="docblock">
+              <p>This property is <code>TRUE</code> if <span class="caps">GTK</span>+ believes that the screensaver is
+currently active. <span class="caps">GTK</span>+ only tracks session state (including this)
+when <code>GtkApplication::register-session</code> is set to <code>TRUE</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.24</span></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-properties"><h5 style="display:block;">Properties inherited from <a class="external" href="javascript:void(0)" data-link="class.Application.html" data-namespace="Gio">GApplication</a> (9)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="property.Application.action-group.html">Gio.Application:action-group</a></h6>
+            <div class="docblock">
+              <p>The group of actions that the application&nbsp;exports.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="property.Application.application-id.html">Gio.Application:application-id</a></h6>
+            <div class="docblock">
+              <p>The unique identifier for the&nbsp;application.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="property.Application.flags.html">Gio.Application:flags</a></h6>
+            <div class="docblock">
+              <p>Flags specifying the behaviour of the&nbsp;application.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="property.Application.inactivity-timeout.html">Gio.Application:inactivity-timeout</a></h6>
+            <div class="docblock">
+              <p>Time (in milliseconds) to stay alive after becoming&nbsp;idle.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="property.Application.is-busy.html">Gio.Application:is-busy</a></h6>
+            <div class="docblock">
+              <p>Whether the application is currently marked as busy through
+<code>g_application_mark_busy()</code> or&nbsp;g_application_bind_busy_property().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.44</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="property.Application.is-registered.html">Gio.Application:is-registered</a></h6>
+            <div class="docblock">
+              <p>Whether <code>g_application_register()</code> has been&nbsp;called.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="property.Application.is-remote.html">Gio.Application:is-remote</a></h6>
+            <div class="docblock">
+              <p>Whether this application instance is&nbsp;remote.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="property.Application.resource-base-path.html">Gio.Application:resource-base-path</a></h6>
+            <div class="docblock">
+              <p>The base resource path for the&nbsp;application.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="property.Application.version.html">Gio.Application:version</a></h6>
+            <div class="docblock">
+              <p>The human-readable version number of the&nbsp;application.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.80</span></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Application.html" data-namespace="Gtk">GtkApplication</a> (3)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="signal.Application.query-end.html">GtkApplication::query-end</a></h6>
+            <div class="docblock">
+              <p>Emitted when the session manager is about to end the session, only
+if <code>GtkApplication::register-session</code> is <code>TRUE</code>. Applications can
+connect to this signal and call <code>gtk_application_inhibit()</code> with
+<code>GTK_APPLICATION_INHIBIT_LOGOUT</code> to delay the end of the session
+until state has been&nbsp;saved.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.24.8</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="signal.Application.window-added.html">GtkApplication::window-added</a></h6>
+            <div class="docblock">
+              <p>Emitted when a <code>GtkWindow</code> is added to <code>application</code> through&nbsp;gtk_application_add_window().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.2</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="signal.Application.window-removed.html">GtkApplication::window-removed</a></h6>
+            <div class="docblock">
+              <p>Emitted when a <code>GtkWindow</code> is removed from <code>application</code>,
+either as a side-effect of being destroyed or explicitly
+through&nbsp;gtk_application_remove_window().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 3.2</span></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Application.html" data-namespace="Gio">GApplication</a> (7)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="signal.Application.activate.html">GApplication::activate</a></h6>
+            <div class="docblock">
+              <p>The ::activate signal is emitted on the primary instance when an
+activation occurs. See&nbsp;g_application_activate().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.0</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="signal.Application.command-line.html">GApplication::command-line</a></h6>
+            <div class="docblock">
+              <p>The ::command-line signal is emitted on the primary instance when
+a commandline is not handled locally. See <code>g_application_run()</code> and
+the <code>GApplicationCommandLine</code> documentation for more&nbsp;information.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.0</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="signal.Application.handle-local-options.html">GApplication::handle-local-options</a></h6>
+            <div class="docblock">
+              <p>The ::handle-local-options signal is emitted on the local instance
+after the parsing of the commandline options has&nbsp;occurred.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.40</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="signal.Application.name-lost.html">GApplication::name-lost</a></h6>
+            <div class="docblock">
+              <p>The ::name-lost signal is emitted only on the registered primary instance
+when a new instance has taken over. This can only happen if the application
+is using the <code>G_APPLICATION_ALLOW_REPLACEMENT</code> flag.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.60</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="signal.Application.open.html">GApplication::open</a></h6>
+            <div class="docblock">
+              <p>The ::open signal is emitted on the primary instance when there are
+files to open. See <code>g_application_open()</code> for more&nbsp;information.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.0</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="signal.Application.shutdown.html">GApplication::shutdown</a></h6>
+            <div class="docblock">
+              <p>The ::shutdown signal is emitted only on the registered primary instance
+immediately after the main loop&nbsp;terminates.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.0</span></p>
+            </div>
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="signal.Application.startup.html">GApplication::startup</a></h6>
+            <div class="docblock">
+              <p>The ::startup signal is emitted on the primary instance immediately
+after registration. See&nbsp;g_application_register().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.0</span></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.0</span></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct AstalApplicationClass {
+  void (* request) (
+    AstalApplication* self,
+    const gchar* msg,
+    GSocketConnection* conn
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        No description available.
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>request: void (* request) (
+    AstalApplication* self,
+    const gchar* msg,
+    GSocketConnection* conn
+  )</code></dt>
+          <dd>No description available.</dd>
+        
+        </dd>
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-request"><a href="vfunc.Application.request.html">Astal.ApplicationClass.request</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 0.1</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+      
+      <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
+      
+      
+      
+<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#type-functions"><span class="link-text">Functions</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
+
+      
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>

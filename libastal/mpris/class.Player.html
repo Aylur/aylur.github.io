@@ -1,0 +1,1576 @@
+<!--
+SPDX-FileCopyrightText: Aylur
+
+SPDX-License-Identifier: LGPL-2.1
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AstalMpris.Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="AstalMpris.Player"/>
+  <meta property="og:description" content="Reference for AstalMpris.Player"/>
+  <meta name="twitter:title" content="AstalMpris.Player"/>
+  <meta name="twitter:description" content="Reference for AstalMpris.Player"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="section namespace">
+        <h3><a href="index.html">AstalMpris</a></h3>
+        <p>API Version: 0.1</p>
+        
+        <p>Library Version: Unknown</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="class.Player.html#description">Player</a>
+  </div>
+</div>
+
+
+  
+<div class="section">
+  <h5>Constructors</h5>
+  <div class="links">
+  
+    <a class="ctor" href="ctor.Player.new.html">new</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Player.raise.html">raise</a>
+  
+    <a class="method" href="method.Player.quit.html">quit</a>
+  
+    <a class="method" href="method.Player.toggle_fullscreen.html">toggle_fullscreen</a>
+  
+    <a class="method" href="method.Player.next.html">next</a>
+  
+    <a class="method" href="method.Player.previous.html">previous</a>
+  
+    <a class="method" href="method.Player.pause.html">pause</a>
+  
+    <a class="method" href="method.Player.play_pause.html">play_pause</a>
+  
+    <a class="method" href="method.Player.stop.html">stop</a>
+  
+    <a class="method" href="method.Player.play.html">play</a>
+  
+    <a class="method" href="method.Player.open_uri.html">open_uri</a>
+  
+    <a class="method" href="method.Player.loop.html">loop</a>
+  
+    <a class="method" href="method.Player.shuffle.html">shuffle</a>
+  
+    <a class="method" href="method.Player._get_position.html">_get_position</a>
+  
+    <a class="method" href="method.Player.get_meta.html">get_meta</a>
+  
+    <a class="method" href="method.Player.try_proxy.html">try_proxy</a>
+  
+    <a class="method" href="method.Player.get_bus_name.html">get_bus_name</a>
+  
+    <a class="method" href="method.Player.set_bus_name.html">set_bus_name</a>
+  
+    <a class="method" href="method.Player.get_available.html">get_available</a>
+  
+    <a class="method" href="method.Player.get_can_quit.html">get_can_quit</a>
+  
+    <a class="method" href="method.Player.get_fullscreen.html">get_fullscreen</a>
+  
+    <a class="method" href="method.Player.get_can_set_fullscreen.html">get_can_set_fullscreen</a>
+  
+    <a class="method" href="method.Player.get_can_raise.html">get_can_raise</a>
+  
+    <a class="method" href="method.Player.get_has_track_list.html">get_has_track_list</a>
+  
+    <a class="method" href="method.Player.get_identity.html">get_identity</a>
+  
+    <a class="method" href="method.Player.get_entry.html">get_entry</a>
+  
+    <a class="method" href="method.Player.get_supported_uri_schemas.html">get_supported_uri_schemas</a>
+  
+    <a class="method" href="method.Player.get_supported_mime_types.html">get_supported_mime_types</a>
+  
+    <a class="method" href="method.Player.get_loop_status.html">get_loop_status</a>
+  
+    <a class="method" href="method.Player.set_loop_status.html">set_loop_status</a>
+  
+    <a class="method" href="method.Player.get_rate.html">get_rate</a>
+  
+    <a class="method" href="method.Player.set_rate.html">set_rate</a>
+  
+    <a class="method" href="method.Player.get_shuffle_status.html">get_shuffle_status</a>
+  
+    <a class="method" href="method.Player.set_shuffle_status.html">set_shuffle_status</a>
+  
+    <a class="method" href="method.Player.get_volume.html">get_volume</a>
+  
+    <a class="method" href="method.Player.set_volume.html">set_volume</a>
+  
+    <a class="method" href="method.Player.get_position.html">get_position</a>
+  
+    <a class="method" href="method.Player.set_position.html">set_position</a>
+  
+    <a class="method" href="method.Player.get_playback_status.html">get_playback_status</a>
+  
+    <a class="method" href="method.Player.get_minimum_rate.html">get_minimum_rate</a>
+  
+    <a class="method" href="method.Player.get_maximum_rate.html">get_maximum_rate</a>
+  
+    <a class="method" href="method.Player.get_can_go_next.html">get_can_go_next</a>
+  
+    <a class="method" href="method.Player.get_can_go_previous.html">get_can_go_previous</a>
+  
+    <a class="method" href="method.Player.get_can_play.html">get_can_play</a>
+  
+    <a class="method" href="method.Player.get_can_pause.html">get_can_pause</a>
+  
+    <a class="method" href="method.Player.get_can_seek.html">get_can_seek</a>
+  
+    <a class="method" href="method.Player.get_can_control.html">get_can_control</a>
+  
+    <a class="method" href="method.Player.get_metadata.html">get_metadata</a>
+  
+    <a class="method" href="method.Player.get_trackid.html">get_trackid</a>
+  
+    <a class="method" href="method.Player.get_length.html">get_length</a>
+  
+    <a class="method" href="method.Player.get_art_url.html">get_art_url</a>
+  
+    <a class="method" href="method.Player.get_album.html">get_album</a>
+  
+    <a class="method" href="method.Player.get_album_artist.html">get_album_artist</a>
+  
+    <a class="method" href="method.Player.get_artist.html">get_artist</a>
+  
+    <a class="method" href="method.Player.get_lyrics.html">get_lyrics</a>
+  
+    <a class="method" href="method.Player.get_title.html">get_title</a>
+  
+    <a class="method" href="method.Player.get_composer.html">get_composer</a>
+  
+    <a class="method" href="method.Player.get_comments.html">get_comments</a>
+  
+    <a class="method" href="method.Player.get_cover_art.html">get_cover_art</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Properties</h5>
+  <div class="links">
+  
+    <a class="property" href="property.Player.bus-name.html">bus-name</a>
+  
+    <a class="property" href="property.Player.available.html">available</a>
+  
+    <a class="property" href="property.Player.can-quit.html">can-quit</a>
+  
+    <a class="property" href="property.Player.fullscreen.html">fullscreen</a>
+  
+    <a class="property" href="property.Player.can-set-fullscreen.html">can-set-fullscreen</a>
+  
+    <a class="property" href="property.Player.can-raise.html">can-raise</a>
+  
+    <a class="property" href="property.Player.has-track-list.html">has-track-list</a>
+  
+    <a class="property" href="property.Player.identity.html">identity</a>
+  
+    <a class="property" href="property.Player.entry.html">entry</a>
+  
+    <a class="property" href="property.Player.supported-uri-schemas.html">supported-uri-schemas</a>
+  
+    <a class="property" href="property.Player.supported-mime-types.html">supported-mime-types</a>
+  
+    <a class="property" href="property.Player.loop-status.html">loop-status</a>
+  
+    <a class="property" href="property.Player.rate.html">rate</a>
+  
+    <a class="property" href="property.Player.shuffle-status.html">shuffle-status</a>
+  
+    <a class="property" href="property.Player.volume.html">volume</a>
+  
+    <a class="property" href="property.Player.position.html">position</a>
+  
+    <a class="property" href="property.Player.playback-status.html">playback-status</a>
+  
+    <a class="property" href="property.Player.minimum-rate.html">minimum-rate</a>
+  
+    <a class="property" href="property.Player.maximum-rate.html">maximum-rate</a>
+  
+    <a class="property" href="property.Player.can-go-next.html">can-go-next</a>
+  
+    <a class="property" href="property.Player.can-go-previous.html">can-go-previous</a>
+  
+    <a class="property" href="property.Player.can-play.html">can-play</a>
+  
+    <a class="property" href="property.Player.can-pause.html">can-pause</a>
+  
+    <a class="property" href="property.Player.can-seek.html">can-seek</a>
+  
+    <a class="property" href="property.Player.can-control.html">can-control</a>
+  
+    <a class="property" href="property.Player.metadata.html">metadata</a>
+  
+    <a class="property" href="property.Player.trackid.html">trackid</a>
+  
+    <a class="property" href="property.Player.length.html">length</a>
+  
+    <a class="property" href="property.Player.art-url.html">art-url</a>
+  
+    <a class="property" href="property.Player.album.html">album</a>
+  
+    <a class="property" href="property.Player.album-artist.html">album-artist</a>
+  
+    <a class="property" href="property.Player.artist.html">artist</a>
+  
+    <a class="property" href="property.Player.lyrics.html">lyrics</a>
+  
+    <a class="property" href="property.Player.title.html">title</a>
+  
+    <a class="property" href="property.Player.composer.html">composer</a>
+  
+    <a class="property" href="property.Player.comments.html">comments</a>
+  
+    <a class="property" href="property.Player.cover-art.html">cover-art</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.Player.appeared.html">appeared</a>
+  
+    <a class="signal" href="signal.Player.closed.html">closed</a>
+  
+    <a class="signal" href="signal.Player.seeked.html">seeked</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2023.3</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index.html">AstalMpris</a><span class="sep" role="presentation"></span>Player</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 0.1</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+        </h4>
+
+        <pre><code>class AstalMpris.Player : GObject.Object
+{
+  /* No available fields */
+}</pre></code>
+
+        <div class="docblock">
+          No description available.
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 0.1</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.Player.new.html">astal_mpris_player_new</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.Player.raise.html">astal_mpris_player_raise</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.quit.html">astal_mpris_player_quit</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.toggle_fullscreen.html">astal_mpris_player_toggle_fullscreen</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.next.html">astal_mpris_player_next</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.previous.html">astal_mpris_player_previous</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.pause.html">astal_mpris_player_pause</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.play_pause.html">astal_mpris_player_play_pause</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.stop.html">astal_mpris_player_stop</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.play.html">astal_mpris_player_play</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.open_uri.html">astal_mpris_player_open_uri</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.loop.html">astal_mpris_player_loop</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.shuffle.html">astal_mpris_player_shuffle</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player._get_position.html">_astal_mpris_player_get_position</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_meta.html">astal_mpris_player_get_meta</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.try_proxy.html">astal_mpris_player_try_proxy</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_bus_name.html">astal_mpris_player_get_bus_name</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.set_bus_name.html">astal_mpris_player_set_bus_name</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_available.html">astal_mpris_player_get_available</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_can_quit.html">astal_mpris_player_get_can_quit</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_fullscreen.html">astal_mpris_player_get_fullscreen</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_can_set_fullscreen.html">astal_mpris_player_get_can_set_fullscreen</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_can_raise.html">astal_mpris_player_get_can_raise</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_has_track_list.html">astal_mpris_player_get_has_track_list</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_identity.html">astal_mpris_player_get_identity</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_entry.html">astal_mpris_player_get_entry</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_supported_uri_schemas.html">astal_mpris_player_get_supported_uri_schemas</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_supported_mime_types.html">astal_mpris_player_get_supported_mime_types</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_loop_status.html">astal_mpris_player_get_loop_status</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.set_loop_status.html">astal_mpris_player_set_loop_status</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_rate.html">astal_mpris_player_get_rate</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.set_rate.html">astal_mpris_player_set_rate</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_shuffle_status.html">astal_mpris_player_get_shuffle_status</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.set_shuffle_status.html">astal_mpris_player_set_shuffle_status</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_volume.html">astal_mpris_player_get_volume</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.set_volume.html">astal_mpris_player_set_volume</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_position.html">astal_mpris_player_get_position</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.set_position.html">astal_mpris_player_set_position</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_playback_status.html">astal_mpris_player_get_playback_status</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_minimum_rate.html">astal_mpris_player_get_minimum_rate</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_maximum_rate.html">astal_mpris_player_get_maximum_rate</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_can_go_next.html">astal_mpris_player_get_can_go_next</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_can_go_previous.html">astal_mpris_player_get_can_go_previous</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_can_play.html">astal_mpris_player_get_can_play</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_can_pause.html">astal_mpris_player_get_can_pause</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_can_seek.html">astal_mpris_player_get_can_seek</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_can_control.html">astal_mpris_player_get_can_control</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_metadata.html">astal_mpris_player_get_metadata</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_trackid.html">astal_mpris_player_get_trackid</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_length.html">astal_mpris_player_get_length</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_art_url.html">astal_mpris_player_get_art_url</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_album.html">astal_mpris_player_get_album</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_album_artist.html">astal_mpris_player_get_album_artist</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_artist.html">astal_mpris_player_get_artist</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_lyrics.html">astal_mpris_player_get_lyrics</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_title.html">astal_mpris_player_get_title</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_composer.html">astal_mpris_player_get_composer</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_comments.html">astal_mpris_player_get_comments</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Player.get_cover_art.html">astal_mpris_player_get_cover_art</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.Player.bus-name.html">AstalMpris.Player:bus-name</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.available.html">AstalMpris.Player:available</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.can-quit.html">AstalMpris.Player:can-quit</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.fullscreen.html">AstalMpris.Player:fullscreen</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.can-set-fullscreen.html">AstalMpris.Player:can-set-fullscreen</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.can-raise.html">AstalMpris.Player:can-raise</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.has-track-list.html">AstalMpris.Player:has-track-list</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.identity.html">AstalMpris.Player:identity</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.entry.html">AstalMpris.Player:entry</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.supported-uri-schemas.html">AstalMpris.Player:supported-uri-schemas</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.supported-mime-types.html">AstalMpris.Player:supported-mime-types</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.loop-status.html">AstalMpris.Player:loop-status</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.rate.html">AstalMpris.Player:rate</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.shuffle-status.html">AstalMpris.Player:shuffle-status</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.volume.html">AstalMpris.Player:volume</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.position.html">AstalMpris.Player:position</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.playback-status.html">AstalMpris.Player:playback-status</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.minimum-rate.html">AstalMpris.Player:minimum-rate</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.maximum-rate.html">AstalMpris.Player:maximum-rate</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.can-go-next.html">AstalMpris.Player:can-go-next</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.can-go-previous.html">AstalMpris.Player:can-go-previous</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.can-play.html">AstalMpris.Player:can-play</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.can-pause.html">AstalMpris.Player:can-pause</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.can-seek.html">AstalMpris.Player:can-seek</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.can-control.html">AstalMpris.Player:can-control</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.metadata.html">AstalMpris.Player:metadata</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.trackid.html">AstalMpris.Player:trackid</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.length.html">AstalMpris.Player:length</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.art-url.html">AstalMpris.Player:art-url</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.album.html">AstalMpris.Player:album</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.album-artist.html">AstalMpris.Player:album-artist</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.artist.html">AstalMpris.Player:artist</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.lyrics.html">AstalMpris.Player:lyrics</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.title.html">AstalMpris.Player:title</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.composer.html">AstalMpris.Player:composer</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.comments.html">AstalMpris.Player:comments</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Player.cover-art.html">AstalMpris.Player:cover-art</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.Player.appeared.html">AstalMpris.Player::appeared</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Player.closed.html">AstalMpris.Player::closed</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Player.seeked.html">AstalMpris.Player::seeked</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.0</span></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct AstalMprisPlayerClass {
+  void (* player_appeared) (
+    AstalMprisPlayer* self
+  );
+  void (* player_closed) (
+    AstalMprisPlayer* self
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        No description available.
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>appeared: void (* player_appeared) (
+    AstalMprisPlayer* self
+  )</code></dt>
+          <dd>No description available.</dd>
+        
+          <dt><code>closed: void (* player_closed) (
+    AstalMprisPlayer* self
+  )</code></dt>
+          <dd>No description available.</dd>
+        
+        </dd>
+      </div>
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+      
+      <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
+      
+      
+      
+<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
+
+      
+
+      
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>
