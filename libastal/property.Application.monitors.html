@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Astal.Application:instance-name</title>
+  <title>Astal.Application:monitors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="Astal.Application:instance-name"/>
-  <meta property="og:description" content="Reference for property Astal.Application:instance-name"/>
-  <meta name="twitter:title" content="Astal.Application:instance-name"/>
-  <meta name="twitter:description" content="Reference for property Astal.Application:instance-name"/>
+  <meta property="og:title" content="Astal.Application:monitors"/>
+  <meta property="og:description" content="Reference for property Astal.Application:monitors"/>
+  <meta name="twitter:title" content="Astal.Application:monitors"/>
+  <meta name="twitter:description" content="Reference for property Astal.Application:monitors"/>
 
 
   
@@ -67,9 +67,9 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property"href="property.Application.socket-path.html">socket-path</a>
   
-    <a class="property"href="property.Application.monitors.html">monitors</a>
+    <a class="property current"href="property.Application.monitors.html">monitors</a>
   
-    <a class="property current"href="property.Application.instance-name.html">instance-name</a>
+    <a class="property"href="property.Application.instance-name.html">instance-name</a>
   
     <a class="property"href="property.Application.windows.html">windows</a>
   
@@ -97,7 +97,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Property</h3>
-    <h1><a href="index.html">Astal</a><span class="sep"></span><a href="class.Application.html">Application</a>:instance-name</h1>
+    <h1><a href="index.html">Astal</a><span class="sep"></span><a href="class.Application.html">Application</a>:monitors</h1>
   </header>
 
   <section>
@@ -111,7 +111,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <pre><code>property instance-name: utf8 [ read, write ]</code></pre>
+        <pre><code>property monitors: Gdk.Monitor [ read ]</code></pre>
       </div>
     </div>
 
@@ -129,7 +129,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <table>
           <tr><td>Type:</td>
-            <td><code>gchar*</code></td>
+            <td>A list of&nbsp;<code>GdkMonitor*</code></td>
           </tr>
           
           
@@ -151,7 +151,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       <table>
         <tr><td>Readable</td><td><b>yes</b></td></tr>
-        <tr><td>Writable</td><td><b>yes</b></td></tr>
+        <tr><td>Writable</td><td><b>no</b></td></tr>
         <tr><td>Construct</td><td><b>no</b></td></tr>
         <tr><td>Construct only</td><td><b>no</b></td></tr>
       </table>

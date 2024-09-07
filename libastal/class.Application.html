@@ -122,6 +122,8 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Application.get_socket_path.html">get_socket_path</a>
   
+    <a class="method" href="method.Application.get_monitors.html">get_monitors</a>
+  
     <a class="method" href="method.Application.get_instance_name.html">get_instance_name</a>
   
     <a class="method" href="method.Application.set_instance_name.html">set_instance_name</a>
@@ -156,6 +158,8 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property" href="property.Application.socket-path.html">socket-path</a>
   
+    <a class="property" href="property.Application.monitors.html">monitors</a>
+  
     <a class="property" href="property.Application.instance-name.html">instance-name</a>
   
     <a class="property" href="property.Application.windows.html">windows</a>
@@ -176,6 +180,17 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.Application.monitor-added.html">monitor-added</a>
+  
+    <a class="signal" href="signal.Application.monitor-removed.html">monitor-removed</a>
+  
+  </div>
+</div>
+
 
 
   
@@ -472,6 +487,16 @@ SPDX-License-Identifier: LGPL-2.1
       
         <div class="">
           <h6><a href="method.Application.get_socket_path.html">astal_application_get_socket_path</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_monitors.html">astal_application_get_monitors</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -806,6 +831,16 @@ Inhibitors are also cleared when the application&nbsp;exits.</p>
         </div>
       
         <div class="">
+          <h6><a href="property.Application.monitors.html">Astal.Application:monitors</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
           <h6><a href="property.Application.instance-name.html">Astal.Application:instance-name</a></h6>
           <div class="docblock">
             No description available.
@@ -1011,6 +1046,30 @@ when <code>GtkApplication::register-session</code> is set to <code>TRUE</code>.<
         <a href="#signals" class="anchor"></a>
       </h4>
 
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.Application.monitor-added.html">Astal.Application::monitor-added</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Application.monitor-removed.html">Astal.Application::monitor-removed</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 0.1</span></p>
+          </div>
+        </div>
+      
+      </div>
       
 
       
@@ -1236,6 +1295,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
 
       
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
 
       
 
