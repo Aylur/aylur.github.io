@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Astal.Window.get_margin_left</title>
+  <title>Astal.Window.set_inhibit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="Astal.Window.get_margin_left"/>
-  <meta priority="og:description" content="Reference for Astal.Window.get_margin_left"/>
-  <meta name="twitter:title" content="Astal.Window.get_margin_left"/>
-  <meta name="twitter:description" content="Reference for Astal.Window.get_margin_left"/>
+  <meta priority="og:title" content="Astal.Window.set_inhibit"/>
+  <meta priority="og:description" content="Reference for Astal.Window.set_inhibit"/>
+  <meta name="twitter:title" content="Astal.Window.set_inhibit"/>
+  <meta name="twitter:description" content="Reference for Astal.Window.set_inhibit"/>
 
 
   
@@ -67,7 +67,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Window.get_inhibit.html">get_inhibit</a>
   
-    <a class="method" href="method.Window.set_inhibit.html">set_inhibit</a>
+    <a class="method current" href="method.Window.set_inhibit.html">set_inhibit</a>
   
     <a class="method" href="method.Window.get_namespace.html">get_namespace</a>
   
@@ -101,7 +101,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Window.set_margin_bottom.html">set_margin_bottom</a>
   
-    <a class="method current" href="method.Window.get_margin_left.html">get_margin_left</a>
+    <a class="method" href="method.Window.get_margin_left.html">get_margin_left</a>
   
     <a class="method" href="method.Window.set_margin_left.html">set_margin_left</a>
   
@@ -129,7 +129,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">Astal</a><span class="sep"></span><a href="class.Window.html">Window</a><span class="sep"></span>get_margin_left</h1>
+    <h1><a href="index.html">Astal</a><span class="sep"></span><a href="class.Window.html">Window</a><span class="sep"></span>set_inhibit</h1>
   </header>
 
   <section>
@@ -145,9 +145,10 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="n">gint</span>
-<span class="n">astal_window_get_margin_left</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="n">AstalWindow</span><span class="o">*</span><span class="w"> </span><span class="n">self</span>
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">astal_window_set_inhibit</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">AstalWindow</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gboolean</span><span class="w"> </span><span class="n">value</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -178,21 +179,19 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
 
     
-
-    
-    <div class="return-value toggle-wrapper">
-      <h4 id="return-value">
-        Return value
-        <a href="#return-value" class="anchor"></a>
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
       </h4>
 
       <div class="docblock">
-        <div class="returns">
-          <div class="arg-description">
-            <p><em>Type:</em>&nbsp;<code>gint</code></p>
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>value</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gboolean</code></p>
             <p>No description available.</p>
-          </div>
-          <div>
             <table>
             
             
@@ -200,11 +199,19 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             
+            
+            
+            
             </table>
-          </div>
-        </div>
+          </dd>
+          
+
+          
+        </dl>
       </div>
     </div>
+    
+
     
 
   </section>
