@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalApps.Application.set_app</title>
+  <title>AstalApps.Application.exact_match</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="AstalApps.Application.set_app"/>
-  <meta priority="og:description" content="Reference for AstalApps.Application.set_app"/>
-  <meta name="twitter:title" content="AstalApps.Application.set_app"/>
-  <meta name="twitter:description" content="Reference for AstalApps.Application.set_app"/>
+  <meta priority="og:title" content="AstalApps.Application.exact_match"/>
+  <meta priority="og:description" content="Reference for AstalApps.Application.exact_match"/>
+  <meta name="twitter:title" content="AstalApps.Application.exact_match"/>
+  <meta name="twitter:description" content="Reference for AstalApps.Application.exact_match"/>
 
 
   
@@ -73,11 +73,11 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Application.fuzzy_match.html">fuzzy_match</a>
   
-    <a class="method" href="method.Application.exact_match.html">exact_match</a>
+    <a class="method current" href="method.Application.exact_match.html">exact_match</a>
   
     <a class="method" href="method.Application.get_app.html">get_app</a>
   
-    <a class="method current" href="method.Application.set_app.html">set_app</a>
+    <a class="method" href="method.Application.set_app.html">set_app</a>
   
     <a class="method" href="method.Application.get_frequency.html">get_frequency</a>
   
@@ -109,7 +109,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">AstalApps</a><span class="sep"></span><a href="class.Application.html">Application</a><span class="sep"></span>set_app</h1>
+    <h1><a href="index.html">AstalApps</a><span class="sep"></span><a href="class.Application.html">Application</a><span class="sep"></span>exact_match</h1>
   </header>
 
   <section>
@@ -126,9 +126,10 @@ SPDX-License-Identifier: LGPL-2.1
 
       <div class="docblock c-decl">
         <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
-<span class="n">astal_apps_application_set_app</span><span class="w"> </span><span class="p">(</span>
+<span class="n">astal_apps_application_exact_match</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">AstalAppsApplication</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
-<span class="w">  </span><span class="n">GDesktopAppInfo</span><span class="o">*</span><span class="w"> </span><span class="n">value</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">term</span><span class="p">,</span>
+<span class="w">  </span><span class="n">AstalAppsScore</span><span class="o">*</span><span class="w"> </span><span class="n">result</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -143,7 +144,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>No description available.</p>
+        <p>Calculate a score using exact string&nbsp;algorithm.</p>
       </div>
 
       <div class="docblock">
@@ -169,9 +170,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <dl class="arguments">
           
-          <dt class="arg-name"><code>value</code></dt>
+          <dt class="arg-name"><code>term</code></dt>
           <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<code>GDesktopAppInfo*</code></p>
+            <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
             <p>No description available.</p>
             <table>
             
@@ -182,6 +183,23 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            <tr><td>The value is a NUL terminated UTF-8 string.</td></tr>
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>result</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="struct.Score.html"><code>AstalAppsScore</code></a></p>
+            <p>No description available.</p>
+            <table>
+            <tr><td title="direction: out">The argument will be set by the function.</td></tr>
+            
+            
+            
+            
+            
+            
+            <tr><td title="transfer: full">The caller of the method takes ownership of the returned data, and is responsible for freeing it.</td></tr>
             
             </table>
           </dd>
