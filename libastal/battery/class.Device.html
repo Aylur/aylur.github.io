@@ -94,8 +94,6 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Instance methods</h5>
   <div class="links">
   
-    <a class="method" href="method.Device.sync.html">sync</a>
-  
     <a class="method" href="method.Device.get_device_type.html">get_device_type</a>
   
     <a class="method" href="method.Device.get_native_path.html">get_native_path</a>
@@ -109,10 +107,6 @@ SPDX-License-Identifier: LGPL-2.1
     <a class="method" href="method.Device.get_update_time.html">get_update_time</a>
   
     <a class="method" href="method.Device.get_power_supply.html">get_power_supply</a>
-  
-    <a class="method" href="method.Device.get_has_history.html">get_has_history</a>
-  
-    <a class="method" href="method.Device.get_has_statistics.html">get_has_statistics</a>
   
     <a class="method" href="method.Device.get_online.html">get_online</a>
   
@@ -189,10 +183,6 @@ SPDX-License-Identifier: LGPL-2.1
     <a class="property" href="property.Device.update-time.html">update-time</a>
   
     <a class="property" href="property.Device.power-supply.html">power-supply</a>
-  
-    <a class="property" href="property.Device.has-history.html">has-history</a>
-  
-    <a class="property" href="property.Device.has-statistics.html">has-statistics</a>
   
     <a class="property" href="property.Device.online.html">online</a>
   
@@ -294,7 +284,7 @@ SPDX-License-Identifier: LGPL-2.1
 }</pre></code>
 
         <div class="docblock">
-          <p>No description available.</p>
+          <p>Client for a UPower <a href="https://upower.freedesktop.org/docs/Device.html">device</a>.</p>
         </div>
 
         <div class="docblock">
@@ -367,7 +357,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="">
         <h6><a href="type_func.Device.get_default.html">astal_battery_device_get_default</a></h6>
         <div class="docblock">
-          No description available.
+          <p>Get the&nbsp;DisplayDevice.</p>
         </div>
         <div class="docblock">
           <p></p>
@@ -386,16 +376,6 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-      
-        <div class="">
-          <h6><a href="method.Device.sync.html">astal_battery_device_sync</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
       
         <div class="">
           <h6><a href="method.Device.get_device_type.html">astal_battery_device_get_device_type</a></h6>
@@ -459,26 +439,6 @@ SPDX-License-Identifier: LGPL-2.1
       
         <div class="">
           <h6><a href="method.Device.get_power_supply.html">astal_battery_device_get_power_supply</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Device.get_has_history.html">astal_battery_device_get_has_history</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Device.get_has_statistics.html">astal_battery_device_get_has_statistics</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -780,7 +740,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.device-type.html">AstalBattery.Device:device-type</a></h6>
           <div class="docblock">
-            No description available.
+            <p>If it is <code>ASTAL_BATTERY_TYPE_BATTERY</code>, you will need to verify that the property power-supply has the value <code>true</code> before 
+considering it as a laptop battery. Otherwise it will likely be the battery for a device of an unknown&nbsp;type.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -790,7 +751,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.native-path.html">AstalBattery.Device:native-path</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Native path of the power source. This is the sysfs path, for example /sys/devices/<span class="caps">LNXSYSTM</span>:00/device:00/<span class="caps">PNP0C0A</span>:00/power_supply/<span class="caps">BAT0</span>. It is 
+blank if the device is being driven by a user space&nbsp;driver.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -800,7 +762,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.vendor.html">AstalBattery.Device:vendor</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Name of the vendor of the&nbsp;battery.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -810,7 +772,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.model.html">AstalBattery.Device:model</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Name of the model of this&nbsp;battery.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -820,7 +782,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.serial.html">AstalBattery.Device:serial</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Unique serial number of the&nbsp;battery.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -830,7 +792,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.update-time.html">AstalBattery.Device:update-time</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The point in time (seconds since the Epoch) that data was read from the power&nbsp;source.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -840,27 +802,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.power-supply.html">AstalBattery.Device:power-supply</a></h6>
           <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="property.Device.has-history.html">AstalBattery.Device:has-history</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="property.Device.has-statistics.html">AstalBattery.Device:has-statistics</a></h6>
-          <div class="docblock">
-            No description available.
+            <p>If the power device is used to supply the system. This would be set <code>true</code> for laptop batteries and <span class="caps">UPS</span> devices, but set to <code>false</code> for 
+wireless mice or&nbsp;PDAs.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -870,7 +813,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.online.html">AstalBattery.Device:online</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Whether power is currently being provided through line power.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_LINE_POWER</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -880,7 +824,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.energy.html">AstalBattery.Device:energy</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Amount of energy (measured in Wh) currently available in the power source.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -890,7 +835,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.energy-empty.html">AstalBattery.Device:energy-empty</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Amount of energy (measured in Wh) in the power source when it&#8217;s considered to be empty.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -900,7 +846,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.energy-full.html">AstalBattery.Device:energy-full</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Amount of energy (measured in Wh) in the power source when it&#8217;s considered full.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -910,7 +857,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.energy-full-design.html">AstalBattery.Device:energy-full-design</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Amount of energy (measured in Wh) the power source is designed to hold when it&#8217;s considered full.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -920,7 +868,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.energy-rate.html">AstalBattery.Device:energy-rate</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Amount of energy being drained from the source, measured in W. If positive, the source is being discharged, if negative it&#8217;s being&nbsp;charged.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -930,7 +878,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.voltage.html">AstalBattery.Device:voltage</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Voltage in the Cell or being recorded by the&nbsp;meter.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -940,7 +888,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.charge-cycles.html">AstalBattery.Device:charge-cycles</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The number of charge cycles as defined by the <span class="caps">TCO</span> certification, or -1 if that value is unknown or not&nbsp;applicable.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -950,7 +898,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.luminosity.html">AstalBattery.Device:luminosity</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Luminosity being recorded by the&nbsp;meter.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -960,7 +908,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.time-to-empty.html">AstalBattery.Device:time-to-empty</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Number of seconds until the power source is considered empty. Is set to 0 if unknown.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -970,7 +919,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.time-to-full.html">AstalBattery.Device:time-to-full</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Number of seconds until the power source is considered full. Is set to 0 if unknown.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -980,7 +930,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.percentage.html">AstalBattery.Device:percentage</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The amount of energy left in the power source expressed as a percentage between 0 and 1.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>. The percentage 
+will be an approximation if <code>AstalBatteryDevice:battery-level</code> is set to something other than&nbsp;None.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -990,7 +942,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.temperature.html">AstalBattery.Device:temperature</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The temperature of the device in degrees Celsius.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1000,7 +953,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.is-present.html">AstalBattery.Device:is-present</a></h6>
           <div class="docblock">
-            No description available.
+            <p>If the power source is present in the bay.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1010,7 +964,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.state.html">AstalBattery.Device:state</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The battery power state.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1020,7 +975,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.is-rechargable.html">AstalBattery.Device:is-rechargable</a></h6>
           <div class="docblock">
-            No description available.
+            <p>If the power source is rechargeable.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1030,7 +986,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.capacity.html">AstalBattery.Device:capacity</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The capacity of the power source expressed as a percentage between 0 and 1.
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1040,7 +997,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.technology.html">AstalBattery.Device:technology</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Technology used in the battery:
+This property is only valid if <code>AstalBatteryDevice:device-type</code> is <code>ASTAL_BATTERY_TYPE_BATTERY</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1050,7 +1008,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.warning-level.html">AstalBattery.Device:warning-level</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Warning level of the&nbsp;battery.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1060,7 +1018,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.battery-level.html">AstalBattery.Device:battery-level</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The level of the battery for devices which do not report a percentage but rather a coarse battery level. If the value is None. then the device 
+does not support coarse battery reporting, and the <code>AstalBatteryDevice:percentage</code> should be used&nbsp;instead.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1070,7 +1029,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.icon-name.html">AstalBattery.Device:icon-name</a></h6>
           <div class="docblock">
-            No description available.
+            <p>An icon name representing this Device.
+<span class="caps">NOTE</span>: <code>AstalBatteryDevice:battery-icon-name</code> might be a better fit as it is calculated from&nbsp;percentage.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1080,7 +1040,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.charging.html">AstalBattery.Device:charging</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if <code>AstalBatteryDevice:state</code> is charging or fully&nbsp;charged.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1090,7 +1050,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.is-battery.html">AstalBattery.Device:is-battery</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if <code>AstalBatteryDevice:device-type</code> is not line power or&nbsp;unknown.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1100,7 +1060,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.battery-icon-name.html">AstalBattery.Device:battery-icon-name</a></h6>
           <div class="docblock">
-            No description available.
+            <p>An icon name in the form of&nbsp;&#8220;battery-level-$percentage-$state-symbolic&#8221;.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1110,7 +1070,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.device-type-name.html">AstalBattery.Device:device-type-name</a></h6>
           <div class="docblock">
-            No description available.
+            <p>A string representation of this device&#8217;s <code>AstalBatteryDevice:device-type</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1120,7 +1080,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.device-type-icon.html">AstalBattery.Device:device-type-icon</a></h6>
           <div class="docblock">
-            No description available.
+            <p>An icon name that can be used to represent this device&#8217;s <code>AstalBatteryDevice:device-type</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
