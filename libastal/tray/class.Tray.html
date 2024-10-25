@@ -242,7 +242,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="">
         <h6><a href="type_func.Tray.get_default.html">astal_tray_tray_get_default</a></h6>
         <div class="docblock">
-          No description available.
+          <p>Get the singleton instance of <code>AstalTrayTray</code>.</p>
         </div>
         <div class="docblock">
           <p></p>
@@ -265,7 +265,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Tray.get_item.html">astal_tray_tray_get_item</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Gets the TrayItem with the given&nbsp;item-id.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -315,7 +315,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Tray.items.html">AstalTray.Tray:items</a></h6>
           <div class="docblock">
-            No description available.
+            <p>List of currently registered tray&nbsp;items.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -347,7 +347,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="signal.Tray.item-added.html">AstalTray.Tray::item-added</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Emitted when a new tray item was&nbsp;added.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -357,7 +357,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="signal.Tray.item-removed.html">AstalTray.Tray::item-removed</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Emitted when a tray item was&nbsp;removed.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -397,11 +397,11 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <pre><code>struct AstalTrayTrayClass {
   void (* tray_item_added) (
     AstalTrayTray* self,
-    const gchar* service
+    const gchar* item_id
   );
   void (* tray_item_removed) (
     AstalTrayTray* self,
-    const gchar* service
+    const gchar* item_id
   );
   
 }</code></pre>
@@ -419,13 +419,13 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         
           <dt><code>item_added: void (* tray_item_added) (
     AstalTrayTray* self,
-    const gchar* service
+    const gchar* item_id
   )</code></dt>
           <dd><p>No description available.</p></dd>
         
           <dt><code>item_removed: void (* tray_item_removed) (
     AstalTrayTray* self,
-    const gchar* service
+    const gchar* item_id
   )</code></dt>
           <dd><p>No description available.</p></dd>
         
