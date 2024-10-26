@@ -82,10 +82,6 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Adapter.stop_discovery.html">stop_discovery</a>
   
-    <a class="method" href="method.Adapter.get_object_path.html">get_object_path</a>
-  
-    <a class="method" href="method.Adapter.set_object_path.html">set_object_path</a>
-  
     <a class="method" href="method.Adapter.get_uuids.html">get_uuids</a>
   
     <a class="method" href="method.Adapter.get_discovering.html">get_discovering</a>
@@ -131,8 +127,6 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Properties</h5>
   <div class="links">
-  
-    <a class="property" href="property.Adapter.object-path.html">object-path</a>
   
     <a class="property" href="property.Adapter.uuids.html">uuids</a>
   
@@ -206,7 +200,7 @@ SPDX-License-Identifier: LGPL-2.1
 }</pre></code>
 
         <div class="docblock">
-          <p>No description available.</p>
+          <p>Object representing an <a href="https://github.com/RadiusNetworks/bluez/blob/master/doc/adapter-api.txt">adapter</a>.</p>
         </div>
 
         <div class="docblock">
@@ -260,7 +254,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Adapter.remove_device.html">astal_bluetooth_adapter_remove_device</a></h6>
           <div class="docblock">
-            No description available.
+            <p>This removes the remote device and the pairing information.
+Possible errors: <code>InvalidArguments</code>, <code>Failed</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -270,7 +265,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Adapter.start_discovery.html">astal_bluetooth_adapter_start_discovery</a></h6>
           <div class="docblock">
-            No description available.
+            <p>This method starts the device discovery procedure.
+Possible errors: <code>NotReady</code>, <code>Failed</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -280,27 +276,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Adapter.stop_discovery.html">astal_bluetooth_adapter_stop_discovery</a></h6>
           <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Adapter.get_object_path.html">astal_bluetooth_adapter_get_object_path</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Adapter.set_object_path.html">astal_bluetooth_adapter_set_object_path</a></h6>
-          <div class="docblock">
-            No description available.
+            <p>This method will cancel any previous <code>astal_bluetooth_adapter_start_discovery()</code> procedure.
+Possible errors: <code>NotReady</code>, <code>Failed</code>, <code>NotAuthorized</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -518,19 +495,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="property.Adapter.object-path.html">AstalBluetooth.Adapter:object-path</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
           <h6><a href="property.Adapter.uuids.html">AstalBluetooth.Adapter:uuids</a></h6>
           <div class="docblock">
-            No description available.
+            <p>List of 128-bit UUIDs that represents the available local&nbsp;services.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -540,7 +507,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.discovering.html">AstalBluetooth.Adapter:discovering</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates that a device discovery procedure is&nbsp;active.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -550,7 +517,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.modalias.html">AstalBluetooth.Adapter:modalias</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Local Device <span class="caps">ID</span> information in modalias format used by the kernel and&nbsp;udev.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -560,7 +527,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.name.html">AstalBluetooth.Adapter:name</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The Bluetooth system name (pretty&nbsp;hostname).</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -570,7 +537,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.class.html">AstalBluetooth.Adapter:class</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The Bluetooth class of&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -580,7 +547,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.address.html">AstalBluetooth.Adapter:address</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The Bluetooth device&nbsp;address.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -590,7 +557,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.discoverable.html">AstalBluetooth.Adapter:discoverable</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Switch an adapter to discoverable or non-discoverable to either make it visible or hide&nbsp;it.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -600,7 +567,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.pairable.html">AstalBluetooth.Adapter:pairable</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Switch an adapter to pairable or&nbsp;non-pairable.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -610,7 +577,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.powered.html">AstalBluetooth.Adapter:powered</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Switch an adapter on or&nbsp;off.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -620,7 +587,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.alias.html">AstalBluetooth.Adapter:alias</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The Bluetooth friendly name.
+In case no alias is set, it will return <code>AstalBluetoothAdapter:name</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -630,7 +598,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.discoverable-timeout.html">AstalBluetooth.Adapter:discoverable-timeout</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The discoverable timeout in seconds. A value of zero means that the timeout is disabled and it will stay in discoverable/limited mode forever 
+until <code>astal_bluetooth_adapter_stop_discovery()</code> is invoked. The default value for the discoverable timeout should be <code>180</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -640,7 +609,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Adapter.pairable-timeout.html">AstalBluetooth.Adapter:pairable-timeout</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The pairable timeout in seconds.
+A value of zero means that the timeout is disabled and it will stay in pairable mode forever. The default value for pairable timeout should be 
+disabled <code>0</code>.</p>
           </div>
           <div class="docblock">
             <p></p>

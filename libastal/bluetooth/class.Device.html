@@ -76,8 +76,6 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Instance methods</h5>
   <div class="links">
   
-    <a class="method" href="method.Device.cancel_pairing.html">cancel_pairing</a>
-  
     <a class="method" href="method.Device.connect_device.html">connect_device</a>
   
     <a class="method" href="method.Device.connect_device_finish.html">connect_device_finish</a>
@@ -92,9 +90,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Device.pair.html">pair</a>
   
-    <a class="method" href="method.Device.get_object_path.html">get_object_path</a>
-  
-    <a class="method" href="method.Device.set_object_path.html">set_object_path</a>
+    <a class="method" href="method.Device.cancel_pairing.html">cancel_pairing</a>
   
     <a class="method" href="method.Device.get_uuids.html">get_uuids</a>
   
@@ -143,8 +139,6 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Properties</h5>
   <div class="links">
-  
-    <a class="property" href="property.Device.object-path.html">object-path</a>
   
     <a class="property" href="property.Device.uuids.html">uuids</a>
   
@@ -226,7 +220,7 @@ SPDX-License-Identifier: LGPL-2.1
 }</pre></code>
 
         <div class="docblock">
-          <p>No description available.</p>
+          <p>Object representing a <a href="https://github.com/luetzel/bluez/blob/master/doc/device-api.txt">device</a>.</p>
         </div>
 
         <div class="docblock">
@@ -278,19 +272,10 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="method.Device.cancel_pairing.html">astal_bluetooth_device_cancel_pairing</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
           <h6><a href="method.Device.connect_device.html">astal_bluetooth_device_connect_device</a></h6>
           <div class="docblock">
-            No description available.
+            <p>This is a generic method to connect any profiles the remote device supports that can be connected to.
+Possible errors: <code>NotReady</code>, <code>Failed</code>, <code>InProgress</code>, <code>AlreadyConnected</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -310,7 +295,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Device.disconnect_device.html">astal_bluetooth_device_disconnect_device</a></h6>
           <div class="docblock">
-            No description available.
+            <p>This method gracefully disconnects all connected profiles.
+Possible errors: <code>NotConnected</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -330,7 +316,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Device.connect_profile.html">astal_bluetooth_device_connect_profile</a></h6>
           <div class="docblock">
-            No description available.
+            <p>This method connects a specific profile of this device. The <span class="caps">UUID</span> provided is the remote service <span class="caps">UUID</span> for the profile.
+Possible errors: <code>Failed</code>, <code>InProgress</code>, <code>InvalidArguments</code>, <code>NotAvailable</code>, <code>NotReady</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -340,7 +327,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Device.disconnect_profile.html">astal_bluetooth_device_disconnect_profile</a></h6>
           <div class="docblock">
-            No description available.
+            <p>This method disconnects a specific profile of this device.
+Possible errors: <code>Failed</code>, <code>InProgress</code>, <code>InvalidArguments</code>, <code>NotSupported</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -350,7 +338,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Device.pair.html">astal_bluetooth_device_pair</a></h6>
           <div class="docblock">
-            No description available.
+            <p>This method will connect to the remote device and initiate pairing.
+Possible errors: <code>InvalidArguments</code>, <code>Failed</code>, <code>AlreadyExists</code>, <code>AuthenticationCanceled</code>, <code>AuthenticationFailed</code>, <code>AuthenticationRejected</code>, 
+<code>AuthenticationTimeout</code>, <code>ConnectionAttemptFailed</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -358,19 +348,10 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.Device.get_object_path.html">astal_bluetooth_device_get_object_path</a></h6>
+          <h6><a href="method.Device.cancel_pairing.html">astal_bluetooth_device_cancel_pairing</a></h6>
           <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Device.set_object_path.html">astal_bluetooth_device_set_object_path</a></h6>
-          <div class="docblock">
-            No description available.
+            <p>This method can be used to cancel a pairing operation initiated by <code>astal_bluetooth_device_pair()</code>.
+Possible errors: <code>DoesNotExist</code>, <code>Failed</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -598,19 +579,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="property.Device.object-path.html">AstalBluetooth.Device:object-path</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
           <h6><a href="property.Device.uuids.html">AstalBluetooth.Device:uuids</a></h6>
           <div class="docblock">
-            No description available.
+            <p>List of 128-bit UUIDs that represents the available remote&nbsp;services.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -620,7 +591,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.connected.html">AstalBluetooth.Device:connected</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if the remote device is currently&nbsp;connected.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -630,7 +601,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.legacy-pairing.html">AstalBluetooth.Device:legacy-pairing</a></h6>
           <div class="docblock">
-            No description available.
+            <p><code>true</code> if the device only supports the pre-2.1 pairing&nbsp;mechanism.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -640,7 +611,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.paired.html">AstalBluetooth.Device:paired</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if the remote device is&nbsp;paired.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -650,7 +621,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.rssi.html">AstalBluetooth.Device:rssi</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Received Signal Strength Indicator of the remote device (inquiry or&nbsp;advertising).</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -660,7 +631,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.adapter.html">AstalBluetooth.Device:adapter</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The object path of the adapter the device belongs&nbsp;to.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -670,7 +641,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.address.html">AstalBluetooth.Device:address</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The Bluetooth device address of the remote&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -680,7 +651,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.icon.html">AstalBluetooth.Device:icon</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Proposed icon&nbsp;name.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -690,7 +661,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.modalias.html">AstalBluetooth.Device:modalias</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Remote Device <span class="caps">ID</span> information in modalias format used by the kernel and&nbsp;udev.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -700,7 +671,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.name.html">AstalBluetooth.Device:name</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The Bluetooth remote name.
+It is always better to use <code>AstalBluetoothDevice:alias</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -710,7 +682,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.appearance.html">AstalBluetooth.Device:appearance</a></h6>
           <div class="docblock">
-            No description available.
+            <p>External appearance of device, as found on <span class="caps">GAP</span>&nbsp;service.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -720,7 +692,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.class.html">AstalBluetooth.Device:class</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The Bluetooth class of device of the remote&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -730,7 +702,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.connecting.html">AstalBluetooth.Device:connecting</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if this device is currently trying to be&nbsp;connected.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -740,7 +712,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.blocked.html">AstalBluetooth.Device:blocked</a></h6>
           <div class="docblock">
-            No description available.
+            <p>If set to <code>true</code> any incoming connections from the device will be immediately&nbsp;rejected.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -750,7 +722,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.trusted.html">AstalBluetooth.Device:trusted</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if the remote is seen as&nbsp;trusted.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -760,7 +732,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.alias.html">AstalBluetooth.Device:alias</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The name alias for the remote device.
+In case no alias is set, it will return the remote device <code>AstalBluetoothDevice:name</code>.</p>
           </div>
           <div class="docblock">
             <p></p>

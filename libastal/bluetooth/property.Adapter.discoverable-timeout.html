@@ -67,8 +67,6 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Properties</h5>
   <div class="links">
   
-    <a class="property"href="property.Adapter.object-path.html">object-path</a>
-  
     <a class="property"href="property.Adapter.uuids.html">uuids</a>
   
     <a class="property"href="property.Adapter.discovering.html">discovering</a>
@@ -133,7 +131,8 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>No description available.</p>
+        <p>The discoverable timeout in seconds. A value of zero means that the timeout is disabled and it will stay in discoverable/limited mode forever 
+until <a href="method.Adapter.stop_discovery.html"><code>astal_bluetooth_adapter_stop_discovery()</code></a> is invoked. The default value for the discoverable timeout should be <code>180</code>.</p>
       </div>
 
       <div class="docblock">

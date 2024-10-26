@@ -67,8 +67,6 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Methods</h5>
   <div class="links">
   
-    <a class="method" href="method.Device.cancel_pairing.html">cancel_pairing</a>
-  
     <a class="method" href="method.Device.connect_device.html">connect_device</a>
   
     <a class="method" href="method.Device.connect_device_finish.html">connect_device_finish</a>
@@ -83,9 +81,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Device.pair.html">pair</a>
   
-    <a class="method" href="method.Device.get_object_path.html">get_object_path</a>
-  
-    <a class="method" href="method.Device.set_object_path.html">set_object_path</a>
+    <a class="method" href="method.Device.cancel_pairing.html">cancel_pairing</a>
   
     <a class="method" href="method.Device.get_uuids.html">get_uuids</a>
   
@@ -158,7 +154,8 @@ SPDX-License-Identifier: LGPL-2.1
         <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
 <span class="n">astal_bluetooth_device_connect_profile</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">AstalBluetoothDevice</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">uuid</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">uuid</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -173,7 +170,8 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>No description available.</p>
+        <p>This method connects a specific profile of this device. The <span class="caps">UUID</span> provided is the remote service <span class="caps">UUID</span> for the profile.
+Possible errors: <code>Failed</code>, <code>InProgress</code>, <code>InvalidArguments</code>, <code>NotAvailable</code>, <code>NotReady</code>.</p>
       </div>
 
       <div class="docblock">
@@ -202,7 +200,7 @@ SPDX-License-Identifier: LGPL-2.1
           <dt class="arg-name"><code>uuid</code></dt>
           <dd class="arg-description">
             <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
-            <p>No description available.</p>
+            <p>The remote service <span class="caps">UUID</span>.&nbsp;.</p>
             <table>
             
             
@@ -217,6 +215,18 @@ SPDX-License-Identifier: LGPL-2.1
           </dd>
           
 
+          
+          <dt class="arg-name"><code>error</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Error.html" class="external"><code>GError **</code></a></p>
+            <p>The return location for <a href="https://docs.gtk.org/glib/error-reporting.html#rules-for-use-of-gerror">a recoverable error</a>.</p>
+            <table>
+              <tr><td>The argument can be <code>NULL</code>.</td></tr>
+              <tr><td>If the return location is not <code>NULL</code>, then you must initialize it to a <code>NULL</code> <code>GError*</code>.</td></tr>
+              <tr><td>The argument will be left initialized to <code>NULL</code> by the method if there are no errors.</td></tr>
+              <tr><td>In case of error, the argument will be set to a newly allocated <code>GError</code>; the caller will take ownership of the data, and be responsible for freeing it.</td></tr>
+            </table>
+          </dd>
           
         </dl>
       </div>
