@@ -109,15 +109,9 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Player.shuffle.html">shuffle</a>
   
-    <a class="method" href="method.Player._get_position.html">_get_position</a>
-  
     <a class="method" href="method.Player.get_meta.html">get_meta</a>
   
-    <a class="method" href="method.Player.try_proxy.html">try_proxy</a>
-  
     <a class="method" href="method.Player.get_bus_name.html">get_bus_name</a>
-  
-    <a class="method" href="method.Player.set_bus_name.html">set_bus_name</a>
   
     <a class="method" href="method.Player.get_available.html">get_available</a>
   
@@ -128,8 +122,6 @@ SPDX-License-Identifier: LGPL-2.1
     <a class="method" href="method.Player.get_can_set_fullscreen.html">get_can_set_fullscreen</a>
   
     <a class="method" href="method.Player.get_can_raise.html">get_can_raise</a>
-  
-    <a class="method" href="method.Player.get_has_track_list.html">get_has_track_list</a>
   
     <a class="method" href="method.Player.get_identity.html">get_identity</a>
   
@@ -223,8 +215,6 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property" href="property.Player.can-raise.html">can-raise</a>
   
-    <a class="property" href="property.Player.has-track-list.html">has-track-list</a>
-  
     <a class="property" href="property.Player.identity.html">identity</a>
   
     <a class="property" href="property.Player.entry.html">entry</a>
@@ -291,19 +281,6 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
-<div class="section">
-  <h5>Signals</h5>
-  <div class="links">
-  
-    <a class="signal" href="signal.Player.appeared.html">appeared</a>
-  
-    <a class="signal" href="signal.Player.closed.html">closed</a>
-  
-    <a class="signal" href="signal.Player.seeked.html">seeked</a>
-  
-  </div>
-</div>
-
 
 
   
@@ -346,7 +323,8 @@ SPDX-License-Identifier: LGPL-2.1
 }</pre></code>
 
         <div class="docblock">
-          <p>No description available.</p>
+          <p>Object which tracks players through their mpris dbus interface. The most simple way is to use <a href="class.Mpris.html"><code>AstalMprisMpris</code></a> which tracks 
+every player, but <a href="class.Player.html"><code>AstalMprisPlayer</code></a> can be constructed for a dedicated players&nbsp;too.</p>
         </div>
 
         <div class="docblock">
@@ -396,7 +374,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="ctor.Player.new.html">astal_mpris_player_new</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Construct a Player that tracks a dbus name. For example &#8220;org.mpris.MediaPlayer2.spotify&#8221;. The &#8220;org.mpris.MediaPlayer2.&#8221; 
+prefix can be leftout so simply &#8220;spotify&#8221; would mean the same. <code>AstalMprisPlayer:available</code> indicates whether the player 
+is actually running or&nbsp;not.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -421,7 +401,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.raise.html">astal_mpris_player_raise</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Brings the player&#8217;s user interface to the front using any appropriate mechanism available.
+The media player may be unable to control how its user interface is displayed, or it may not have a graphical user interface at all. In this 
+case, the <code>AstalMprisPlayer:can-raise</code> is <code>false</code> and this method does&nbsp;nothing.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -431,7 +413,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.quit.html">astal_mpris_player_quit</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Causes the media player to stop running.
+The media player may refuse to allow clients to shut it down. In this case, the <code>AstalMprisPlayer:can-quit</code> property is false 
+and this method does&nbsp;nothing.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -441,7 +425,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.toggle_fullscreen.html">astal_mpris_player_toggle_fullscreen</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Toggle <code>AstalMprisPlayer:fullscreen</code> state.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -451,7 +435,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.next.html">astal_mpris_player_next</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Skips to the next track in the tracklist.
+If there is no next track (and endless playback and track repeat are both off), stop playback. If [property@
+AstalMpris.Player:can_go_next] is <code>false</code> this method has no&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -461,7 +447,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.previous.html">astal_mpris_player_previous</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Skips to the previous track in the tracklist.
+If there is no previous track (and endless playback and track repeat are both off), stop playback. If [property@
+AstalMpris.Player:can_go_previous] is <code>false</code> this method has no&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -471,7 +459,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.pause.html">astal_mpris_player_pause</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Pauses playback.
+If playback is already paused, this has no effect. If <code>AstalMprisPlayer:can-pause</code> is <code>false</code> this method has no&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -481,7 +470,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.play_pause.html">astal_mpris_player_play_pause</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Pauses playback.
+If playback is already paused, resumes playback. If playback is stopped, starts&nbsp;playback.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -491,7 +481,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.stop.html">astal_mpris_player_stop</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Stops playback.
+If playback is already stopped, this has no effect. If <code>AstalMprisPlayer:can-control</code> is <code>false</code> this method has no&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -501,7 +492,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.play.html">astal_mpris_player_play</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Starts or resumes playback.
+If already playing, this has no effect. If paused, playback resumes from the current position. If <code>AstalMprisPlayer:can-play</code> 
+is <code>false</code> this method has no&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -511,7 +504,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.open_uri.html">astal_mpris_player_open_uri</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Uri scheme should be an element of <code>AstalMprisPlayer:supported-uri-schemas</code> and the mime-type should match one of the elements 
+of <code>AstalMprisPlayer:supported-mime-types</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -521,7 +515,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.loop.html">astal_mpris_player_loop</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Change <code>AstalMprisPlayer:loop-status</code> from none to track, from track to playlist, from playlist to&nbsp;none.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -531,17 +525,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.shuffle.html">astal_mpris_player_shuffle</a></h6>
           <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Player._get_position.html">_astal_mpris_player_get_position</a></h6>
-          <div class="docblock">
-            No description available.
+            <p>Toggle <code>AstalMprisPlayer:shuffle-status</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -551,17 +535,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Player.get_meta.html">astal_mpris_player_get_meta</a></h6>
           <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Player.try_proxy.html">astal_mpris_player_try_proxy</a></h6>
-          <div class="docblock">
-            No description available.
+            <p>Lookup a key from <code>AstalMprisPlayer:metadata</code>. This method is useful for languages that fail to introspect&nbsp;hashtables.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -570,16 +544,6 @@ SPDX-License-Identifier: LGPL-2.1
       
         <div class="">
           <h6><a href="method.Player.get_bus_name.html">astal_mpris_player_get_bus_name</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Player.set_bus_name.html">astal_mpris_player_set_bus_name</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -630,16 +594,6 @@ SPDX-License-Identifier: LGPL-2.1
       
         <div class="">
           <h6><a href="method.Player.get_can_raise.html">astal_mpris_player_get_can_raise</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Player.get_has_track_list.html">astal_mpris_player_get_has_track_list</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -1041,7 +995,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.available.html">AstalMpris.Player:available</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if <code>AstalMprisPlayer:bus-name</code> is available on&nbsp;dbus.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1051,7 +1005,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.can-quit.html">AstalMpris.Player:can-quit</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if <code>astal_mpris_player_quit()</code> has any&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1061,7 +1015,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.fullscreen.html">AstalMpris.Player:fullscreen</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if the player is occupying the fullscreen. This is typically used for videos. Use <code>astal_mpris_player_toggle_fullscreen()</code> 
+to toggle fullscreen&nbsp;state.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1071,7 +1026,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.can-set-fullscreen.html">AstalMpris.Player:can-set-fullscreen</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if <code>astal_mpris_player_toggle_fullscreen()</code> has any&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1081,17 +1036,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.can-raise.html">AstalMpris.Player:can-raise</a></h6>
           <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="property.Player.has-track-list.html">AstalMpris.Player:has-track-list</a></h6>
-          <div class="docblock">
-            No description available.
+            <p>Indicates if <code>astal_mpris_player_raise()</code> has any&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1101,7 +1046,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.identity.html">AstalMpris.Player:identity</a></h6>
           <div class="docblock">
-            No description available.
+            <p>A human friendly name to identify the&nbsp;player.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1111,7 +1056,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.entry.html">AstalMpris.Player:entry</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The base name of a .desktop&nbsp;file.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1121,7 +1066,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.supported-uri-schemas.html">AstalMpris.Player:supported-uri-schemas</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The <span class="caps">URI</span> schemes supported by the media player.
+This can be viewed as protocols supported by the player in almost all cases. Almost every media player will include support for the &#8220;file
+&#8221; scheme. Other common schemes are &#8220;http&#8221; and&nbsp;&#8220;rtsp&#8221;.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1131,7 +1078,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.supported-mime-types.html">AstalMpris.Player:supported-mime-types</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The mime-types supported by the&nbsp;player.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1141,7 +1088,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.loop-status.html">AstalMpris.Player:loop-status</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The current loop/repeat&nbsp;status.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1151,7 +1098,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.rate.html">AstalMpris.Player:rate</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The current playback&nbsp;rate.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1161,7 +1108,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.shuffle-status.html">AstalMpris.Player:shuffle-status</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The current shuffle&nbsp;status.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1171,7 +1118,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.volume.html">AstalMpris.Player:volume</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The current volume level between 0 and&nbsp;1.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1181,7 +1128,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.position.html">AstalMpris.Player:position</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The current position of the track in seconds. To get a progress percentage simply divide this with <code>AstalMprisPlayer:length</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1191,7 +1138,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.playback-status.html">AstalMpris.Player:playback-status</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The current playback&nbsp;status.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1201,7 +1148,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.minimum-rate.html">AstalMpris.Player:minimum-rate</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The minimum value which the <code>AstalMprisPlayer:rate</code> can&nbsp;take.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1211,7 +1158,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.maximum-rate.html">AstalMpris.Player:maximum-rate</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The maximum value which the <code>AstalMprisPlayer:rate</code> can&nbsp;take.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1221,7 +1168,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.can-go-next.html">AstalMpris.Player:can-go-next</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if invoking <code>astal_mpris_player_next()</code> has&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1231,7 +1178,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.can-go-previous.html">AstalMpris.Player:can-go-previous</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if invoking <code>astal_mpris_player_previous()</code> has&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1241,7 +1188,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.can-play.html">AstalMpris.Player:can-play</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if invoking <code>astal_mpris_player_play()</code> has&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1251,7 +1198,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.can-pause.html">AstalMpris.Player:can-pause</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if invoking <code>astal_mpris_player_pause()</code> has&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1261,7 +1208,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.can-seek.html">AstalMpris.Player:can-seek</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if setting <code>AstalMprisPlayer:position</code> has&nbsp;effect.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1271,7 +1218,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.can-control.html">AstalMpris.Player:can-control</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Indicates if the player can be controlled with methods such as <code>astal_mpris_player_play_pause()</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1281,7 +1228,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.metadata.html">AstalMpris.Player:metadata</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Metadata hashtable of this player. In languages that cannot introspect this use <code>astal_mpris_player_get_meta()</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1291,7 +1238,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.trackid.html">AstalMpris.Player:trackid</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Currently playing track&#8217;s&nbsp;id.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1301,7 +1248,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.length.html">AstalMpris.Player:length</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Length of the currently playing track in&nbsp;seconds.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1311,7 +1258,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.art-url.html">AstalMpris.Player:art-url</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The location of an image representing the track or album. You should always prefer to use <code>AstalMprisPlayer:cover-art</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1321,7 +1268,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.album.html">AstalMpris.Player:album</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Title of the currently playing&nbsp;album.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1331,7 +1278,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.album-artist.html">AstalMpris.Player:album-artist</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Artists of the currently playing&nbsp;album.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1341,7 +1288,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.artist.html">AstalMpris.Player:artist</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Artists of the currently playing&nbsp;track.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1351,7 +1298,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.lyrics.html">AstalMpris.Player:lyrics</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Lyrics of the currently playing&nbsp;track.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1361,7 +1308,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.title.html">AstalMpris.Player:title</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Title of the currently playing&nbsp;track.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1371,7 +1318,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.composer.html">AstalMpris.Player:composer</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Composers of the currently playing&nbsp;track.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1381,7 +1328,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.comments.html">AstalMpris.Player:comments</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Comments of the currently playing&nbsp;track.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1391,7 +1338,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Player.cover-art.html">AstalMpris.Player:cover-art</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Path of the cached <code>AstalMprisPlayer:art-url</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1417,40 +1364,6 @@ SPDX-License-Identifier: LGPL-2.1
         <a href="#signals" class="anchor"></a>
       </h4>
 
-      
-      <div class="docblock">
-      
-        <div class="">
-          <h6><a href="signal.Player.appeared.html">AstalMpris.Player::appeared</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="signal.Player.closed.html">AstalMpris.Player::closed</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="signal.Player.seeked.html">AstalMpris.Player::seeked</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-      </div>
       
 
       
@@ -1481,13 +1394,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
       <div class="docblock">
         <pre><code>struct AstalMprisPlayerClass {
-  void (* player_appeared) (
-    AstalMprisPlayer* self
-  );
-  void (* player_closed) (
-    AstalMprisPlayer* self
-  );
-  
+  /* no available fields */
 }</code></pre>
       </div>
 
@@ -1495,24 +1402,6 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <p>No description available.</p>
       </div>
 
-      
-      <div class="docblock">
-        <h6>Class members</h6>
-
-        <dl class="members">
-        
-          <dt><code>appeared: void (* player_appeared) (
-    AstalMprisPlayer* self
-  )</code></dt>
-          <dd><p>No description available.</p></dd>
-        
-          <dt><code>closed: void (* player_closed) (
-    AstalMprisPlayer* self
-  )</code></dt>
-          <dd><p>No description available.</p></dd>
-        
-        </dd>
-      </div>
       
     </div>
     
@@ -1552,8 +1441,6 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
 
       
-<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
-
 
       
 
