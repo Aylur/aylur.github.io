@@ -192,8 +192,6 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="signal" href="signal.Notification.resolved.html">resolved</a>
   
-    <a class="signal" href="signal.Notification.dismissed.html">dismissed</a>
-  
     <a class="signal" href="signal.Notification.invoked.html">invoked</a>
   
   </div>
@@ -345,8 +343,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Notification.dismiss.html">astal_notifd_notification_dismiss</a></h6>
           <div class="docblock">
-            <p>Dismiss this notification popup
-This method doesn&#8217;t have any functionality on its own, but should be handled by frontend implementation to hide notification&nbsp;popups.</p>
+            <p>Resolve this notification with <code>ASTAL_NOTIFD_CLOSED_REASON_DISMISSED_BY_USER</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -822,17 +819,6 @@ Can be invoked by calling <code>astal_notifd_notification_invoke()</code> with t
           <h6><a href="signal.Notification.resolved.html">AstalNotifd.Notification::resolved</a></h6>
           <div class="docblock">
             <p>Emitted when this this notification is&nbsp;resolved.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="signal.Notification.dismissed.html">AstalNotifd.Notification::dismissed</a></h6>
-          <div class="docblock">
-            <p>Emitted when the user dismisses this notification.
-See also: <function>astal_notifd_notification_dismiss</function>.</p>
           </div>
           <div class="docblock">
             <p></p>
