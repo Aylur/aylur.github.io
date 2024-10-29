@@ -981,7 +981,7 @@ of <code>AstalMprisPlayer:supported-mime-types</code>.</p>
         <div class="">
           <h6><a href="property.Player.bus-name.html">AstalMpris.Player:bus-name</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Full dbus namae of this&nbsp;player.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1390,7 +1390,13 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
       <div class="docblock">
         <pre><code>struct AstalMprisPlayerClass {
-  /* no available fields */
+  void (* player_appeared) (
+    AstalMprisPlayer* self
+  );
+  void (* player_closed) (
+    AstalMprisPlayer* self
+  );
+  
 }</code></pre>
       </div>
 
@@ -1398,6 +1404,24 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <p>No description available.</p>
       </div>
 
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>appeared: void (* player_appeared) (
+    AstalMprisPlayer* self
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>closed: void (* player_closed) (
+    AstalMprisPlayer* self
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        </dd>
+      </div>
       
     </div>
     
