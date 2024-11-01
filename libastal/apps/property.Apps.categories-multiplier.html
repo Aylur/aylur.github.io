@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalApps.Application:executable</title>
+  <title>AstalApps.Apps:categories-multiplier</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalApps.Application:executable"/>
-  <meta property="og:description" content="Reference for property AstalApps.Application:executable"/>
-  <meta name="twitter:title" content="AstalApps.Application:executable"/>
-  <meta name="twitter:description" content="Reference for property AstalApps.Application:executable"/>
+  <meta property="og:title" content="AstalApps.Apps:categories-multiplier"/>
+  <meta property="og:description" content="Reference for property AstalApps.Apps:categories-multiplier"/>
+  <meta name="twitter:title" content="AstalApps.Apps:categories-multiplier"/>
+  <meta name="twitter:description" content="Reference for property AstalApps.Apps:categories-multiplier"/>
 
 
   
@@ -60,32 +60,42 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a href="class.Application.html">Application</a>
+    <a href="class.Apps.html">Apps</a>
   </div>
 </div>
 <div class="section">
   <h5>Properties</h5>
   <div class="links">
   
-    <a class="property"href="property.Application.app.html">app</a>
+    <a class="property"href="property.Apps.show-hidden.html">show-hidden</a>
   
-    <a class="property"href="property.Application.frequency.html">frequency</a>
+    <a class="property"href="property.Apps.list.html">list</a>
   
-    <a class="property"href="property.Application.name.html">name</a>
+    <a class="property"href="property.Apps.min-score.html">min-score</a>
   
-    <a class="property"href="property.Application.entry.html">entry</a>
+    <a class="property"href="property.Apps.name-multiplier.html">name-multiplier</a>
   
-    <a class="property"href="property.Application.description.html">description</a>
+    <a class="property"href="property.Apps.entry-multiplier.html">entry-multiplier</a>
   
-    <a class="property"href="property.Application.wm-class.html">wm-class</a>
+    <a class="property"href="property.Apps.executable-multiplier.html">executable-multiplier</a>
   
-    <a class="property current"href="property.Application.executable.html">executable</a>
+    <a class="property"href="property.Apps.description-multiplier.html">description-multiplier</a>
   
-    <a class="property"href="property.Application.icon-name.html">icon-name</a>
+    <a class="property"href="property.Apps.keywords-multiplier.html">keywords-multiplier</a>
   
-    <a class="property"href="property.Application.keywords.html">keywords</a>
+    <a class="property current"href="property.Apps.categories-multiplier.html">categories-multiplier</a>
   
-    <a class="property"href="property.Application.categories.html">categories</a>
+    <a class="property"href="property.Apps.include-name.html">include-name</a>
+  
+    <a class="property"href="property.Apps.include-entry.html">include-entry</a>
+  
+    <a class="property"href="property.Apps.include-executable.html">include-executable</a>
+  
+    <a class="property"href="property.Apps.include-description.html">include-description</a>
+  
+    <a class="property"href="property.Apps.include-keywords.html">include-keywords</a>
+  
+    <a class="property"href="property.Apps.include-categories.html">include-categories</a>
   
   </div>
 </div>
@@ -101,7 +111,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Property</h3>
-    <h1><a href="index.html">AstalApps</a><span class="sep"></span><a href="class.Application.html">Application</a>:executable</h1>
+    <h1><a href="index.html">AstalApps</a><span class="sep"></span><a href="class.Apps.html">Apps</a>:categories-multiplier</h1>
   </header>
 
   <section>
@@ -115,7 +125,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <pre><code>property executable: utf8 [ read ]</code></pre>
+        <pre><code>property categories-multiplier: double [ read, write ]</code></pre>
       </div>
     </div>
 
@@ -127,13 +137,12 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p><code>Exec</code> field from the desktop file. Note that if you want to launch this Application you should use the [method@
-AstalApps.Application.launch]&nbsp;method.</p>
+        <p>Extra multiplier to apply when matching the categories of an application. Defaults to <code>0.5</code>.</p>
       </div>
 
       <div class="docblock">
         <p>
-          Type:<code>gchar*</code></p>
+          Type:<code>gdouble</code></p>
         
         
         
@@ -151,7 +160,7 @@ AstalApps.Application.launch]&nbsp;method.</p>
       <div class="docblock">
       <table>
         <tr><td>Readable</td><td><b>yes</b></td></tr>
-        <tr><td>Writable</td><td><b>no</b></td></tr>
+        <tr><td>Writable</td><td><b>yes</b></td></tr>
         <tr><td>Construct</td><td><b>no</b></td></tr>
         <tr><td>Construct only</td><td><b>no</b></td></tr>
       </table>

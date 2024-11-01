@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalApps.Application.set_app</title>
+  <title>AstalApps.Application.get_categories</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="AstalApps.Application.set_app"/>
-  <meta priority="og:description" content="Reference for AstalApps.Application.set_app"/>
-  <meta name="twitter:title" content="AstalApps.Application.set_app"/>
-  <meta name="twitter:description" content="Reference for AstalApps.Application.set_app"/>
+  <meta priority="og:title" content="AstalApps.Application.get_categories"/>
+  <meta priority="og:description" content="Reference for AstalApps.Application.get_categories"/>
+  <meta name="twitter:title" content="AstalApps.Application.get_categories"/>
+  <meta name="twitter:description" content="Reference for AstalApps.Application.get_categories"/>
 
 
   
@@ -77,7 +77,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Application.get_app.html">get_app</a>
   
-    <a class="method current" href="method.Application.set_app.html">set_app</a>
+    <a class="method" href="method.Application.set_app.html">set_app</a>
   
     <a class="method" href="method.Application.get_frequency.html">get_frequency</a>
   
@@ -97,7 +97,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Application.get_keywords.html">get_keywords</a>
   
-    <a class="method" href="method.Application.get_categories.html">get_categories</a>
+    <a class="method current" href="method.Application.get_categories.html">get_categories</a>
   
   </div>
 </div>
@@ -113,7 +113,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">AstalApps</a><span class="sep"></span><a href="class.Application.html">Application</a><span class="sep"></span>set_app</h1>
+    <h1><a href="index.html">AstalApps</a><span class="sep"></span><a href="class.Application.html">Application</a><span class="sep"></span>get_categories</h1>
   </header>
 
   <section>
@@ -129,10 +129,10 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
-<span class="n">astal_apps_application_set_app</span><span class="w"> </span><span class="p">(</span>
+        <pre><code><div class="highlight"><pre><span></span><span class="n">gchar</span><span class="o">**</span>
+<span class="n">astal_apps_application_get_categories</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">AstalAppsApplication</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
-<span class="w">  </span><span class="n">GDesktopAppInfo</span><span class="o">*</span><span class="w"> </span><span class="n">value</span>
+<span class="w">  </span><span class="n">gint</span><span class="o">*</span><span class="w"> </span><span class="n">result_length1</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -173,11 +173,12 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <dl class="arguments">
           
-          <dt class="arg-name"><code>value</code></dt>
+          <dt class="arg-name"><code>result_length1</code></dt>
           <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<code>GDesktopAppInfo*</code></p>
+            <p><em>Type:</em>&nbsp;<code>gint*</code></p>
             <p>No description available.</p>
             <table>
+            <tr><td title="direction: out">The argument will be set by the function.</td></tr>
             
             
             
@@ -185,7 +186,6 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             
-            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
             
             </table>
           </dd>
@@ -197,6 +197,32 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
     
 
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <div class="returns">
+          <div class="arg-description">
+            <p><em>Type:</em>&nbsp;An array of&nbsp;<code>gchar*</code></p>
+            <p>No description available.</p>
+          </div>
+          <div>
+            <table>
+            
+            
+            <tr><td>The length of the array is in the <code>result_length1</code> argument.</td></tr>
+            <tr><td title="transfer: full">The caller of the method takes ownership of the returned data, and is responsible for freeing it.</td></tr>
+            
+            <tr><td>Each element is a NUL terminated UTF-8 string.</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
     
 
   </section>
