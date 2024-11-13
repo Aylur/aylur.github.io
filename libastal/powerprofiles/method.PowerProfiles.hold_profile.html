@@ -71,8 +71,6 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.PowerProfiles.release_profile.html">release_profile</a>
   
-    <a class="method" href="method.PowerProfiles.to_json_string.html">to_json_string</a>
-  
     <a class="method" href="method.PowerProfiles.get_active_profile.html">get_active_profile</a>
   
     <a class="method" href="method.PowerProfiles.set_active_profile.html">set_active_profile</a>
@@ -84,8 +82,6 @@ SPDX-License-Identifier: LGPL-2.1
     <a class="method" href="method.PowerProfiles.get_active_profile_holds.html">get_active_profile_holds</a>
   
     <a class="method" href="method.PowerProfiles.get_performance_degraded.html">get_performance_degraded</a>
-  
-    <a class="method" href="method.PowerProfiles.get_performance_inhibited.html">get_performance_inhibited</a>
   
     <a class="method" href="method.PowerProfiles.get_profiles.html">get_profiles</a>
   
@@ -141,7 +137,11 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>No description available.</p>
+        <p>This forces the passed profile (either &#8216;power-saver&#8217; or &#8216;performance&#8217;) to be activated until either the caller 
+quits, <a href="method.PowerProfiles.release_profile.html"><code>astal_power_profiles_power_profiles_release_profile()</code></a> is called, or the [property@
+AstalPowerProfiles.PowerProfiles:active_profile] is changed by the user. When conflicting profiles are requested to be held, the &#8216;power-saver
+&#8216; profile will be activated in preference to the &#8216;performance&#8217; profile. Those holds will be automatically cancelled if the user 
+manually switches to another profile, and the <a href="signal.PowerProfiles.profile-released.html"><code>AstalPowerProfilesPowerProfiles::profile-released</code></a> signal will be&nbsp;emitted.</p>
       </div>
 
       <div class="docblock">
