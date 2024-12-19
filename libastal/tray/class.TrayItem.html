@@ -82,8 +82,6 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.TrayItem.scroll.html">scroll</a>
   
-    <a class="method" href="method.TrayItem.create_menu.html">create_menu</a>
-  
     <a class="method" href="method.TrayItem.to_json_string.html">to_json_string</a>
   
     <a class="method" href="method.TrayItem.get_title.html">get_title</a>
@@ -109,6 +107,10 @@ SPDX-License-Identifier: LGPL-2.1
     <a class="method" href="method.TrayItem.get_gicon.html">get_gicon</a>
   
     <a class="method" href="method.TrayItem.get_item_id.html">get_item_id</a>
+  
+    <a class="method" href="method.TrayItem.get_menu_model.html">get_menu_model</a>
+  
+    <a class="method" href="method.TrayItem.get_action_group.html">get_action_group</a>
   
   </div>
 </div>
@@ -143,6 +145,10 @@ SPDX-License-Identifier: LGPL-2.1
     <a class="property" href="property.TrayItem.gicon.html">gicon</a>
   
     <a class="property" href="property.TrayItem.item-id.html">item-id</a>
+  
+    <a class="property" href="property.TrayItem.menu-model.html">menu-model</a>
+  
+    <a class="property" href="property.TrayItem.action-group.html">action-group</a>
   
   </div>
 </div>
@@ -285,16 +291,6 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.TrayItem.create_menu.html">astal_tray_tray_item_create_menu</a></h6>
-          <div class="docblock">
-            <p>Creates a new Gtk Menu for this&nbsp;item.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
           <h6><a href="method.TrayItem.to_json_string.html">astal_tray_tray_item_to_json_string</a></h6>
           <div class="docblock">
             No description available.
@@ -424,6 +420,26 @@ SPDX-License-Identifier: LGPL-2.1
           </div>
         </div>
       
+        <div class="">
+          <h6><a href="method.TrayItem.get_menu_model.html">astal_tray_tray_item_get_menu_model</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TrayItem.get_action_group.html">astal_tray_tray_item_get_action_group</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
       </div>
 
       
@@ -527,8 +543,8 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.TrayItem.icon-theme-path.html">AstalTray.TrayItem:icon-theme-path</a></h6>
           <div class="docblock">
-            <p>The icon theme path, where to look for the <code>AstalTrayTrayItem:icon-name</code>.
-It is recommended to use the <code>AstalTrayTrayItem:gicon</code> property, which does the icon lookups for&nbsp;you.</p>
+            <p>The icon theme path, where to look for the <code>AstalTrayTrayItem:icon-name</code>. It is recommended to use the [property@
+AstalTray.TrayItem:gicon] property, which does the icon lookups for&nbsp;you.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -539,8 +555,7 @@ It is recommended to use the <code>AstalTrayTrayItem:gicon</code> property, whic
           <h6><a href="property.TrayItem.icon-name.html">AstalTray.TrayItem:icon-name</a></h6>
           <div class="docblock">
             <p>The name of the icon. This should be looked up in the <code>AstalTrayTrayItem:icon-theme-path</code> if set or in the currently used icon 
-theme otherwise.
-It is recommended to use the <code>AstalTrayTrayItem:gicon</code> property, which does the icon lookups for&nbsp;you.</p>
+theme otherwise. It is recommended to use the <code>AstalTrayTrayItem:gicon</code> property, which does the icon lookups for&nbsp;you.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -550,8 +565,7 @@ It is recommended to use the <code>AstalTrayTrayItem:gicon</code> property, whic
         <div class="">
           <h6><a href="property.TrayItem.icon-pixbuf.html">AstalTray.TrayItem:icon-pixbuf</a></h6>
           <div class="docblock">
-            <p>A pixbuf containing the icon.
-It is recommended to use the <code>AstalTrayTrayItem:gicon</code> property, which does the icon lookups for&nbsp;you.</p>
+            <p>A pixbuf containing the icon. It is recommended to use the <code>AstalTrayTrayItem:gicon</code> property, which does the icon lookups for&nbsp;you.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -574,6 +588,26 @@ icon. This property unifies the <code>AstalTrayTrayItem:icon-name</code>, <code>
           <h6><a href="property.TrayItem.item-id.html">AstalTray.TrayItem:item-id</a></h6>
           <div class="docblock">
             <p>The id of the item used to uniquely identify the TrayItems by this&nbsp;lib.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TrayItem.menu-model.html">AstalTray.TrayItem:menu-model</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TrayItem.action-group.html">AstalTray.TrayItem:action-group</a></h6>
+          <div class="docblock">
+            No description available.
           </div>
           <div class="docblock">
             <p></p>
