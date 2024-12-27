@@ -146,6 +146,8 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="signal" href="signal.Process.stderr.html">stderr</a>
   
+    <a class="signal" href="signal.Process.exit.html">exit</a>
+  
   </div>
 </div>
 
@@ -241,8 +243,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="ctor.Process.new.html">astal_io_process_new</a></h6>
           <div class="docblock">
-            <p>Start a new subprocess with the given command.
-The first element of the vector is executed with the remaining elements as the argument&nbsp;list.</p>
+            <p>See <code>astal_io_process_subprocessv()</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -379,7 +380,7 @@ The first element of the vector is executed with the remaining elements as the a
         <div class="">
           <h6><a href="method.Process.write.html">astal_io_process_write</a></h6>
           <div class="docblock">
-            <p>Write a line to the subprocess&#8217; stdin&nbsp;synchronously.</p>
+            <p>Write a line to the subprocess&#8217; stdin synchronously. hat is the&nbsp;issue.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -481,7 +482,7 @@ The first element of the vector is executed with the remaining elements as the a
         <div class="">
           <h6><a href="signal.Process.stdout.html">AstalIO.Process::stdout</a></h6>
           <div class="docblock">
-            <p>When the underlying subprocess writes to its stdout this signal is emitted with that&nbsp;line.</p>
+            <p>When the underlying subprocess writes to its&nbsp;stdout.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -491,7 +492,17 @@ The first element of the vector is executed with the remaining elements as the a
         <div class="">
           <h6><a href="signal.Process.stderr.html">AstalIO.Process::stderr</a></h6>
           <div class="docblock">
-            <p>When the underlying subprocess writes to its stderr this signal is emitted with that&nbsp;line.</p>
+            <p>When the underlying subprocess writes to its&nbsp;stderr.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Process.exit.html">AstalIO.Process::exit</a></h6>
+          <div class="docblock">
+            <p>When the underlying subprocess exits or is&nbsp;terminated.</p>
           </div>
           <div class="docblock">
             <p></p>
