@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Astal.Window.get_anchor</title>
+  <title>Astal.Window.get_current_monitor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="Astal.Window.get_anchor"/>
-  <meta priority="og:description" content="Reference for Astal.Window.get_anchor"/>
-  <meta name="twitter:title" content="Astal.Window.get_anchor"/>
-  <meta name="twitter:description" content="Reference for Astal.Window.get_anchor"/>
+  <meta priority="og:title" content="Astal.Window.get_current_monitor"/>
+  <meta priority="og:description" content="Reference for Astal.Window.get_current_monitor"/>
+  <meta name="twitter:title" content="Astal.Window.get_current_monitor"/>
+  <meta name="twitter:description" content="Reference for Astal.Window.get_current_monitor"/>
 
 
   
@@ -51,9 +51,9 @@ SPDX-License-Identifier: LGPL-2.1
       
       <div class="section namespace">
         <h3><a href="index.html">Astal</a></h3>
-        <p>API Version: 4.0</p>
+        <p>API Version: 3.0</p>
         
-        <p>Library Version: 4.0.0</p>
+        <p>Library Version: 3.0.0</p>
         
       </div>
       
@@ -67,13 +67,17 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Methods</h5>
   <div class="links">
   
-    <a class="method" href="method.Window.get_current_monitor.html">get_current_monitor</a>
+    <a class="method current" href="method.Window.get_current_monitor.html">get_current_monitor</a>
+  
+    <a class="method" href="method.Window.get_inhibit.html">get_inhibit</a>
+  
+    <a class="method" href="method.Window.set_inhibit.html">set_inhibit</a>
   
     <a class="method" href="method.Window.get_namespace.html">get_namespace</a>
   
     <a class="method" href="method.Window.set_namespace.html">set_namespace</a>
   
-    <a class="method current" href="method.Window.get_anchor.html">get_anchor</a>
+    <a class="method" href="method.Window.get_anchor.html">get_anchor</a>
   
     <a class="method" href="method.Window.set_anchor.html">set_anchor</a>
   
@@ -129,7 +133,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">Astal</a><span class="sep"></span><a href="class.Window.html">Window</a><span class="sep"></span>get_anchor</h1>
+    <h1><a href="index.html">Astal</a><span class="sep"></span><a href="class.Window.html">Window</a><span class="sep"></span>get_current_monitor</h1>
   </header>
 
   <section>
@@ -145,8 +149,8 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="n">AstalWindowAnchor</span>
-<span class="n">astal_window_get_anchor</span><span class="w"> </span><span class="p">(</span>
+        <pre><code><div class="highlight"><pre><span></span><span class="n">GdkMonitor</span><span class="o">*</span>
+<span class="n">astal_window_get_current_monitor</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">AstalWindow</span><span class="o">*</span><span class="w"> </span><span class="n">self</span>
 <span class="p">)</span>
 </pre></div>
@@ -162,7 +166,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>No description available.</p>
+        <p>Get the current <a href="javascript:void(0)" data-namespace="Gdk" data-link="class.Monitor.html" class="external"><code>GdkMonitor</code></a> this window resides&nbsp;in.</p>
       </div>
 
       <div class="docblock">
@@ -190,7 +194,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <div class="returns">
           <div class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="flags.WindowAnchor.html"><code>AstalWindowAnchor</code></a></p>
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="class.Monitor.html" data-namespace="Gdk" class="external"><code>GdkMonitor</code></a></p>
             <p>No description available.</p>
           </div>
           <div>
@@ -198,7 +202,7 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             
-            
+            <tr><td title="transfer: full">The caller of the method takes ownership of the returned data, and is responsible for freeing it.</td></tr>
             
             
             </table>
