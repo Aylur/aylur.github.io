@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalBluetooth.Device:blocked</title>
+  <title>AstalBluetooth.Device:battery-percentage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalBluetooth.Device:blocked"/>
-  <meta property="og:description" content="Reference for property AstalBluetooth.Device:blocked"/>
-  <meta name="twitter:title" content="AstalBluetooth.Device:blocked"/>
-  <meta name="twitter:description" content="Reference for property AstalBluetooth.Device:blocked"/>
+  <meta property="og:title" content="AstalBluetooth.Device:battery-percentage"/>
+  <meta property="og:description" content="Reference for property AstalBluetooth.Device:battery-percentage"/>
+  <meta name="twitter:title" content="AstalBluetooth.Device:battery-percentage"/>
+  <meta name="twitter:description" content="Reference for property AstalBluetooth.Device:battery-percentage"/>
 
 
   
@@ -93,11 +93,11 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property"href="property.Device.connecting.html">connecting</a>
   
-    <a class="property current"href="property.Device.blocked.html">blocked</a>
+    <a class="property"href="property.Device.blocked.html">blocked</a>
   
     <a class="property"href="property.Device.trusted.html">trusted</a>
   
-    <a class="property"href="property.Device.battery-percentage.html">battery-percentage</a>
+    <a class="property current"href="property.Device.battery-percentage.html">battery-percentage</a>
   
     <a class="property"href="property.Device.alias.html">alias</a>
   
@@ -115,7 +115,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Property</h3>
-    <h1><a href="index.html">AstalBluetooth</a><span class="sep"></span><a href="class.Device.html">Device</a>:blocked</h1>
+    <h1><a href="index.html">AstalBluetooth</a><span class="sep"></span><a href="class.Device.html">Device</a>:battery-percentage</h1>
   </header>
 
   <section>
@@ -129,7 +129,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <pre><code>property blocked: gboolean [ read, write ]</code></pre>
+        <pre><code>property battery-percentage: double [ read ]</code></pre>
       </div>
     </div>
 
@@ -141,12 +141,12 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>If set to <code>true</code> any incoming connections from the device will be immediately&nbsp;rejected.</p>
+        <p>The percentage of battery left on the device if it has one, else&nbsp;-1.</p>
       </div>
 
       <div class="docblock">
         <p>
-          Type:<code>gboolean</code></p>
+          Type:<code>gdouble</code></p>
         
         
         
@@ -164,7 +164,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       <table>
         <tr><td>Readable</td><td><b>yes</b></td></tr>
-        <tr><td>Writable</td><td><b>yes</b></td></tr>
+        <tr><td>Writable</td><td><b>no</b></td></tr>
         <tr><td>Construct</td><td><b>no</b></td></tr>
         <tr><td>Construct only</td><td><b>no</b></td></tr>
       </table>
