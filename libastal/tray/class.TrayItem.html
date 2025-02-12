@@ -609,7 +609,8 @@ icon. This property unifies the <code>AstalTrayTrayItem:icon-name</code>, <code>
         <div class="">
           <h6><a href="property.TrayItem.menu-model.html">AstalTray.TrayItem:menu-model</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The MenuModel describing the menu for this TrayItem to be used with a MenuButton or PopoverMenu. The actions for this menu are defined in 
+<code>AstalTrayTrayItem:action-group</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -619,7 +620,9 @@ icon. This property unifies the <code>AstalTrayTrayItem:icon-name</code>, <code>
         <div class="">
           <h6><a href="property.TrayItem.action-group.html">AstalTray.TrayItem:action-group</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The ActionGroup containing the actions for the menu. All actions have the <code>dbusmenu</code> prefix and are setup to work with the [property@
+AstalTray.TrayItem:menu-model]. Make sure to insert this action group into a parent widget of the menu, eg the MenuButton for which the MenuModel for 
+this TrayItem is&nbsp;set.</p>
           </div>
           <div class="docblock">
             <p></p>
