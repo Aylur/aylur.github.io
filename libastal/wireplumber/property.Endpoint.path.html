@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalWp.Endpoint:id</title>
+  <title>AstalWp.Endpoint:path</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalWp.Endpoint:id"/>
-  <meta property="og:description" content="Reference for property AstalWp.Endpoint:id"/>
-  <meta name="twitter:title" content="AstalWp.Endpoint:id"/>
-  <meta name="twitter:description" content="Reference for property AstalWp.Endpoint:id"/>
+  <meta property="og:title" content="AstalWp.Endpoint:path"/>
+  <meta property="og:description" content="Reference for property AstalWp.Endpoint:path"/>
+  <meta name="twitter:title" content="AstalWp.Endpoint:path"/>
+  <meta name="twitter:description" content="Reference for property AstalWp.Endpoint:path"/>
 
 
   
@@ -71,7 +71,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property"href="property.Endpoint.icon.html">icon</a>
   
-    <a class="property current"href="property.Endpoint.id.html">id</a>
+    <a class="property"href="property.Endpoint.id.html">id</a>
   
     <a class="property"href="property.Endpoint.is-default.html">is-default</a>
   
@@ -83,7 +83,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property"href="property.Endpoint.name.html">name</a>
   
-    <a class="property"href="property.Endpoint.path.html">path</a>
+    <a class="property current"href="property.Endpoint.path.html">path</a>
   
     <a class="property"href="property.Endpoint.serial.html">serial</a>
   
@@ -105,7 +105,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Property</h3>
-    <h1><a href="index.html">AstalWp</a><span class="sep"></span><a href="class.Endpoint.html">Endpoint</a>:id</h1>
+    <h1><a href="index.html">AstalWp</a><span class="sep"></span><a href="class.Endpoint.html">Endpoint</a>:path</h1>
   </header>
 
   <section>
@@ -119,7 +119,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <pre><code>property id: guint [ read ]</code></pre>
+        <pre><code>property path: utf8 [ read ]</code></pre>
       </div>
     </div>
 
@@ -131,12 +131,12 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>The pipewire id of this&nbsp;endpoint.</p>
+        <p>The object path of this&nbsp;endpoint.</p>
       </div>
 
       <div class="docblock">
         <p>
-          Type:<code>guint</code></p>
+          Type:<code>gchar*</code></p>
         
         
         
@@ -146,9 +146,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <table>
         
-          <tr><td>Default value</td><td>0</td></tr>
+          <tr><td>Default value</td><td>NULL</td></tr>
         
-          <tr><td>Getter method</td><td><a href="method.Endpoint.get_id.html"><code>astal_wp_endpoint_get_id()</code></a></td></tr>
+          <tr><td>Getter method</td><td><a href="method.Endpoint.get_path.html"><code>astal_wp_endpoint_get_path()</code></a></td></tr>
         
         </table>
       </div>
