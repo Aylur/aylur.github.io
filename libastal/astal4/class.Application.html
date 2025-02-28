@@ -789,7 +789,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <pre><code>struct AstalApplicationClass {
   void (* request) (
     AstalApplication* self,
-    const gchar* msg,
+    const gchar* request,
     GSocketConnection* conn
   );
   
@@ -808,7 +808,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         
           <dt><code>request: void (* request) (
     AstalApplication* self,
-    const gchar* msg,
+    const gchar* request,
     GSocketConnection* conn
   )</code></dt>
           <dd><p>No description available.</p></dd>

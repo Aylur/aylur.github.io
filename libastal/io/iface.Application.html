@@ -164,7 +164,7 @@ SPDX-License-Identifier: LGPL-2.1
         <pre><code>interface AstalIO.Application : GObject.Object</code></pre>
 
         <div class="docblock">
-          <p>This interface is used as a placeholder for the Astal Application class. It is not meant to be used by&nbsp;consumers.</p>
+          <p>This interface is used internally in Astal3 and Astal4, not meant for public&nbsp;usage.</p>
         </div>
 
         <div class="docblock">
@@ -340,7 +340,7 @@ SPDX-License-Identifier: LGPL-2.1
   );
   void (* request) (
     AstalIOApplication* self,
-    const gchar* msg,
+    const gchar* request,
     GSocketConnection* conn,
     GError** error
   );
@@ -414,7 +414,7 @@ SPDX-License-Identifier: LGPL-2.1
           <td style="vertical-align:top"><code>request</code></td>
           <td style="vertical-align:top"><pre><code>void (* request) (
     AstalIOApplication* self,
-    const gchar* msg,
+    const gchar* request,
     GSocketConnection* conn,
     GError** error
   )</code></pre></td>

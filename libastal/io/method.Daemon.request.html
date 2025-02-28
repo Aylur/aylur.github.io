@@ -102,7 +102,7 @@ SPDX-License-Identifier: LGPL-2.1
         <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
 <span class="n">astal_io_daemon_request</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">AstalIODaemon</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">msg</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
 <span class="w">  </span><span class="n">GSocketConnection</span><span class="o">*</span><span class="w"> </span><span class="n">conn</span>
 <span class="p">)</span>
 </pre></div>
@@ -144,10 +144,10 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <dl class="arguments">
           
-          <dt class="arg-name"><code>msg</code></dt>
+          <dt class="arg-name"><code>request</code></dt>
           <dd class="arg-description">
             <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
-            <p>Body of the message&nbsp;.</p>
+            <p>Body of the request&nbsp;.</p>
             <table>
             
             
