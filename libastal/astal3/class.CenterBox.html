@@ -162,7 +162,7 @@ SPDX-License-Identifier: LGPL-2.1
         </h4>
 
         <pre><code>class Astal.CenterBox : Gtk.Box
-{
+  implements Gtk.Buildable {
   /* No available fields */
 }</pre></code>
 
@@ -219,6 +219,23 @@ SPDX-License-Identifier: LGPL-2.1
 
     
 
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a class="external" href="javascript:void(0)" data-link="iface.Buildable.html" data-namespace="Gtk">GtkBuildable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
     
 
     
@@ -443,6 +460,51 @@ number of pixels to place between children of <code>box</code>.</p>
         
       
 
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="iface.Buildable.html" data-namespace="Gtk">GtkBuildable</a> (10)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Buildable.add_child.html">gtk_buildable_add_child</a></h6>
+            <div class="docblock">
+              <p>Adds a child to <code>buildable</code>. <code>type</code> is an optional string
+describing how the child should be&nbsp;added.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Buildable.construct_child.html">gtk_buildable_construct_child</a></h6>
+            <div class="docblock">
+              <p>Constructs a child of <code>buildable</code> with the name <code>name</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Buildable.custom_finished.html">gtk_buildable_custom_finished</a></h6>
+            <div class="docblock">
+              <p>This is similar to <code>gtk_buildable_parser_finished()</code> but is
+called once for each custom tag handled by the <code>buildable</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Buildable.custom_tag_end.html">gtk_buildable_custom_tag_end</a></h6>
+            <div class="docblock">
+              <p>This is called at the end of each custom element handled by
+the&nbsp;buildable.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Buildable.custom_tag_start.html">gtk_buildable_custom_tag_start</a></h6>
+            <div class="docblock">
+              <p>This is called for each unknown element under <code>&lt;child&gt;</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Buildable.get_internal_child.html">gtk_buildable_get_internal_child</a></h6>
+            <div class="docblock">
+              <p>Get the internal child called <code>childname</code> of the <code>buildable</code> object.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Buildable.get_name.html">gtk_buildable_get_name</a></h6>
+            <div class="docblock">
+              <p>Gets the name of the <code>buildable</code> object.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Buildable.parser_finished.html">gtk_buildable_parser_finished</a></h6>
+            <div class="docblock">
+              <p>Called when the builder finishes the parsing of a
+[GtkBuilder <span class="caps">UI</span> definition][<span class="caps">BUILDER</span>-<span class="caps">UI</span>].
+Note that this will be called once for each time
+<code>gtk_builder_add_from_file()</code> or <code>gtk_builder_add_from_string()</code>
+is called on a&nbsp;builder.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Buildable.set_buildable_property.html">gtk_buildable_set_buildable_property</a></h6>
+            <div class="docblock">
+              <p>Sets the property name <code>name</code> to <code>value</code> on the <code>buildable</code> object.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gtk" data-link="method.Buildable.set_name.html">gtk_buildable_set_name</a></h6>
+            <div class="docblock">
+              <p>Sets the name of the <code>buildable</code> object.</p>
+            </div>
+          </div>
+        </div>
+        
       
     </div>
     
@@ -675,6 +737,8 @@ Also see&nbsp;gtk_tooltip_set_markup().</p>
         
       
 
+      
+        
       
 
     </div>
@@ -1069,6 +1133,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
 
       
+        
+      
 
     </div>
     
@@ -1113,6 +1179,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
       <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
       
+      
+      <li class="toc-list-item"><a href="#implements"><span class="link-text">Implements</span></a></li>
       
       
 <li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
