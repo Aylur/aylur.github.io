@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalTray.TrayItem:title</title>
+  <title>AstalTray.TrayItem:menu-path</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalTray.TrayItem:title"/>
-  <meta property="og:description" content="Reference for property AstalTray.TrayItem:title"/>
-  <meta name="twitter:title" content="AstalTray.TrayItem:title"/>
-  <meta name="twitter:description" content="Reference for property AstalTray.TrayItem:title"/>
+  <meta property="og:title" content="AstalTray.TrayItem:menu-path"/>
+  <meta property="og:description" content="Reference for property AstalTray.TrayItem:menu-path"/>
+  <meta name="twitter:title" content="AstalTray.TrayItem:menu-path"/>
+  <meta name="twitter:description" content="Reference for property AstalTray.TrayItem:menu-path"/>
 
 
   
@@ -67,7 +67,7 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Properties</h5>
   <div class="links">
   
-    <a class="property current"href="property.TrayItem.title.html">title</a>
+    <a class="property"href="property.TrayItem.title.html">title</a>
   
     <a class="property"href="property.TrayItem.category.html">category</a>
   
@@ -91,7 +91,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property"href="property.TrayItem.item-id.html">item-id</a>
   
-    <a class="property"href="property.TrayItem.menu-path.html">menu-path</a>
+    <a class="property current"href="property.TrayItem.menu-path.html">menu-path</a>
   
     <a class="property"href="property.TrayItem.menu-model.html">menu-model</a>
   
@@ -111,7 +111,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Property</h3>
-    <h1><a href="index.html">AstalTray</a><span class="sep"></span><a href="class.TrayItem.html">TrayItem</a>:title</h1>
+    <h1><a href="index.html">AstalTray</a><span class="sep"></span><a href="class.TrayItem.html">TrayItem</a>:menu-path</h1>
   </header>
 
   <section>
@@ -125,7 +125,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <pre><code>property title: utf8 [ read, write ]</code></pre>
+        <pre><code>property menu-path: GLib.ObjectPath [ read, write ]</code></pre>
       </div>
     </div>
 
@@ -137,12 +137,12 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>The Title of the&nbsp;TrayItem.</p>
+        <p>The object path to the&nbsp;dbusmenu.</p>
       </div>
 
       <div class="docblock">
         <p>
-          Type:<code>gchar*</code></p>
+          Type:<code>char*</code></p>
         
         
         

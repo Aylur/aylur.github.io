@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalTray.TrayItem.get_status</title>
+  <title>AstalTray.TrayItem.get_menu_path</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="AstalTray.TrayItem.get_status"/>
-  <meta priority="og:description" content="Reference for AstalTray.TrayItem.get_status"/>
-  <meta name="twitter:title" content="AstalTray.TrayItem.get_status"/>
-  <meta name="twitter:description" content="Reference for AstalTray.TrayItem.get_status"/>
+  <meta priority="og:title" content="AstalTray.TrayItem.get_menu_path"/>
+  <meta priority="og:description" content="Reference for AstalTray.TrayItem.get_menu_path"/>
+  <meta name="twitter:title" content="AstalTray.TrayItem.get_menu_path"/>
+  <meta name="twitter:description" content="Reference for AstalTray.TrayItem.get_menu_path"/>
 
 
   
@@ -81,7 +81,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.TrayItem.get_category.html">get_category</a>
   
-    <a class="method current" href="method.TrayItem.get_status.html">get_status</a>
+    <a class="method" href="method.TrayItem.get_status.html">get_status</a>
   
     <a class="method" href="method.TrayItem.get_tooltip.html">get_tooltip</a>
   
@@ -101,7 +101,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.TrayItem.get_item_id.html">get_item_id</a>
   
-    <a class="method" href="method.TrayItem.get_menu_path.html">get_menu_path</a>
+    <a class="method current" href="method.TrayItem.get_menu_path.html">get_menu_path</a>
   
     <a class="method" href="method.TrayItem.get_menu_model.html">get_menu_model</a>
   
@@ -121,7 +121,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">AstalTray</a><span class="sep"></span><a href="class.TrayItem.html">TrayItem</a><span class="sep"></span>get_status</h1>
+    <h1><a href="index.html">AstalTray</a><span class="sep"></span><a href="class.TrayItem.html">TrayItem</a><span class="sep"></span>get_menu_path</h1>
   </header>
 
   <section>
@@ -137,8 +137,8 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="n">AstalTrayStatus</span>
-<span class="n">astal_tray_tray_item_get_status</span><span class="w"> </span><span class="p">(</span>
+        <pre><code><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span>
+<span class="n">astal_tray_tray_item_get_menu_path</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">AstalTrayTrayItem</span><span class="o">*</span><span class="w"> </span><span class="n">self</span>
 <span class="p">)</span>
 </pre></div>
@@ -182,7 +182,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <div class="returns">
           <div class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="enum.Status.html"><code>AstalTrayStatus</code></a></p>
+            <p><em>Type:</em>&nbsp;<code>const char*</code></p>
             <p>No description available.</p>
           </div>
           <div>
@@ -190,7 +190,7 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             
-            
+            <tr><td title="transfer: none">The returned data is owned by the instance.</td></tr>
             
             
             </table>
