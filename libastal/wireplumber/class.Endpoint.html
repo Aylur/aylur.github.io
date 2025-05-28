@@ -76,37 +76,23 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Instance methods</h5>
   <div class="links">
   
-    <a class="method" href="method.Endpoint.get_description.html">get_description</a>
+    <a class="method" href="method.Endpoint.get_device.html">get_device</a>
   
-    <a class="method" href="method.Endpoint.get_icon.html">get_icon</a>
-  
-    <a class="method" href="method.Endpoint.get_id.html">get_id</a>
+    <a class="method" href="method.Endpoint.get_device_id.html">get_device_id</a>
   
     <a class="method" href="method.Endpoint.get_is_default.html">get_is_default</a>
   
-    <a class="method" href="method.Endpoint.get_lock_channels.html">get_lock_channels</a>
+    <a class="method" href="method.Endpoint.get_route.html">get_route</a>
   
-    <a class="method" href="method.Endpoint.get_media_class.html">get_media_class</a>
+    <a class="method" href="method.Endpoint.get_route_id.html">get_route_id</a>
   
-    <a class="method" href="method.Endpoint.get_mute.html">get_mute</a>
-  
-    <a class="method" href="method.Endpoint.get_name.html">get_name</a>
-  
-    <a class="method" href="method.Endpoint.get_path.html">get_path</a>
-  
-    <a class="method" href="method.Endpoint.get_serial.html">get_serial</a>
-  
-    <a class="method" href="method.Endpoint.get_volume.html">get_volume</a>
-  
-    <a class="method" href="method.Endpoint.get_volume_icon.html">get_volume_icon</a>
+    <a class="method" href="method.Endpoint.get_routes.html">get_routes</a>
   
     <a class="method" href="method.Endpoint.set_is_default.html">set_is_default</a>
   
-    <a class="method" href="method.Endpoint.set_lock_channels.html">set_lock_channels</a>
+    <a class="method" href="method.Endpoint.set_route.html">set_route</a>
   
-    <a class="method" href="method.Endpoint.set_mute.html">set_mute</a>
-  
-    <a class="method" href="method.Endpoint.set_volume.html">set_volume</a>
+    <a class="method" href="method.Endpoint.set_route_id.html">set_route_id</a>
   
   </div>
 </div>
@@ -118,29 +104,21 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Properties</h5>
   <div class="links">
   
-    <a class="property" href="property.Endpoint.description.html">description</a>
+    <a class="property" href="property.Endpoint.default-plugin.html">default-plugin</a>
   
-    <a class="property" href="property.Endpoint.icon.html">icon</a>
+    <a class="property" href="property.Endpoint.device.html">device</a>
   
-    <a class="property" href="property.Endpoint.id.html">id</a>
+    <a class="property" href="property.Endpoint.device-id.html">device-id</a>
   
     <a class="property" href="property.Endpoint.is-default.html">is-default</a>
   
-    <a class="property" href="property.Endpoint.lock-channels.html">lock-channels</a>
+    <a class="property" href="property.Endpoint.is-default-node.html">is-default-node</a>
   
-    <a class="property" href="property.Endpoint.media-class.html">media-class</a>
+    <a class="property" href="property.Endpoint.route.html">route</a>
   
-    <a class="property" href="property.Endpoint.mute.html">mute</a>
+    <a class="property" href="property.Endpoint.route-id.html">route-id</a>
   
-    <a class="property" href="property.Endpoint.name.html">name</a>
-  
-    <a class="property" href="property.Endpoint.path.html">path</a>
-  
-    <a class="property" href="property.Endpoint.serial.html">serial</a>
-  
-    <a class="property" href="property.Endpoint.volume.html">volume</a>
-  
-    <a class="property" href="property.Endpoint.volume-icon.html">volume-icon</a>
+    <a class="property" href="property.Endpoint.routes.html">routes</a>
   
   </div>
 </div>
@@ -184,7 +162,7 @@ SPDX-License-Identifier: LGPL-2.1
           
         </h4>
 
-        <pre><code>final class AstalWp.Endpoint : GObject.Object
+        <pre><code>final class AstalWp.Endpoint : AstalWp.Node
 {
   /* No available fields */
 }</pre></code>
@@ -216,6 +194,10 @@ SPDX-License-Identifier: LGPL-2.1
         <ul>
         
           
+          <li class="class"><a href="class.Node.html" title="Node">AstalWpNode</a></li>
+          
+        
+          
           <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
           
         
@@ -242,9 +224,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="method.Endpoint.get_description.html">astal_wp_endpoint_get_description</a></h6>
+          <h6><a href="method.Endpoint.get_device.html">astal_wp_endpoint_get_device</a></h6>
           <div class="docblock">
-            <p>Gets the description of this&nbsp;endpoint.</p>
+            <p>Gets the device associated with this&nbsp;endpoint.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -252,19 +234,9 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.Endpoint.get_icon.html">astal_wp_endpoint_get_icon</a></h6>
+          <h6><a href="method.Endpoint.get_device_id.html">astal_wp_endpoint_get_device_id</a></h6>
           <div class="docblock">
-            <p>Gets the icon for this&nbsp;endpoint.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Endpoint.get_id.html">astal_wp_endpoint_get_id</a></h6>
-          <div class="docblock">
-            <p>Gets the id of the&nbsp;endpoint.</p>
+            <p>Gets the id of the device associated with this&nbsp;endpoint.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -274,7 +246,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Endpoint.get_is_default.html">astal_wp_endpoint_get_is_default</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Is this endpoint configured as the&nbsp;default.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -282,9 +254,9 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.Endpoint.get_lock_channels.html">astal_wp_endpoint_get_lock_channels</a></h6>
+          <h6><a href="method.Endpoint.get_route.html">astal_wp_endpoint_get_route</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Gets the currently active <code>AstalWpRoute</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -292,9 +264,9 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.Endpoint.get_media_class.html">astal_wp_endpoint_get_media_class</a></h6>
+          <h6><a href="method.Endpoint.get_route_id.html">astal_wp_endpoint_get_route_id</a></h6>
           <div class="docblock">
-            <p>Gets the media class of the&nbsp;endpoint.</p>
+            <p>Gets the id of the currently active&nbsp;route.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -302,59 +274,11 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.Endpoint.get_mute.html">astal_wp_endpoint_get_mute</a></h6>
+          <h6><a href="method.Endpoint.get_routes.html">astal_wp_endpoint_get_routes</a></h6>
           <div class="docblock">
-            <p>Gets the mute status of the&nbsp;endpoint.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Endpoint.get_name.html">astal_wp_endpoint_get_name</a></h6>
-          <div class="docblock">
-            <p>Gets the name of this&nbsp;endpoint.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Endpoint.get_path.html">astal_wp_endpoint_get_path</a></h6>
-          <div class="docblock">
-            <p>Gets the object path of this&nbsp;endpoint.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Endpoint.get_serial.html">astal_wp_endpoint_get_serial</a></h6>
-          <div class="docblock">
-            <p>Gets the serial number of this&nbsp;endpoint.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Endpoint.get_volume.html">astal_wp_endpoint_get_volume</a></h6>
-          <div class="docblock">
-            <p>Gets the&nbsp;volume.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Endpoint.get_volume_icon.html">astal_wp_endpoint_get_volume_icon</a></h6>
-          <div class="docblock">
-            No description available.
+            <p>Gets a list of available routes.
+This list is filtered and contains only routes, that are actually available. You can get a full
+list of routes from <code>AstalWpDevice:routes</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -364,7 +288,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Endpoint.set_is_default.html">astal_wp_endpoint_set_is_default</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Sets this endpoint as the&nbsp;default.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -372,9 +296,9 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.Endpoint.set_lock_channels.html">astal_wp_endpoint_set_lock_channels</a></h6>
+          <h6><a href="method.Endpoint.set_route.html">astal_wp_endpoint_set_route</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Sets the currently active <code>AstalWpRoute</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -382,20 +306,9 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.Endpoint.set_mute.html">astal_wp_endpoint_set_mute</a></h6>
+          <h6><a href="method.Endpoint.set_route_id.html">astal_wp_endpoint_set_route_id</a></h6>
           <div class="docblock">
-            <p>Sets the mute status for the&nbsp;endpoint.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Endpoint.set_volume.html">astal_wp_endpoint_set_volume</a></h6>
-          <div class="docblock">
-            <p>Sets the volume level for this endpoint. The volume is clamped to be between
-0 and&nbsp;1.5.</p>
+            <p>Sets the currently active route&nbsp;id.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -404,6 +317,149 @@ SPDX-License-Identifier: LGPL-2.1
       
       </div>
 
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.Node.html">AstalWpNode</a> (19)</h5><div class="docblock">
+          
+            <h6><a href="method.Node.get_channels.html">astal_wp_node_get_channels</a></h6><div class="docblock">
+              <p>Gets the list representing the per channel&nbsp;volumes.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_description.html">astal_wp_node_get_description</a></h6><div class="docblock">
+              <p>Gets the description of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_icon.html">astal_wp_node_get_icon</a></h6><div class="docblock">
+              <p>Gets the icon for this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_id.html">astal_wp_node_get_id</a></h6><div class="docblock">
+              <p>Gets the id of the&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_lock_channels.html">astal_wp_node_get_lock_channels</a></h6><div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_media_class.html">astal_wp_node_get_media_class</a></h6><div class="docblock">
+              <p>Gets the media class of the&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_mute.html">astal_wp_node_get_mute</a></h6><div class="docblock">
+              <p>Gets the mute status of the&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_name.html">astal_wp_node_get_name</a></h6><div class="docblock">
+              <p>Gets the name of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_path.html">astal_wp_node_get_path</a></h6><div class="docblock">
+              <p>Gets the object path of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_pw_property.html">astal_wp_node_get_pw_property</a></h6><div class="docblock">
+              <p>Gets the pipewire property with the give key. You should use the GObject properties of this node
+whereever possible, as you can get notified on changes, which is not the case&nbsp;here.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_serial.html">astal_wp_node_get_serial</a></h6><div class="docblock">
+              <p>Gets the serial number of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_state.html">astal_wp_node_get_state</a></h6><div class="docblock">
+              <p>Gets the current state of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_volume.html">astal_wp_node_get_volume</a></h6><div class="docblock">
+              <p>Gets the&nbsp;volume.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.get_volume_icon.html">astal_wp_node_get_volume_icon</a></h6><div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.metadata_changed.html">astal_wp_node_metadata_changed</a></h6><div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.params_changed.html">astal_wp_node_params_changed</a></h6><div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.set_lock_channels.html">astal_wp_node_set_lock_channels</a></h6><div class="docblock">
+              <p>Lock the channel volumes together. If set, all channels will always have the same&nbsp;volume.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.set_mute.html">astal_wp_node_set_mute</a></h6><div class="docblock">
+              <p>Sets the mute status for the&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Node.set_volume.html">astal_wp_node_set_volume</a></h6><div class="docblock">
+              <p>Sets the volume level for this node. The volume is clamped to be between
+0 and&nbsp;1.5.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
       
         
         <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
@@ -433,9 +489,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="property.Endpoint.description.html">AstalWp.Endpoint:description</a></h6>
+          <h6><a href="property.Endpoint.default-plugin.html">AstalWp.Endpoint:default-plugin</a></h6>
           <div class="docblock">
-            <p>The description of this&nbsp;endpoint.</p>
+            No description available.
           </div>
           <div class="docblock">
             <p></p>
@@ -443,10 +499,9 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="property.Endpoint.icon.html">AstalWp.Endpoint:icon</a></h6>
+          <h6><a href="property.Endpoint.device.html">AstalWp.Endpoint:device</a></h6>
           <div class="docblock">
-            <p>The icon of this endpoint. Note that endpoints do not have icons associated with them in
-pipewire, so the icon of the associated device is used&nbsp;instead.</p>
+            <p>The the device associated with this&nbsp;endpoint.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -454,9 +509,9 @@ pipewire, so the icon of the associated device is used&nbsp;instead.</p>
         </div>
       
         <div class="">
-          <h6><a href="property.Endpoint.id.html">AstalWp.Endpoint:id</a></h6>
+          <h6><a href="property.Endpoint.device-id.html">AstalWp.Endpoint:device-id</a></h6>
           <div class="docblock">
-            <p>The pipewire id of this&nbsp;endpoint.</p>
+            <p>The id of the device associated with this&nbsp;endpoint.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -466,7 +521,7 @@ pipewire, so the icon of the associated device is used&nbsp;instead.</p>
         <div class="">
           <h6><a href="property.Endpoint.is-default.html">AstalWp.Endpoint:is-default</a></h6>
           <div class="docblock">
-            <p>Whether this endpoint is the default one used for this media-class. Note that setting this
+            <p>Whether this node is the default one used for this media-class. Note that setting this
 property to false has no&nbsp;effect.</p>
           </div>
           <div class="docblock">
@@ -475,9 +530,9 @@ property to false has no&nbsp;effect.</p>
         </div>
       
         <div class="">
-          <h6><a href="property.Endpoint.lock-channels.html">AstalWp.Endpoint:lock-channels</a></h6>
+          <h6><a href="property.Endpoint.is-default-node.html">AstalWp.Endpoint:is-default-node</a></h6>
           <div class="docblock">
-            <p>Whether to lock the channels together or&nbsp;not.</p>
+            No description available.
           </div>
           <div class="docblock">
             <p></p>
@@ -485,9 +540,9 @@ property to false has no&nbsp;effect.</p>
         </div>
       
         <div class="">
-          <h6><a href="property.Endpoint.media-class.html">AstalWp.Endpoint:media-class</a></h6>
+          <h6><a href="property.Endpoint.route.html">AstalWp.Endpoint:route</a></h6>
           <div class="docblock">
-            <p>The media class of this&nbsp;endpoint.</p>
+            No description available.
           </div>
           <div class="docblock">
             <p></p>
@@ -495,9 +550,9 @@ property to false has no&nbsp;effect.</p>
         </div>
       
         <div class="">
-          <h6><a href="property.Endpoint.mute.html">AstalWp.Endpoint:mute</a></h6>
+          <h6><a href="property.Endpoint.route-id.html">AstalWp.Endpoint:route-id</a></h6>
           <div class="docblock">
-            <p>The mute state of this&nbsp;endpoint.</p>
+            No description available.
           </div>
           <div class="docblock">
             <p></p>
@@ -505,49 +560,9 @@ property to false has no&nbsp;effect.</p>
         </div>
       
         <div class="">
-          <h6><a href="property.Endpoint.name.html">AstalWp.Endpoint:name</a></h6>
+          <h6><a href="property.Endpoint.routes.html">AstalWp.Endpoint:routes</a></h6>
           <div class="docblock">
-            <p>The name of this&nbsp;endpoint.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="property.Endpoint.path.html">AstalWp.Endpoint:path</a></h6>
-          <div class="docblock">
-            <p>The object path of this&nbsp;endpoint.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="property.Endpoint.serial.html">AstalWp.Endpoint:serial</a></h6>
-          <div class="docblock">
-            <p>The object serial of this&nbsp;endpoint.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="property.Endpoint.volume.html">AstalWp.Endpoint:volume</a></h6>
-          <div class="docblock">
-            <p>The volume of this&nbsp;endpoint.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="property.Endpoint.volume-icon.html">AstalWp.Endpoint:volume-icon</a></h6>
-          <div class="docblock">
-            <p>The volume icon of this&nbsp;endpoint.</p>
+            <p>A list of available&nbsp;routes.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -557,6 +572,127 @@ property to false has no&nbsp;effect.</p>
       </div>
       
 
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-properties">
+          <h5 style="display:block;">Properties inherited from <a href="class.Node.html">AstalWpNode</a> (16)</h5><div class="docblock">
+          
+            <h6><a href="property.Node.channels.html">AstalWp.Node:channels</a></h6><div class="docblock">
+              <p>A list of per channel&nbsp;volumes.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.description.html">AstalWp.Node:description</a></h6><div class="docblock">
+              <p>The description of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.icon.html">AstalWp.Node:icon</a></h6><div class="docblock">
+              <p>The icon of this node. Note that nodes do not have icons associated with them in
+pipewire, so the icon of the associated device is used&nbsp;instead.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.id.html">AstalWp.Node:id</a></h6><div class="docblock">
+              <p>The pipewire id of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.lock-channels.html">AstalWp.Node:lock-channels</a></h6><div class="docblock">
+              <p>Whether to lock the channels together or&nbsp;not.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.media-class.html">AstalWp.Node:media-class</a></h6><div class="docblock">
+              <p>The media class of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.mixer-plugin.html">AstalWp.Node:mixer-plugin</a></h6><div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.mute.html">AstalWp.Node:mute</a></h6><div class="docblock">
+              <p>The mute state of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.name.html">AstalWp.Node:name</a></h6><div class="docblock">
+              <p>The name of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.node.html">AstalWp.Node:node</a></h6><div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.path.html">AstalWp.Node:path</a></h6><div class="docblock">
+              <p>The object path of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.serial.html">AstalWp.Node:serial</a></h6><div class="docblock">
+              <p>The object serial of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.state.html">AstalWp.Node:state</a></h6><div class="docblock">
+              <p>The current state of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.volume.html">AstalWp.Node:volume</a></h6><div class="docblock">
+              <p>The volume of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.volume-icon.html">AstalWp.Node:volume-icon</a></h6><div class="docblock">
+              <p>The volume icon of this&nbsp;node.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.Node.wp.html">AstalWp.Node:wp</a></h6><div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
       
         
       
@@ -575,6 +711,8 @@ property to false has no&nbsp;effect.</p>
 
       
 
+      
+        
       
         
         <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
@@ -603,7 +741,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
       <div class="docblock">
         <pre><code>struct AstalWpEndpointClass {
-  GObjectClass parent_class;
+  AstalWpNodeClass parent_class;
   
 }</code></pre>
       </div>
@@ -618,7 +756,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
         <dl class="members">
         
-          <dt><code>parent_class: GObjectClass</code></dt>
+          <dt><code>parent_class: AstalWpNodeClass</code></dt>
           <dd><p>No description available.</p></dd>
         
         </dd>

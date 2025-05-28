@@ -76,21 +76,37 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Instance methods</h5>
   <div class="links">
   
-    <a class="method" href="method.Device.get_active_profile.html">get_active_profile</a>
+    <a class="method" href="method.Device.get_active_profile_id.html">get_active_profile_id</a>
   
     <a class="method" href="method.Device.get_description.html">get_description</a>
   
     <a class="method" href="method.Device.get_device_type.html">get_device_type</a>
   
+    <a class="method" href="method.Device.get_form_factor.html">get_form_factor</a>
+  
     <a class="method" href="method.Device.get_icon.html">get_icon</a>
   
     <a class="method" href="method.Device.get_id.html">get_id</a>
+  
+    <a class="method" href="method.Device.get_input_route_id.html">get_input_route_id</a>
+  
+    <a class="method" href="method.Device.get_input_routes.html">get_input_routes</a>
+  
+    <a class="method" href="method.Device.get_output_route_id.html">get_output_route_id</a>
+  
+    <a class="method" href="method.Device.get_output_routes.html">get_output_routes</a>
   
     <a class="method" href="method.Device.get_profile.html">get_profile</a>
   
     <a class="method" href="method.Device.get_profiles.html">get_profiles</a>
   
-    <a class="method" href="method.Device.set_active_profile.html">set_active_profile</a>
+    <a class="method" href="method.Device.get_route.html">get_route</a>
+  
+    <a class="method" href="method.Device.get_routes.html">get_routes</a>
+  
+    <a class="method" href="method.Device.set_active_profile_id.html">set_active_profile_id</a>
+  
+    <a class="method" href="method.Device.set_route.html">set_route</a>
   
   </div>
 </div>
@@ -106,13 +122,27 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property" href="property.Device.description.html">description</a>
   
+    <a class="property" href="property.Device.device.html">device</a>
+  
     <a class="property" href="property.Device.device-type.html">device-type</a>
+  
+    <a class="property" href="property.Device.form-factor.html">form-factor</a>
   
     <a class="property" href="property.Device.icon.html">icon</a>
   
     <a class="property" href="property.Device.id.html">id</a>
   
+    <a class="property" href="property.Device.input-route-id.html">input-route-id</a>
+  
+    <a class="property" href="property.Device.input-routes.html">input-routes</a>
+  
+    <a class="property" href="property.Device.output-route-id.html">output-route-id</a>
+  
+    <a class="property" href="property.Device.output-routes.html">output-routes</a>
+  
     <a class="property" href="property.Device.profiles.html">profiles</a>
+  
+    <a class="property" href="property.Device.routes.html">routes</a>
   
   </div>
 </div>
@@ -214,7 +244,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="method.Device.get_active_profile.html">astal_wp_device_get_active_profile</a></h6>
+          <h6><a href="method.Device.get_active_profile_id.html">astal_wp_device_get_active_profile_id</a></h6>
           <div class="docblock">
             <p>Gets the currently active profile of this&nbsp;device.</p>
           </div>
@@ -244,6 +274,16 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
+          <h6><a href="method.Device.get_form_factor.html">astal_wp_device_get_form_factor</a></h6>
+          <div class="docblock">
+            <p>Gets the form factor of this&nbsp;device.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
           <h6><a href="method.Device.get_icon.html">astal_wp_device_get_icon</a></h6>
           <div class="docblock">
             <p>Gets the icon of this&nbsp;device.</p>
@@ -257,6 +297,46 @@ SPDX-License-Identifier: LGPL-2.1
           <h6><a href="method.Device.get_id.html">astal_wp_device_get_id</a></h6>
           <div class="docblock">
             <p>Gets the id of this&nbsp;device.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Device.get_input_route_id.html">astal_wp_device_get_input_route_id</a></h6>
+          <div class="docblock">
+            <p>Gets the currently active input route of this&nbsp;device.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Device.get_input_routes.html">astal_wp_device_get_input_routes</a></h6>
+          <div class="docblock">
+            <p>Gets a GList containing the input&nbsp;routes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Device.get_output_route_id.html">astal_wp_device_get_output_route_id</a></h6>
+          <div class="docblock">
+            <p>Gets the currently active output route of this&nbsp;device.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Device.get_output_routes.html">astal_wp_device_get_output_routes</a></h6>
+          <div class="docblock">
+            <p>Gets a GList containing the output&nbsp;routes.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -284,9 +364,39 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.Device.set_active_profile.html">astal_wp_device_set_active_profile</a></h6>
+          <h6><a href="method.Device.get_route.html">astal_wp_device_get_route</a></h6>
+          <div class="docblock">
+            <p>Gets the route with the given&nbsp;id.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Device.get_routes.html">astal_wp_device_get_routes</a></h6>
+          <div class="docblock">
+            <p>Gets a GList containing the&nbsp;routes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Device.set_active_profile_id.html">astal_wp_device_set_active_profile_id</a></h6>
           <div class="docblock">
             <p>Sets the profile for this&nbsp;device.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Device.set_route.html">astal_wp_device_set_route</a></h6>
+          <div class="docblock">
+            <p>Sets the route for this device. You should use the <code>astal_wp_endpoint_set_route()</code> instead.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -336,7 +446,17 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Device.description.html">AstalWp.Device:description</a></h6>
           <div class="docblock">
-            <p>The description of this&nbsp;device.</p>
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Device.device.html">AstalWp.Device:device</a></h6>
+          <div class="docblock">
+            No description available.
           </div>
           <div class="docblock">
             <p></p>
@@ -347,6 +467,16 @@ SPDX-License-Identifier: LGPL-2.1
           <h6><a href="property.Device.device-type.html">AstalWp.Device:device-type</a></h6>
           <div class="docblock">
             <p>The type of this&nbsp;device.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Device.form-factor.html">AstalWp.Device:form-factor</a></h6>
+          <div class="docblock">
+            <p>The from factor of this&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -374,9 +504,59 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
+          <h6><a href="property.Device.input-route-id.html">AstalWp.Device:input-route-id</a></h6>
+          <div class="docblock">
+            <p>The id of the currently active input&nbsp;route.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Device.input-routes.html">AstalWp.Device:input-routes</a></h6>
+          <div class="docblock">
+            <p>A list of available input&nbsp;routes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Device.output-route-id.html">AstalWp.Device:output-route-id</a></h6>
+          <div class="docblock">
+            <p>The id of the currently active output&nbsp;route.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Device.output-routes.html">AstalWp.Device:output-routes</a></h6>
+          <div class="docblock">
+            <p>A list of available output&nbsp;routes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
           <h6><a href="property.Device.profiles.html">AstalWp.Device:profiles</a></h6>
           <div class="docblock">
             <p>A list of available&nbsp;profiles.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Device.routes.html">AstalWp.Device:routes</a></h6>
+          <div class="docblock">
+            <p>A list of available&nbsp;routes.</p>
           </div>
           <div class="docblock">
             <p></p>

@@ -93,11 +93,11 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Audio.get_devices.html">get_devices</a>
   
-    <a class="method" href="method.Audio.get_endpoint.html">get_endpoint</a>
-  
     <a class="method" href="method.Audio.get_microphone.html">get_microphone</a>
   
     <a class="method" href="method.Audio.get_microphones.html">get_microphones</a>
+  
+    <a class="method" href="method.Audio.get_node.html">get_node</a>
   
     <a class="method" href="method.Audio.get_recorder.html">get_recorder</a>
   
@@ -262,7 +262,7 @@ endpoints and&nbsp;devices.</p>
         <div class="">
           <h6><a href="ctor.Audio.new.html">astal_wp_audio_new</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Creates a new Audio object. You should use <code>AstalWpWp:audio</code> instead.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -325,16 +325,6 @@ endpoints and&nbsp;devices.</p>
         </div>
       
         <div class="">
-          <h6><a href="method.Audio.get_endpoint.html">astal_wp_audio_get_endpoint</a></h6>
-          <div class="docblock">
-            <p>The endpoint with the given&nbsp;id.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
           <h6><a href="method.Audio.get_microphone.html">astal_wp_audio_get_microphone</a></h6>
           <div class="docblock">
             <p>Gets the microphone with the given&nbsp;id.</p>
@@ -348,6 +338,16 @@ endpoints and&nbsp;devices.</p>
           <h6><a href="method.Audio.get_microphones.html">astal_wp_audio_get_microphones</a></h6>
           <div class="docblock">
             <p>A GList containing the&nbsp;microphones.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Audio.get_node.html">astal_wp_audio_get_node</a></h6>
+          <div class="docblock">
+            <p>The node with the given&nbsp;id.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -487,7 +487,7 @@ endpoints and&nbsp;devices.</p>
         <div class="">
           <h6><a href="property.Audio.recorders.html">AstalWp.Audio:recorders</a></h6>
           <div class="docblock">
-            <p>A list of AstalWpEndpoint&nbsp;objects.</p>
+            <p>A list of AstalWpStream&nbsp;objects.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -507,7 +507,7 @@ endpoints and&nbsp;devices.</p>
         <div class="">
           <h6><a href="property.Audio.streams.html">AstalWp.Audio:streams</a></h6>
           <div class="docblock">
-            <p>A list of AstalWpEndpoint&nbsp;objects.</p>
+            <p>A list of AstalWpStream&nbsp;objects.</p>
           </div>
           <div class="docblock">
             <p></p>

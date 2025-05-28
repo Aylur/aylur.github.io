@@ -95,9 +95,11 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Wp.get_devices.html">get_devices</a>
   
-    <a class="method" href="method.Wp.get_endpoint.html">get_endpoint</a>
+    <a class="method" href="method.Wp.get_node.html">get_node</a>
   
-    <a class="method" href="method.Wp.get_endpoints.html">get_endpoints</a>
+    <a class="method" href="method.Wp.get_node_by_serial.html">get_node_by_serial</a>
+  
+    <a class="method" href="method.Wp.get_nodes.html">get_nodes</a>
   
     <a class="method" href="method.Wp.get_scale.html">get_scale</a>
   
@@ -123,7 +125,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property" href="property.Wp.devices.html">devices</a>
   
-    <a class="property" href="property.Wp.endpoints.html">endpoints</a>
+    <a class="property" href="property.Wp.nodes.html">nodes</a>
   
     <a class="property" href="property.Wp.scale.html">scale</a>
   
@@ -143,9 +145,11 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="signal" href="signal.Wp.device-removed.html">device-removed</a>
   
-    <a class="signal" href="signal.Wp.endpoint-added.html">endpoint-added</a>
+    <a class="signal" href="signal.Wp.node-added.html">node-added</a>
   
-    <a class="signal" href="signal.Wp.endpoint-removed.html">endpoint-removed</a>
+    <a class="signal" href="signal.Wp.node-removed.html">node-removed</a>
+  
+    <a class="signal" href="signal.Wp.ready.html">ready</a>
   
   </div>
 </div>
@@ -316,9 +320,9 @@ the <a href="class.Audio.html"><code>AstalWpAudio</code></a> or <a href="class.V
         </div>
       
         <div class="">
-          <h6><a href="method.Wp.get_endpoint.html">astal_wp_wp_get_endpoint</a></h6>
+          <h6><a href="method.Wp.get_node.html">astal_wp_wp_get_node</a></h6>
           <div class="docblock">
-            <p>The endpoint with the given&nbsp;id.</p>
+            <p>The node with the given&nbsp;id.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -326,9 +330,19 @@ the <a href="class.Audio.html"><code>AstalWpAudio</code></a> or <a href="class.V
         </div>
       
         <div class="">
-          <h6><a href="method.Wp.get_endpoints.html">astal_wp_wp_get_endpoints</a></h6>
+          <h6><a href="method.Wp.get_node_by_serial.html">astal_wp_wp_get_node_by_serial</a></h6>
           <div class="docblock">
-            <p>A GList containing all&nbsp;endpoints.</p>
+            <p>Finds the AstalWpNode with the give&nbsp;serial.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Wp.get_nodes.html">astal_wp_wp_get_nodes</a></h6>
+          <div class="docblock">
+            <p>A GList containing all&nbsp;nodes.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -436,9 +450,9 @@ the <a href="class.Audio.html"><code>AstalWpAudio</code></a> or <a href="class.V
         </div>
       
         <div class="">
-          <h6><a href="property.Wp.endpoints.html">AstalWp.Wp:endpoints</a></h6>
+          <h6><a href="property.Wp.nodes.html">AstalWp.Wp:nodes</a></h6>
           <div class="docblock">
-            <p>A list of <code>AstalWpEndpoint</code> objects.</p>
+            No description available.
           </div>
           <div class="docblock">
             <p></p>
@@ -508,7 +522,7 @@ the <a href="class.Audio.html"><code>AstalWpAudio</code></a> or <a href="class.V
         </div>
       
         <div class="">
-          <h6><a href="signal.Wp.endpoint-added.html">AstalWp.Wp::endpoint-added</a></h6>
+          <h6><a href="signal.Wp.node-added.html">AstalWp.Wp::node-added</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -518,7 +532,17 @@ the <a href="class.Audio.html"><code>AstalWpAudio</code></a> or <a href="class.V
         </div>
       
         <div class="">
-          <h6><a href="signal.Wp.endpoint-removed.html">AstalWp.Wp::endpoint-removed</a></h6>
+          <h6><a href="signal.Wp.node-removed.html">AstalWp.Wp::node-removed</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Wp.ready.html">AstalWp.Wp::ready</a></h6>
           <div class="docblock">
             No description available.
           </div>
