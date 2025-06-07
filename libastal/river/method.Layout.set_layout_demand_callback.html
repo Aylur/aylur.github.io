@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalRiver.River.run_command_async</title>
+  <title>AstalRiver.Layout.set_layout_demand_callback</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="AstalRiver.River.run_command_async"/>
-  <meta priority="og:description" content="Reference for AstalRiver.River.run_command_async"/>
-  <meta name="twitter:title" content="AstalRiver.River.run_command_async"/>
-  <meta name="twitter:description" content="Reference for AstalRiver.River.run_command_async"/>
+  <meta priority="og:title" content="AstalRiver.Layout.set_layout_demand_callback"/>
+  <meta priority="og:description" content="Reference for AstalRiver.Layout.set_layout_demand_callback"/>
+  <meta name="twitter:title" content="AstalRiver.Layout.set_layout_demand_callback"/>
+  <meta name="twitter:description" content="Reference for AstalRiver.Layout.set_layout_demand_callback"/>
 
 
   
@@ -60,26 +60,16 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a href="class.River.html">River</a>
+    <a href="class.Layout.html">Layout</a>
   </div>
 </div>
 <div class="section">
   <h5>Methods</h5>
   <div class="links">
   
-    <a class="method" href="method.River.get_focused_output.html">get_focused_output</a>
+    <a class="method" href="method.Layout.get_namespace.html">get_namespace</a>
   
-    <a class="method" href="method.River.get_focused_view.html">get_focused_view</a>
-  
-    <a class="method" href="method.River.get_mode.html">get_mode</a>
-  
-    <a class="method" href="method.River.get_output.html">get_output</a>
-  
-    <a class="method" href="method.River.get_outputs.html">get_outputs</a>
-  
-    <a class="method" href="method.River.new_layout.html">new_layout</a>
-  
-    <a class="method current" href="method.River.run_command_async.html">run_command_async</a>
+    <a class="method current" href="method.Layout.set_layout_demand_callback.html">set_layout_demand_callback</a>
   
   </div>
 </div>
@@ -95,7 +85,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">AstalRiver</a><span class="sep"></span><a href="class.River.html">River</a><span class="sep"></span>run_command_async</h1>
+    <h1><a href="index.html">AstalRiver</a><span class="sep"></span><a href="class.Layout.html">Layout</a><span class="sep"></span>set_layout_demand_callback</h1>
   </header>
 
   <section>
@@ -112,11 +102,11 @@ SPDX-License-Identifier: LGPL-2.1
 
       <div class="docblock c-decl">
         <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
-<span class="n">astal_river_river_run_command_async</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="n">AstalRiverRiver</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
-<span class="w">  </span><span class="n">gint</span><span class="w"> </span><span class="n">length</span><span class="p">,</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">**</span><span class="w"> </span><span class="n">cmd</span><span class="p">,</span>
-<span class="w">  </span><span class="n">AstalRiverCommandCallback</span><span class="w"> </span><span class="n">callback</span>
+<span class="n">astal_river_layout_set_layout_demand_callback</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">AstalRiverLayout</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
+<span class="w">  </span><span class="n">AstalRiverLayoutDemandCallback</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">user_data</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GDestroyNotify</span><span class="w"> </span><span class="n">destroy_notify</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -131,7 +121,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>Sends a given command to the compositor and calls the callback after it was&nbsp;executed.</p>
+        <p>Sets the callback to be called when a layout demand is&nbsp;made.</p>
       </div>
 
       <div class="docblock">
@@ -157,47 +147,47 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <dl class="arguments">
           
-          <dt class="arg-name"><code>length</code></dt>
-          <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<code>gint</code></p>
-            <p>The length of the cmd&nbsp;array.</p>
-            <table>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            </table>
-          </dd>
-          
-          <dt class="arg-name"><code>cmd</code></dt>
-          <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;An array of&nbsp;<code>gchar*</code></p>
-            <p>The command to&nbsp;execute.</p>
-            <table>
-            
-            
-            
-            
-            
-            
-            <tr><td>The length of the array is specified in the <code>length</code> argument.</td></tr>
-            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
-            <tr><td>Each element is a NUL terminated UTF-8 string.</td></tr>
-            </table>
-          </dd>
-          
           <dt class="arg-name"><code>callback</code></dt>
           <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="callback.CommandCallback.html"><code>AstalRiverCommandCallback</code></a></p>
-            <p>The callback to&nbsp;invoke.</p>
+            <p><em>Type:</em>&nbsp;<a href="callback.LayoutDemandCallback.html"><code>AstalRiverLayoutDemandCallback</code></a></p>
+            <p>The callback to be called when a layout demand is&nbsp;made.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>user_data</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gpointer</code></p>
+            <p>User data to be passed to the&nbsp;callback.</p>
             <table>
             
             <tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>destroy_notify</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="callback.DestroyNotify.html" data-namespace="GLib" class="external"><code>GDestroyNotify</code></a></p>
+            <p>A function to destroy the user data when it is no longer&nbsp;needed.</p>
+            <table>
+            
+            
             
             
             
