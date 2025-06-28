@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalNetwork.AccessPoint.get_flags</title>
+  <title>AstalNetwork.AccessPoint.activate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="AstalNetwork.AccessPoint.get_flags"/>
-  <meta priority="og:description" content="Reference for AstalNetwork.AccessPoint.get_flags"/>
-  <meta name="twitter:title" content="AstalNetwork.AccessPoint.get_flags"/>
-  <meta name="twitter:description" content="Reference for AstalNetwork.AccessPoint.get_flags"/>
+  <meta priority="og:title" content="AstalNetwork.AccessPoint.activate"/>
+  <meta priority="og:description" content="Reference for AstalNetwork.AccessPoint.activate"/>
+  <meta name="twitter:title" content="AstalNetwork.AccessPoint.activate"/>
+  <meta name="twitter:description" content="Reference for AstalNetwork.AccessPoint.activate"/>
 
 
   
@@ -71,7 +71,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.AccessPoint.get_path.html">get_path</a>
   
-    <a class="method" href="method.AccessPoint.activate.html">activate</a>
+    <a class="method current" href="method.AccessPoint.activate.html">activate</a>
   
     <a class="method" href="method.AccessPoint.activate_finish.html">activate_finish</a>
   
@@ -91,7 +91,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.AccessPoint.get_mode.html">get_mode</a>
   
-    <a class="method current" href="method.AccessPoint.get_flags.html">get_flags</a>
+    <a class="method" href="method.AccessPoint.get_flags.html">get_flags</a>
   
     <a class="method" href="method.AccessPoint.get_rsn_flags.html">get_rsn_flags</a>
   
@@ -115,7 +115,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">AstalNetwork</a><span class="sep"></span><a href="class.AccessPoint.html">AccessPoint</a><span class="sep"></span>get_flags</h1>
+    <h1><a href="index.html">AstalNetwork</a><span class="sep"></span><a href="class.AccessPoint.html">AccessPoint</a><span class="sep"></span>activate</h1>
   </header>
 
   <section>
@@ -131,9 +131,12 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="n">NM80211ApFlags</span>
-<span class="n">astal_network_access_point_get_flags</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="n">AstalNetworkAccessPoint</span><span class="o">*</span><span class="w"> </span><span class="n">self</span>
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">astal_network_access_point_activate</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">AstalNetworkAccessPoint</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">password</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GAsyncReadyCallback</span><span class="w"> </span><span class="n">_callback_</span><span class="p">,</span>
+<span class="w">  </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">_callback__target</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -148,7 +151,8 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>No description available.</p>
+        <p>Activates the first connection associated with this AccessPoint or creates a new SimpleConnection using &#8220;wpa-psk&#8221; and activates it. 
+Returns whether the connection is the new active&nbsp;connection.</p>
       </div>
 
       <div class="docblock">
@@ -165,22 +169,40 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
 
     
-
-    
-    <div class="return-value toggle-wrapper">
-      <h4 id="return-value">
-        Return value
-        <a href="#return-value" class="anchor"></a>
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
       </h4>
 
       <div class="docblock">
-        <div class="returns">
-          <div class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="flags.80211ApFlags.html" data-namespace="NM" class="external"><code>NM80211ApFlags</code></a></p>
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>password</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
             <p>No description available.</p>
-          </div>
-          <div>
             <table>
+            
+            <tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            <tr><td>The value is a NUL terminated UTF-8 string.</td></tr>
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>_callback_</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="callback.AsyncReadyCallback.html" data-namespace="Gio" class="external"><code>GAsyncReadyCallback</code></a></p>
+            <p>No description available.</p>
+            <table>
+            
+            <tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
             
             
             
@@ -188,10 +210,32 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             </table>
-          </div>
-        </div>
+          </dd>
+          
+          <dt class="arg-name"><code>_callback__target</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>void*</code></p>
+            <p>No description available.</p>
+            <table>
+            
+            <tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
+            </table>
+          </dd>
+          
+
+          
+        </dl>
       </div>
     </div>
+    
+
     
 
   </section>

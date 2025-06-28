@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalNetwork.Wifi.get_strength</title>
+  <title>AstalNetwork.Wifi.deactivate_connection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="AstalNetwork.Wifi.get_strength"/>
-  <meta priority="og:description" content="Reference for AstalNetwork.Wifi.get_strength"/>
-  <meta name="twitter:title" content="AstalNetwork.Wifi.get_strength"/>
-  <meta name="twitter:description" content="Reference for AstalNetwork.Wifi.get_strength"/>
+  <meta priority="og:title" content="AstalNetwork.Wifi.deactivate_connection"/>
+  <meta priority="og:description" content="Reference for AstalNetwork.Wifi.deactivate_connection"/>
+  <meta name="twitter:title" content="AstalNetwork.Wifi.deactivate_connection"/>
+  <meta name="twitter:description" content="Reference for AstalNetwork.Wifi.deactivate_connection"/>
 
 
   
@@ -69,7 +69,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Wifi.scan.html">scan</a>
   
-    <a class="method" href="method.Wifi.deactivate_connection.html">deactivate_connection</a>
+    <a class="method current" href="method.Wifi.deactivate_connection.html">deactivate_connection</a>
   
     <a class="method" href="method.Wifi.deactivate_connection_finish.html">deactivate_connection_finish</a>
   
@@ -93,7 +93,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Wifi.get_ssid.html">get_ssid</a>
   
-    <a class="method current" href="method.Wifi.get_strength.html">get_strength</a>
+    <a class="method" href="method.Wifi.get_strength.html">get_strength</a>
   
     <a class="method" href="method.Wifi.get_frequency.html">get_frequency</a>
   
@@ -119,7 +119,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">AstalNetwork</a><span class="sep"></span><a href="class.Wifi.html">Wifi</a><span class="sep"></span>get_strength</h1>
+    <h1><a href="index.html">AstalNetwork</a><span class="sep"></span><a href="class.Wifi.html">Wifi</a><span class="sep"></span>deactivate_connection</h1>
   </header>
 
   <section>
@@ -135,9 +135,11 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="n">guint8</span>
-<span class="n">astal_network_wifi_get_strength</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="n">AstalNetworkWifi</span><span class="o">*</span><span class="w"> </span><span class="n">self</span>
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">astal_network_wifi_deactivate_connection</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">AstalNetworkWifi</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GAsyncReadyCallback</span><span class="w"> </span><span class="n">_callback_</span><span class="p">,</span>
+<span class="w">  </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">_callback__target</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -169,22 +171,23 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
 
     
-
-    
-    <div class="return-value toggle-wrapper">
-      <h4 id="return-value">
-        Return value
-        <a href="#return-value" class="anchor"></a>
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
       </h4>
 
       <div class="docblock">
-        <div class="returns">
-          <div class="arg-description">
-            <p><em>Type:</em>&nbsp;<code>guint8</code></p>
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>_callback_</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="callback.AsyncReadyCallback.html" data-namespace="Gio" class="external"><code>GAsyncReadyCallback</code></a></p>
             <p>No description available.</p>
-          </div>
-          <div>
             <table>
+            
+            <tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
             
             
             
@@ -192,10 +195,32 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             </table>
-          </div>
-        </div>
+          </dd>
+          
+          <dt class="arg-name"><code>_callback__target</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>void*</code></p>
+            <p>No description available.</p>
+            <table>
+            
+            <tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
+            </table>
+          </dd>
+          
+
+          
+        </dl>
       </div>
     </div>
+    
+
     
 
   </section>

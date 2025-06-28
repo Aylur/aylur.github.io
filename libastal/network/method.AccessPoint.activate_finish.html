@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalNetwork.AccessPoint.get_flags</title>
+  <title>AstalNetwork.AccessPoint.activate_finish</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="AstalNetwork.AccessPoint.get_flags"/>
-  <meta priority="og:description" content="Reference for AstalNetwork.AccessPoint.get_flags"/>
-  <meta name="twitter:title" content="AstalNetwork.AccessPoint.get_flags"/>
-  <meta name="twitter:description" content="Reference for AstalNetwork.AccessPoint.get_flags"/>
+  <meta priority="og:title" content="AstalNetwork.AccessPoint.activate_finish"/>
+  <meta priority="og:description" content="Reference for AstalNetwork.AccessPoint.activate_finish"/>
+  <meta name="twitter:title" content="AstalNetwork.AccessPoint.activate_finish"/>
+  <meta name="twitter:description" content="Reference for AstalNetwork.AccessPoint.activate_finish"/>
 
 
   
@@ -73,7 +73,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.AccessPoint.activate.html">activate</a>
   
-    <a class="method" href="method.AccessPoint.activate_finish.html">activate_finish</a>
+    <a class="method current" href="method.AccessPoint.activate_finish.html">activate_finish</a>
   
     <a class="method" href="method.AccessPoint.get_bandwidth.html">get_bandwidth</a>
   
@@ -91,7 +91,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.AccessPoint.get_mode.html">get_mode</a>
   
-    <a class="method current" href="method.AccessPoint.get_flags.html">get_flags</a>
+    <a class="method" href="method.AccessPoint.get_flags.html">get_flags</a>
   
     <a class="method" href="method.AccessPoint.get_rsn_flags.html">get_rsn_flags</a>
   
@@ -115,7 +115,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">AstalNetwork</a><span class="sep"></span><a href="class.AccessPoint.html">AccessPoint</a><span class="sep"></span>get_flags</h1>
+    <h1><a href="index.html">AstalNetwork</a><span class="sep"></span><a href="class.AccessPoint.html">AccessPoint</a><span class="sep"></span>activate_finish</h1>
   </header>
 
   <section>
@@ -131,9 +131,11 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="n">NM80211ApFlags</span>
-<span class="n">astal_network_access_point_get_flags</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="n">AstalNetworkAccessPoint</span><span class="o">*</span><span class="w"> </span><span class="n">self</span>
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">astal_network_access_point_activate_finish</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">AstalNetworkAccessPoint</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GAsyncResult</span><span class="o">*</span><span class="w"> </span><span class="n">_res_</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -165,21 +167,19 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
 
     
-
-    
-    <div class="return-value toggle-wrapper">
-      <h4 id="return-value">
-        Return value
-        <a href="#return-value" class="anchor"></a>
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
       </h4>
 
       <div class="docblock">
-        <div class="returns">
-          <div class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="flags.80211ApFlags.html" data-namespace="NM" class="external"><code>NM80211ApFlags</code></a></p>
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>_res_</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="iface.AsyncResult.html" data-namespace="Gio" class="external"><code>GAsyncResult</code></a></p>
             <p>No description available.</p>
-          </div>
-          <div>
             <table>
             
             
@@ -187,11 +187,31 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
             </table>
-          </div>
-        </div>
+          </dd>
+          
+
+          
+          <dt class="arg-name"><code>error</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Error.html" class="external"><code>GError **</code></a></p>
+            <p>The return location for <a href="https://docs.gtk.org/glib/error-reporting.html#rules-for-use-of-gerror">a recoverable error</a>.</p>
+            <table>
+              <tr><td>The argument can be <code>NULL</code>.</td></tr>
+              <tr><td>If the return location is not <code>NULL</code>, then you must initialize it to a <code>NULL</code> <code>GError*</code>.</td></tr>
+              <tr><td>The argument will be left initialized to <code>NULL</code> by the method if there are no errors.</td></tr>
+              <tr><td>In case of error, the argument will be set to a newly allocated <code>GError</code>; the caller will take ownership of the data, and be responsible for freeing it.</td></tr>
+            </table>
+          </dd>
+          
+        </dl>
       </div>
     </div>
+    
+
     
 
   </section>
