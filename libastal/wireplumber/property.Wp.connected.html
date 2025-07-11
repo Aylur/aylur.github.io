@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalWp.Wp:default-microphone</title>
+  <title>AstalWp.Wp:connected</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalWp.Wp:default-microphone"/>
-  <meta property="og:description" content="Reference for property AstalWp.Wp:default-microphone"/>
-  <meta name="twitter:title" content="AstalWp.Wp:default-microphone"/>
-  <meta name="twitter:description" content="Reference for property AstalWp.Wp:default-microphone"/>
+  <meta property="og:title" content="AstalWp.Wp:connected"/>
+  <meta property="og:description" content="Reference for property AstalWp.Wp:connected"/>
+  <meta name="twitter:title" content="AstalWp.Wp:connected"/>
+  <meta name="twitter:description" content="Reference for property AstalWp.Wp:connected"/>
 
 
   
@@ -69,9 +69,9 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property"href="property.Wp.audio.html">audio</a>
   
-    <a class="property"href="property.Wp.connected.html">connected</a>
+    <a class="property current"href="property.Wp.connected.html">connected</a>
   
-    <a class="property current"href="property.Wp.default-microphone.html">default-microphone</a>
+    <a class="property"href="property.Wp.default-microphone.html">default-microphone</a>
   
     <a class="property"href="property.Wp.default-speaker.html">default-speaker</a>
   
@@ -97,7 +97,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Property</h3>
-    <h1><a href="index.html">AstalWp</a><span class="sep"></span><a href="class.Wp.html">Wp</a>:default-microphone</h1>
+    <h1><a href="index.html">AstalWp</a><span class="sep"></span><a href="class.Wp.html">Wp</a>:connected</h1>
   </header>
 
   <section>
@@ -111,7 +111,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <pre><code>property default-microphone: AstalWp.Endpoint [ read ]</code></pre>
+        <pre><code>property connected: gboolean [ read ]</code></pre>
       </div>
     </div>
 
@@ -123,12 +123,12 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>The <a href="class.Endpoint.html"><code>AstalWpEndpoint</code></a> representing the default&nbsp;micophone.</p>
+        <p>The connection status to the pipewire&nbsp;daemon.</p>
       </div>
 
       <div class="docblock">
         <p>
-          Type:<a href="class.Endpoint.html"><code>AstalWpEndpoint</code></a></p>
+          Type:<code>gboolean</code></p>
         
         
         
@@ -138,7 +138,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <table>
         
-          <tr><td>Getter method</td><td><a href="method.Wp.get_default_microphone.html"><code>astal_wp_wp_get_default_microphone()</code></a></td></tr>
+          <tr><td>Default value</td><td>FALSE</td></tr>
         
         </table>
       </div>
