@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalNotifd.Notifd:ignore-timeout</title>
+  <title>AstalNotifd.Notifd:default-timeout</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalNotifd.Notifd:ignore-timeout"/>
-  <meta property="og:description" content="Reference for property AstalNotifd.Notifd:ignore-timeout"/>
-  <meta name="twitter:title" content="AstalNotifd.Notifd:ignore-timeout"/>
-  <meta name="twitter:description" content="Reference for property AstalNotifd.Notifd:ignore-timeout"/>
+  <meta property="og:title" content="AstalNotifd.Notifd:default-timeout"/>
+  <meta property="og:description" content="Reference for property AstalNotifd.Notifd:default-timeout"/>
+  <meta name="twitter:title" content="AstalNotifd.Notifd:default-timeout"/>
+  <meta name="twitter:description" content="Reference for property AstalNotifd.Notifd:default-timeout"/>
 
 
   
@@ -67,11 +67,11 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Properties</h5>
   <div class="links">
   
-    <a class="property current"href="property.Notifd.ignore-timeout.html">ignore-timeout</a>
+    <a class="property"href="property.Notifd.ignore-timeout.html">ignore-timeout</a>
   
     <a class="property"href="property.Notifd.dont-disturb.html">dont-disturb</a>
   
-    <a class="property"href="property.Notifd.default-timeout.html">default-timeout</a>
+    <a class="property current"href="property.Notifd.default-timeout.html">default-timeout</a>
   
     <a class="property"href="property.Notifd.notifications.html">notifications</a>
   
@@ -89,7 +89,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Property</h3>
-    <h1><a href="index.html">AstalNotifd</a><span class="sep"></span><a href="class.Notifd.html">Notifd</a>:ignore-timeout</h1>
+    <h1><a href="index.html">AstalNotifd</a><span class="sep"></span><a href="class.Notifd.html">Notifd</a>:default-timeout</h1>
   </header>
 
   <section>
@@ -103,7 +103,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <pre><code>property ignore-timeout: gboolean [ read, write ]</code></pre>
+        <pre><code>property default-timeout: int [ read, write ]</code></pre>
       </div>
     </div>
 
@@ -115,13 +115,13 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>Ignore the timeout specified by incoming notifications. By default notifications can specify a timeout in milliseconds after which the daemon 
-will resolve them even without user&nbsp;input.</p>
+        <p>Timeout used for notifications that do not specify a timeout and let the server decide. Negative values result in no timeout. By default this 
+is&nbsp;-1.</p>
       </div>
 
       <div class="docblock">
         <p>
-          Type:<code>gboolean</code></p>
+          Type:<code>gint</code></p>
         
         
         

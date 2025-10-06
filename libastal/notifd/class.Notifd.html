@@ -104,6 +104,10 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Notifd.set_dont_disturb.html">set_dont_disturb</a>
   
+    <a class="method" href="method.Notifd.get_default_timeout.html">get_default_timeout</a>
+  
+    <a class="method" href="method.Notifd.set_default_timeout.html">set_default_timeout</a>
+  
     <a class="method" href="method.Notifd.get_notifications.html">get_notifications</a>
   
   </div>
@@ -119,6 +123,8 @@ SPDX-License-Identifier: LGPL-2.1
     <a class="property" href="property.Notifd.ignore-timeout.html">ignore-timeout</a>
   
     <a class="property" href="property.Notifd.dont-disturb.html">dont-disturb</a>
+  
+    <a class="property" href="property.Notifd.default-timeout.html">default-timeout</a>
   
     <a class="property" href="property.Notifd.notifications.html">notifications</a>
   
@@ -326,6 +332,26 @@ This class queues up to become the next daemon, while acting as a proxy in the&n
         </div>
       
         <div class="">
+          <h6><a href="method.Notifd.get_default_timeout.html">astal_notifd_notifd_get_default_timeout</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Notifd.set_default_timeout.html">astal_notifd_notifd_set_default_timeout</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
           <h6><a href="method.Notifd.get_notifications.html">astal_notifd_notifd_get_notifications</a></h6>
           <div class="docblock">
             No description available.
@@ -368,8 +394,8 @@ This class queues up to become the next daemon, while acting as a proxy in the&n
         <div class="">
           <h6><a href="property.Notifd.ignore-timeout.html">AstalNotifd.Notifd:ignore-timeout</a></h6>
           <div class="docblock">
-            <p>Ignore the timeout specified by incoming notifications.
-By default notifications can specify a timeout in milliseconds after which the daemon will resolve them even without user&nbsp;input.</p>
+            <p>Ignore the timeout specified by incoming notifications. By default notifications can specify a timeout in milliseconds after which the daemon 
+will resolve them even without user&nbsp;input.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -379,8 +405,19 @@ By default notifications can specify a timeout in milliseconds after which the d
         <div class="">
           <h6><a href="property.Notifd.dont-disturb.html">AstalNotifd.Notifd:dont-disturb</a></h6>
           <div class="docblock">
-            <p>Indicate to frontends to not show popups to the user.
-This property does not have any effect on its own, its merely a value to use between the daemon process and proxies for frontends to&nbsp;use.</p>
+            <p>Indicate to frontends to not show popups to the user. This property does not have any effect on its own, its merely a value to use between the 
+daemon process and proxies for frontends to&nbsp;use.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Notifd.default-timeout.html">AstalNotifd.Notifd:default-timeout</a></h6>
+          <div class="docblock">
+            <p>Timeout used for notifications that do not specify a timeout and let the server decide. Negative values result in no timeout. By default this 
+is&nbsp;-1.</p>
           </div>
           <div class="docblock">
             <p></p>
