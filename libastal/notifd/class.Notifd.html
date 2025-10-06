@@ -470,7 +470,17 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
       <div class="docblock">
         <pre><code>struct AstalNotifdNotifdClass {
-  /* no available fields */
+  void (* notifd_notified) (
+    AstalNotifdNotifd* self,
+    guint id,
+    gboolean replaced
+  );
+  void (* notifd_resolved) (
+    AstalNotifdNotifd* self,
+    guint id,
+    AstalNotifdClosedReason reason
+  );
+  
 }</code></pre>
       </div>
 
@@ -478,6 +488,28 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <p>No description available.</p>
       </div>
 
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>notified: void (* notifd_notified) (
+    AstalNotifdNotifd* self,
+    guint id,
+    gboolean replaced
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>resolved: void (* notifd_resolved) (
+    AstalNotifdNotifd* self,
+    guint id,
+    AstalNotifdClosedReason reason
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        </dd>
+      </div>
       
     </div>
     

@@ -67,7 +67,11 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Properties</h5>
   <div class="links">
   
+    <a class="property"href="property.Notification.state.html">state</a>
+  
     <a class="property"href="property.Notification.time.html">time</a>
+  
+    <a class="property"href="property.Notification.id.html">id</a>
   
     <a class="property"href="property.Notification.app-name.html">app-name</a>
   
@@ -77,11 +81,11 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property"href="property.Notification.body.html">body</a>
   
-    <a class="property"href="property.Notification.id.html">id</a>
-  
     <a class="property"href="property.Notification.expire-timeout.html">expire-timeout</a>
   
     <a class="property"href="property.Notification.actions.html">actions</a>
+  
+    <a class="property"href="property.Notification.hints.html">hints</a>
   
     <a class="property"href="property.Notification.image.html">image</a>
   
@@ -135,7 +139,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <pre><code>property transient: gboolean [ read ]</code></pre>
+        <pre><code>property transient: gboolean [ read, write ]</code></pre>
       </div>
     </div>
 
@@ -147,7 +151,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>Indicates that the notification should be excluded from&nbsp;persistency.</p>
+        <p>Standard <code>transient</code> hint. Indicates that the notification should be excluded from&nbsp;persistency.</p>
       </div>
 
       <div class="docblock">
@@ -170,7 +174,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       <table>
         <tr><td>Readable</td><td><b>yes</b></td></tr>
-        <tr><td>Writable</td><td><b>no</b></td></tr>
+        <tr><td>Writable</td><td><b>yes</b></td></tr>
         <tr><td>Construct</td><td><b>no</b></td></tr>
         <tr><td>Construct only</td><td><b>no</b></td></tr>
       </table>
