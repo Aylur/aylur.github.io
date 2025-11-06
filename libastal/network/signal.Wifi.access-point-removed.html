@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalNetwork.Wifi::state-changed</title>
+  <title>AstalNetwork.Wifi::access-point-removed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalNetwork.Wifi::state-changed"/>
-  <meta property="og:description" content="Reference for signal AstalNetwork.Wifi::state-changed"/>
-  <meta name="twitter:title" content="AstalNetwork.Wifi::state-changed"/>
-  <meta name="twitter:description" content="Reference for signal AstalNetwork.Wifi::state-changed"/>
+  <meta property="og:title" content="AstalNetwork.Wifi::access-point-removed"/>
+  <meta property="og:description" content="Reference for signal AstalNetwork.Wifi::access-point-removed"/>
+  <meta name="twitter:title" content="AstalNetwork.Wifi::access-point-removed"/>
+  <meta name="twitter:description" content="Reference for signal AstalNetwork.Wifi::access-point-removed"/>
 
 
   
@@ -69,9 +69,9 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="signal" href="signal.Wifi.access-point-added.html">access-point-added</a>
   
-    <a class="signal" href="signal.Wifi.access-point-removed.html">access-point-removed</a>
+    <a class="signal current" href="signal.Wifi.access-point-removed.html">access-point-removed</a>
   
-    <a class="signal current" href="signal.Wifi.state-changed.html">state-changed</a>
+    <a class="signal" href="signal.Wifi.state-changed.html">state-changed</a>
   
   </div>
 </div>
@@ -87,7 +87,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Signal</h3>
-    <h1><a href="index.html">AstalNetwork</a><span class="sep"></span><a href="class.Wifi.html">Wifi</a>::state-changed</h1>
+    <h1><a href="index.html">AstalNetwork</a><span class="sep"></span><a href="class.Wifi.html">Wifi</a>::access-point-removed</h1>
   </header>
 
   <section>
@@ -102,11 +102,9 @@ SPDX-License-Identifier: LGPL-2.1
 
       <div class="docblock">
         <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
-<span class="n">state_changed</span><span class="w"> </span><span class="p">(</span>
+<span class="n">access_point_removed</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">AstalNetworkWifi</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
-<span class="w">  </span><span class="n">AstalNetworkDeviceState</span><span class="w"> </span><span class="n">new_state</span><span class="p">,</span>
-<span class="w">  </span><span class="n">AstalNetworkDeviceState</span><span class="w"> </span><span class="n">old_state</span><span class="p">,</span>
-<span class="w">  </span><span class="n">NMDeviceStateReason</span><span class="w"> </span><span class="n">reaseon</span><span class="p">,</span>
+<span class="w">  </span><span class="n">AstalNetworkAccessPoint</span><span class="o">*</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span>
 <span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">user_data</span>
 <span class="p">)</span>
 </pre></div>
@@ -151,9 +149,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <dl class="arguments">
           
-          <dt class="arg-name"><code>new_state</code></dt>
+          <dt class="arg-name"><code>ap</code></dt>
           <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="enum.DeviceState.html"><code>AstalNetworkDeviceState</code></a></p>
+            <p><em>Type:</em>&nbsp;<a href="class.AccessPoint.html"><code>AstalNetworkAccessPoint</code></a></p>
             <p>No description available.</p>
             <table>
             
@@ -163,41 +161,7 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             
-            
-            
-            </table>
-          </dd>
-          
-          <dt class="arg-name"><code>old_state</code></dt>
-          <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="enum.DeviceState.html"><code>AstalNetworkDeviceState</code></a></p>
-            <p>No description available.</p>
-            <table>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            </table>
-          </dd>
-          
-          <dt class="arg-name"><code>reaseon</code></dt>
-          <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="enum.DeviceStateReason.html" data-namespace="NM" class="external"><code>NMDeviceStateReason</code></a></p>
-            <p>No description available.</p>
-            <table>
-            
-            
-            
-            
-            
-            
-            
-            
+            <tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
             
             </table>
           </dd>
