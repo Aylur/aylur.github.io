@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalRiver.Layout.set_layout_demand_callback</title>
+  <title>AstalRiver.Layout.set_layout_demand_closure</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="AstalRiver.Layout.set_layout_demand_callback"/>
-  <meta priority="og:description" content="Reference for AstalRiver.Layout.set_layout_demand_callback"/>
-  <meta name="twitter:title" content="AstalRiver.Layout.set_layout_demand_callback"/>
-  <meta name="twitter:description" content="Reference for AstalRiver.Layout.set_layout_demand_callback"/>
+  <meta priority="og:title" content="AstalRiver.Layout.set_layout_demand_closure"/>
+  <meta priority="og:description" content="Reference for AstalRiver.Layout.set_layout_demand_closure"/>
+  <meta name="twitter:title" content="AstalRiver.Layout.set_layout_demand_closure"/>
+  <meta name="twitter:description" content="Reference for AstalRiver.Layout.set_layout_demand_closure"/>
 
 
   
@@ -67,9 +67,9 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Methods</h5>
   <div class="links">
   
-    <a class="method" href="method.Layout.get_namespace.html">get_namespace</a>
+    <a class="method current" href="method.Layout.set_layout_demand_closure.html">set_layout_demand_closure</a>
   
-    <a class="method current" href="method.Layout.set_layout_demand_callback.html">set_layout_demand_callback</a>
+    <a class="method" href="method.Layout.get_namespace.html">get_namespace</a>
   
   </div>
 </div>
@@ -85,7 +85,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">AstalRiver</a><span class="sep"></span><a href="class.Layout.html">Layout</a><span class="sep"></span>set_layout_demand_callback</h1>
+    <h1><a href="index.html">AstalRiver</a><span class="sep"></span><a href="class.Layout.html">Layout</a><span class="sep"></span>set_layout_demand_closure</h1>
   </header>
 
   <section>
@@ -102,11 +102,9 @@ SPDX-License-Identifier: LGPL-2.1
 
       <div class="docblock c-decl">
         <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
-<span class="n">astal_river_layout_set_layout_demand_callback</span><span class="w"> </span><span class="p">(</span>
+<span class="n">astal_river_layout_set_layout_demand_closure</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">AstalRiverLayout</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
-<span class="w">  </span><span class="n">AstalRiverLayoutDemandCallback</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span>
-<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">user_data</span><span class="p">,</span>
-<span class="w">  </span><span class="n">GDestroyNotify</span><span class="w"> </span><span class="n">destroy_notify</span>
+<span class="w">  </span><span class="n">GClosure</span><span class="o">*</span><span class="w"> </span><span class="n">closure</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -121,7 +119,10 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>Sets the callback to be called when a layout demand is&nbsp;made.</p>
+        <p>Sets the Closure to be called when a new layout is requested. The Closure is of type <a href="callback.LayoutDemandCallback.html"><code>AstalRiverLayoutDemandCallback</code></a>.
+The Closure must return a <a href="class.LayoutDemandResult.html"><code>AstalRiverLayoutDemandResult</code></a> containing exactly as many <a href="javascript:void(0)" data-namespace="AstalWl" data-link="struct.Rectangle.html" class="external"><code>AstalWlRectangle</code></a> objects as 
+requested. Each rectangle represents the position and size of each window. Before the result is applied, each rectangle is croped to ensure it lies 
+entirely within the usable&nbsp;area.</p>
       </div>
 
       <div class="docblock">
@@ -149,53 +150,19 @@ SPDX-License-Identifier: LGPL-2.1
           
 
           
-          <dt class="arg-name"><code>callback</code></dt>
+          <dt class="arg-name"><code>closure</code></dt>
           <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="callback.LayoutDemandCallback.html"><code>AstalRiverLayoutDemandCallback</code></a></p>
-            <p>The callback to be called when a layout demand is&nbsp;made.</p>
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="struct.Closure.html" data-namespace="GObject" class="external"><code>GClosure</code></a></p>
+            <p>No description available.</p>
             <table>
             
             
-            
-            
-            
-            
-            
-            
-            
-            </table>
-          </dd>
-          
-          <dt class="arg-name"><code>user_data</code></dt>
-          <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<code>gpointer</code></p>
-            <p>User data to be passed to the&nbsp;callback.</p>
-            <table>
-            
-            <tr><td>The argument can be <code>NULL</code>.</td></tr>
             
             
             
             
             
             <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
-            
-            </table>
-          </dd>
-          
-          <dt class="arg-name"><code>destroy_notify</code></dt>
-          <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="callback.DestroyNotify.html" data-namespace="GLib" class="external"><code>GDestroyNotify</code></a></p>
-            <p>A function to destroy the user data when it is no longer&nbsp;needed.</p>
-            <table>
-            
-            
-            
-            
-            
-            
-            
-            
             
             </table>
           </dd>

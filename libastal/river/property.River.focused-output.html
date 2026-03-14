@@ -67,13 +67,15 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Properties</h5>
   <div class="links">
   
+    <a class="property"href="property.River.outputs.html">outputs</a>
+  
     <a class="property current"href="property.River.focused-output.html">focused-output</a>
+  
+    <a class="property"href="property.River.focused-output-name.html">focused-output-name</a>
   
     <a class="property"href="property.River.focused-view.html">focused-view</a>
   
     <a class="property"href="property.River.mode.html">mode</a>
-  
-    <a class="property"href="property.River.outputs.html">outputs</a>
   
   </div>
 </div>
@@ -103,7 +105,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <pre><code>property focused-output: utf8 [ read ]</code></pre>
+        <pre><code>property focused-output: AstalRiver.Output [ read, write ]</code></pre>
       </div>
     </div>
 
@@ -115,27 +117,17 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>The name of the currently focused&nbsp;output.</p>
+        <p>The currently focused Output&nbsp;object.</p>
       </div>
 
       <div class="docblock">
         <p>
-          Type:<code>gchar*</code></p>
+          Type:<a href="class.Output.html"><code>AstalRiverOutput</code></a></p>
         
         
         
       </div>
 
-      
-      <div class="docblock">
-        <table>
-        
-          <tr><td>Default value</td><td>NULL</td></tr>
-        
-          <tr><td>Getter method</td><td><a href="method.River.get_focused_output.html"><code>astal_river_river_get_focused_output()</code></a></td></tr>
-        
-        </table>
-      </div>
       
     </div>
 
@@ -148,7 +140,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       <table>
         <tr><td>Readable</td><td><b>yes</b></td></tr>
-        <tr><td>Writable</td><td><b>no</b></td></tr>
+        <tr><td>Writable</td><td><b>yes</b></td></tr>
         <tr><td>Construct</td><td><b>no</b></td></tr>
         <tr><td>Construct only</td><td><b>no</b></td></tr>
       </table>

@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalRiver.River.run_command_async</title>
+  <title>AstalRiver.River.find_output_by_astal_wl_output</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="AstalRiver.River.run_command_async"/>
-  <meta priority="og:description" content="Reference for AstalRiver.River.run_command_async"/>
-  <meta name="twitter:title" content="AstalRiver.River.run_command_async"/>
-  <meta name="twitter:description" content="Reference for AstalRiver.River.run_command_async"/>
+  <meta priority="og:title" content="AstalRiver.River.find_output_by_astal_wl_output"/>
+  <meta priority="og:description" content="Reference for AstalRiver.River.find_output_by_astal_wl_output"/>
+  <meta name="twitter:title" content="AstalRiver.River.find_output_by_astal_wl_output"/>
+  <meta name="twitter:description" content="Reference for AstalRiver.River.find_output_by_astal_wl_output"/>
 
 
   
@@ -69,7 +69,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.River.find_output_by_wl_output.html">find_output_by_wl_output</a>
   
-    <a class="method" href="method.River.find_output_by_astal_wl_output.html">find_output_by_astal_wl_output</a>
+    <a class="method current" href="method.River.find_output_by_astal_wl_output.html">find_output_by_astal_wl_output</a>
   
     <a class="method" href="method.River.find_output_by_name.html">find_output_by_name</a>
   
@@ -77,7 +77,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.River.run_command.html">run_command</a>
   
-    <a class="method current" href="method.River.run_command_async.html">run_command_async</a>
+    <a class="method" href="method.River.run_command_async.html">run_command_async</a>
   
     <a class="method" href="method.River.run_command_finish.html">run_command_finish</a>
   
@@ -107,7 +107,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Method</h3>
-    <h1><a href="index.html">AstalRiver</a><span class="sep"></span><a href="class.River.html">River</a><span class="sep"></span>run_command_async</h1>
+    <h1><a href="index.html">AstalRiver</a><span class="sep"></span><a href="class.River.html">River</a><span class="sep"></span>find_output_by_astal_wl_output</h1>
   </header>
 
   <section>
@@ -123,13 +123,10 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
-<span class="n">astal_river_river_run_command_async</span><span class="w"> </span><span class="p">(</span>
+        <pre><code><div class="highlight"><pre><span></span><span class="n">AstalRiverOutput</span><span class="o">*</span>
+<span class="n">astal_river_river_find_output_by_astal_wl_output</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">AstalRiverRiver</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
-<span class="w">  </span><span class="n">gchar</span><span class="o">**</span><span class="w"> </span><span class="n">cmd</span><span class="p">,</span>
-<span class="w">  </span><span class="n">gint</span><span class="w"> </span><span class="n">cmd_length1</span><span class="p">,</span>
-<span class="w">  </span><span class="n">GAsyncReadyCallback</span><span class="w"> </span><span class="n">_callback_</span><span class="p">,</span>
-<span class="w">  </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">_callback__target</span>
+<span class="w">  </span><span class="n">AstalWlOutput</span><span class="o">*</span><span class="w"> </span><span class="n">wl_output</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -144,7 +141,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>Executes a given command, similar to&nbsp;riverctl.</p>
+        <p>Looks up an output based on its underlying <a href="javascript:void(0)" data-namespace="AstalWl" data-link="class.Output.html" class="external"><code>AstalWlOutput</code></a>&nbsp;object.</p>
       </div>
 
       <div class="docblock">
@@ -172,64 +169,13 @@ SPDX-License-Identifier: LGPL-2.1
           
 
           
-          <dt class="arg-name"><code>cmd</code></dt>
+          <dt class="arg-name"><code>wl_output</code></dt>
           <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;An array of&nbsp;<code>gchar*</code></p>
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="class.Output.html" data-namespace="AstalWl" class="external"><code>AstalWlOutput</code></a></p>
             <p>No description available.</p>
             <table>
             
             
-            
-            
-            
-            
-            <tr><td>The length of the array is specified in the <code>cmd_length1</code> argument.</td></tr>
-            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
-            <tr><td>Each element is a NUL terminated UTF-8 string.</td></tr>
-            </table>
-          </dd>
-          
-          <dt class="arg-name"><code>cmd_length1</code></dt>
-          <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<code>gint</code></p>
-            <p>No description available.</p>
-            <table>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            </table>
-          </dd>
-          
-          <dt class="arg-name"><code>_callback_</code></dt>
-          <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="callback.AsyncReadyCallback.html" data-namespace="Gio" class="external"><code>GAsyncReadyCallback</code></a></p>
-            <p>No description available.</p>
-            <table>
-            
-            <tr><td>The argument can be <code>NULL</code>.</td></tr>
-            
-            
-            
-            
-            
-            
-            
-            </table>
-          </dd>
-          
-          <dt class="arg-name"><code>_callback__target</code></dt>
-          <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<code>void*</code></p>
-            <p>No description available.</p>
-            <table>
-            
-            <tr><td>The argument can be <code>NULL</code>.</td></tr>
             
             
             
@@ -247,6 +193,32 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
     
 
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <div class="returns">
+          <div class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.Output.html"><code>AstalRiverOutput</code></a></p>
+            <p>No description available.</p>
+          </div>
+          <div>
+            <table>
+            
+            
+            
+            <tr><td title="transfer: full">The caller of the method takes ownership of the returned data, and is responsible for freeing it.</td></tr>
+            <tr><td>The return value can be <code>NULL</code>.</td></tr>
+            
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
     
 
   </section>

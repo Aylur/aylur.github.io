@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalRiver.Layout</title>
+  <title>AstalRiver.LayoutDemandResult</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalRiver.Layout"/>
-  <meta property="og:description" content="Reference for AstalRiver.Layout"/>
-  <meta name="twitter:title" content="AstalRiver.Layout"/>
-  <meta name="twitter:description" content="Reference for AstalRiver.Layout"/>
+  <meta property="og:title" content="AstalRiver.LayoutDemandResult"/>
+  <meta property="og:description" content="Reference for AstalRiver.LayoutDemandResult"/>
+  <meta name="twitter:title" content="AstalRiver.LayoutDemandResult"/>
+  <meta name="twitter:description" content="Reference for AstalRiver.LayoutDemandResult"/>
 
 
   
@@ -60,25 +60,17 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a class="current" href="class.Layout.html#description">Layout</a>
+    <a class="current" href="class.LayoutDemandResult.html#description">LayoutDemandResult</a>
   </div>
 </div>
-
-
-  
-
-
-  
 
 
   
 <div class="section">
-  <h5>Instance methods</h5>
+  <h5>Constructors</h5>
   <div class="links">
   
-    <a class="method" href="method.Layout.set_layout_demand_closure.html">set_layout_demand_closure</a>
-  
-    <a class="method" href="method.Layout.get_namespace.html">get_namespace</a>
+    <a class="ctor" href="ctor.LayoutDemandResult.new.html">new</a>
   
   </div>
 </div>
@@ -86,29 +78,15 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
-<div class="section">
-  <h5>Properties</h5>
-  <div class="links">
-  
-    <a class="property" href="property.Layout.namespace.html">namespace</a>
-  
-  </div>
-</div>
-
 
 
   
-<div class="section">
-  <h5>Signals</h5>
-  <div class="links">
-  
-    <a class="signal" href="signal.Layout.namespace-in-use.html">namespace-in-use</a>
-  
-    <a class="signal" href="signal.Layout.user-command.html">user-command</a>
-  
-  </div>
-</div>
 
+
+  
+
+
+  
 
 
   
@@ -129,7 +107,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Class</h3>
-    <h1 aria-label="Name"><a href="index.html">AstalRiver</a><span class="sep" role="presentation"></span>Layout</h1>
+    <h1 aria-label="Name"><a href="index.html">AstalRiver</a><span class="sep" role="presentation"></span>LayoutDemandResult</h1>
   </header>
 
   <section>
@@ -145,13 +123,14 @@ SPDX-License-Identifier: LGPL-2.1
           
         </h4>
 
-        <pre><code>class AstalRiver.Layout : GObject.Object
+        <pre><code>class AstalRiver.LayoutDemandResult : GObject.Object
 {
-  GClosure* layout_demand_closure
+  gchar* layout_name,
+  GList* rectangles
 }</pre></code>
 
         <div class="docblock">
-          <p>Allows implementing a custom windows Layout&nbsp;generator.</p>
+          <p>No description available.</p>
         </div>
 
         <div class="docblock">
@@ -190,6 +169,27 @@ SPDX-License-Identifier: LGPL-2.1
     
 
     
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.LayoutDemandResult.new.html">astal_river_layout_demand_result_new</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
 
     
 
@@ -201,29 +201,6 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-      
-        <div class="">
-          <h6><a href="method.Layout.set_layout_demand_closure.html">astal_river_layout_set_layout_demand_closure</a></h6>
-          <div class="docblock">
-            <p>Sets the Closure to be called when a new layout is requested. The Closure is of&nbsp;type <code>AstalRiverLayoutDemandCallback</code>.
-The Closure must return&nbsp;a <code>AstalRiverLayoutDemandResult</code> containing exactly as&nbsp;many <code>AstalWlRectangle</code> objects as 
-requested. Each rectangle represents the position and size of each window. Before the result is applied, each rectangle is croped to ensure it lies 
-entirely within the usable&nbsp;area.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Layout.get_namespace.html">astal_river_layout_get_namespace</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
       
       </div>
 
@@ -246,36 +223,6 @@ entirely within the usable&nbsp;area.</p>
     
 
     
-    <div class="toggle-wrapper properties">
-      <h4 id="properties">
-        Properties
-        <a href="#properties" class="anchor"></a>
-      </h4>
-
-      
-      <div class="docblock">
-      
-        <div class="">
-          <h6><a href="property.Layout.namespace.html">AstalRiver.Layout:namespace</a></h6>
-          <div class="docblock">
-            <p>The name of this&nbsp;layout.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-      </div>
-      
-
-      
-        
-      
-
-      
-
-    </div>
-    
 
     
     <div class="signals toggle-wrapper">
@@ -284,30 +231,6 @@ entirely within the usable&nbsp;area.</p>
         <a href="#signals" class="anchor"></a>
       </h4>
 
-      
-      <div class="docblock">
-      
-        <div class="">
-          <h6><a href="signal.Layout.namespace-in-use.html">AstalRiver.Layout::namespace-in-use</a></h6>
-          <div class="docblock">
-            <p>Emitted when a Layout with the given name is already registered for an&nbsp;output.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="signal.Layout.user-command.html">AstalRiver.Layout::user-command</a></h6>
-          <div class="docblock">
-            <p>Emitted when the user sent a command to this&nbsp;layout.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-      </div>
       
 
       
@@ -337,7 +260,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       </h4>
 
       <div class="docblock">
-        <pre><code>struct AstalRiverLayoutClass {
+        <pre><code>struct AstalRiverLayoutDemandResultClass {
   /* no available fields */
 }</code></pre>
       </div>
@@ -371,20 +294,16 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
       
       
+<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
+
+
+      
 
       
 
       
-<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
-
 
       
-<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
-
-
-      
-<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
-
 
       
 
