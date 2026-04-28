@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Quarrel.FileOpt</title>
+  <title>Quarrel.SpecialFlag</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="Quarrel.FileOpt"/>
-  <meta property="og:description" content="Reference for Quarrel.FileOpt"/>
-  <meta name="twitter:title" content="Quarrel.FileOpt"/>
-  <meta name="twitter:description" content="Reference for Quarrel.FileOpt"/>
+  <meta property="og:title" content="Quarrel.SpecialFlag"/>
+  <meta property="og:description" content="Reference for Quarrel.SpecialFlag"/>
+  <meta name="twitter:title" content="Quarrel.SpecialFlag"/>
+  <meta name="twitter:description" content="Reference for Quarrel.SpecialFlag"/>
 
 
   
@@ -60,7 +60,7 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a class="current" href="class.FileOpt.html#description">FileOpt</a>
+    <a class="current" href="class.SpecialFlag.html#description">SpecialFlag</a>
   </div>
 </div>
 
@@ -70,7 +70,7 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Constructors</h5>
   <div class="links">
   
-    <a class="ctor" href="ctor.FileOpt.new.html">new</a>
+    <a class="ctor" href="ctor.SpecialFlag.new.html">new</a>
   
   </div>
 </div>
@@ -85,9 +85,9 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Instance methods</h5>
   <div class="links">
   
-    <a class="method" href="method.FileOpt.get_value.html">get_value</a>
+    <a class="method" href="method.SpecialFlag.get_enabled.html">get_enabled</a>
   
-    <a class="method" href="method.FileOpt.set_value.html">set_value</a>
+    <a class="method" href="method.SpecialFlag.set_enabled.html">set_enabled</a>
   
   </div>
 </div>
@@ -99,7 +99,7 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Properties</h5>
   <div class="links">
   
-    <a class="property" href="property.FileOpt.value.html">value</a>
+    <a class="property" href="property.SpecialFlag.enabled.html">enabled</a>
   
   </div>
 </div>
@@ -127,7 +127,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Class</h3>
-    <h1 aria-label="Name"><a href="index.html">Quarrel</a><span class="sep" role="presentation"></span>FileOpt</h1>
+    <h1 aria-label="Name"><a href="index.html">Quarrel</a><span class="sep" role="presentation"></span>SpecialFlag</h1>
   </header>
 
   <section>
@@ -143,13 +143,13 @@ SPDX-License-Identifier: LGPL-2.1
           
         </h4>
 
-        <pre><code>class Quarrel.FileOpt : Quarrel.Opt
+        <pre><code>class Quarrel.SpecialFlag : Quarrel.Opt
 {
   /* No available fields */
 }</pre></code>
 
         <div class="docblock">
-          <p>Option that stores a single file path as a <a href="javascript:void(0)" data-namespace="Gio" data-link="iface.File.html" class="external"><code>GFile</code></a>.</p>
+          <p>Similar to <a href="class.Flag.html"><code>QuarrelFlag</code></a> which also turns of validating positional arguments. Used for flags such&nbsp;as <code>--version</code> and <code>--help</code>.</p>
         </div>
 
         <div class="docblock">
@@ -201,9 +201,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="ctor.FileOpt.new.html">quarrel_file_opt_new</a></h6>
+          <h6><a href="ctor.SpecialFlag.new.html">quarrel_special_flag_new</a></h6>
           <div class="docblock">
-            <p>Create a file-valued&nbsp;option.</p>
+            <p>Create a flag&nbsp;option.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -226,7 +226,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="method.FileOpt.get_value.html">quarrel_file_opt_get_value</a></h6>
+          <h6><a href="method.SpecialFlag.get_enabled.html">quarrel_special_flag_get_enabled</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -236,7 +236,7 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.FileOpt.set_value.html">quarrel_file_opt_set_value</a></h6>
+          <h6><a href="method.SpecialFlag.set_enabled.html">quarrel_special_flag_set_enabled</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -340,9 +340,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="property.FileOpt.value.html">Quarrel.FileOpt:value</a></h6>
+          <h6><a href="property.SpecialFlag.enabled.html">Quarrel.SpecialFlag:enabled</a></h6>
           <div class="docblock">
-            <p>Parsed file&nbsp;value.</p>
+            <p>Parsed flag&nbsp;state.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -448,7 +448,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       </h4>
 
       <div class="docblock">
-        <pre><code>struct QuarrelFileOptClass {
+        <pre><code>struct QuarrelSpecialFlagClass {
   /* no available fields */
 }</code></pre>
       </div>

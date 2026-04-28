@@ -66,6 +66,15 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
+<div class="section">
+  <h5>Constructors</h5>
+  <div class="links">
+  
+    <a class="ctor" href="ctor.Opt.new.html">new</a>
+  
+  </div>
+</div>
+
 
 
   
@@ -75,8 +84,6 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Instance methods</h5>
   <div class="links">
-  
-    <a class="method" href="method.Opt.parse.html">parse</a>
   
     <a class="method" href="method.Opt.get_description.html">get_description</a>
   
@@ -118,21 +125,21 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
-
-
-  
-
-
-  
 <div class="section">
-  <h5>Virtual methods</h5>
+  <h5>Signals</h5>
   <div class="links">
   
-    <a class="method" href="vfunc.Opt.parse.html">parse</a>
+    <a class="signal" href="signal.Opt.parse.html">parse</a>
   
   </div>
 </div>
 
+
+
+  
+
+
+  
 
 
 
@@ -163,7 +170,7 @@ SPDX-License-Identifier: LGPL-2.1
           
         </h4>
 
-        <pre><code>abstract class Quarrel.Opt : GObject.Object
+        <pre><code>class Quarrel.Opt : GObject.Object
 {
   /* No available fields */
 }</pre></code>
@@ -210,6 +217,8 @@ SPDX-License-Identifier: LGPL-2.1
         <ul>
           <li class="class"><a href="class.Flag.html" title="Flag">QuarrelFlag</a></li>
         
+          <li class="class"><a href="class.SpecialFlag.html" title="SpecialFlag">QuarrelSpecialFlag</a></li>
+        
           <li class="class"><a href="class.StringOpt.html" title="StringOpt">QuarrelStringOpt</a></li>
         
           <li class="class"><a href="class.IntOpt.html" title="IntOpt">QuarrelIntOpt</a></li>
@@ -229,6 +238,27 @@ SPDX-License-Identifier: LGPL-2.1
     
 
     
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.Opt.new.html">quarrel_opt_new</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
 
     
 
@@ -240,16 +270,6 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-      
-        <div class="">
-          <h6><a href="method.Opt.parse.html">quarrel_opt_parse</a></h6>
-          <div class="docblock">
-            <p>Parse and store a value received for this&nbsp;option.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
       
         <div class="">
           <h6><a href="method.Opt.get_description.html">quarrel_opt_get_description</a></h6>
@@ -421,6 +441,20 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.Opt.parse.html">Quarrel.Opt::parse</a></h6>
+          <div class="docblock">
+            <p>Parse and store a value received for this option. Returns optional parse error&nbsp;string.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
 
       
         
@@ -450,12 +484,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
       <div class="docblock">
         <pre><code>struct QuarrelOptClass {
-  void (* parse) (
-    QuarrelOpt* self,
-    const gchar* value,
-    GError** error
-  );
-  
+  /* no available fields */
 }</code></pre>
       </div>
 
@@ -464,45 +493,9 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       </div>
 
       
-      <div class="docblock">
-        <h6>Class members</h6>
-
-        <dl class="members">
-        
-          <dt><code>parse: void (* parse) (
-    QuarrelOpt* self,
-    const gchar* value,
-    GError** error
-  )</code></dt>
-          <dd><p>No description available.</p></dd>
-        
-        </dd>
-      </div>
-      
     </div>
     
 
-    
-    <div class="toggle-wrapper methods">
-      <h4 id="virtual-methods">
-        Virtual methods
-        <a href="#virtual-methods" class="anchor"></a>
-      </h4>
-
-      <div class="docblock">
-      
-      <div class="">
-        <h6 id="vfunc-parse"><a href="vfunc.Opt.parse.html">Quarrel.OptClass.parse</a></h6>
-        <div class="docblock">
-          <p>Parse and store a value received for this&nbsp;option.</p>
-        </div>
-        <div class="docblock">
-          <p></p>
-        </div>
-      </div>
-      
-      </div>
-    </div>
     
 
     
@@ -524,6 +517,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
       
       
+<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
+
 
       
 
@@ -536,12 +531,12 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
 
       
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
 
       
 
       
-<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
-
 
     </ul>
   </nav>

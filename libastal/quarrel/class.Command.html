@@ -78,6 +78,15 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
+<div class="section">
+  <h5>Functions</h5>
+  <div class="links">
+  
+    <a class="func" href="type_func.Command.throwing.html">throwing</a>
+  
+  </div>
+</div>
+
 
 
   
@@ -105,15 +114,13 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Command.get_parent.html">get_parent</a>
   
-    <a class="method" href="method.Command.set_parent.html">set_parent</a>
-  
     <a class="method" href="method.Command.get_about_text.html">get_about_text</a>
+  
+    <a class="method" href="method.Command.get_args.html">get_args</a>
   
     <a class="method" href="method.Command.get_name.html">get_name</a>
   
     <a class="method" href="method.Command.set_name.html">set_name</a>
-  
-    <a class="method" href="method.Command.get_args.html">get_args</a>
   
   </div>
 </div>
@@ -129,9 +136,9 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property" href="property.Command.about-text.html">about-text</a>
   
-    <a class="property" href="property.Command.name.html">name</a>
-  
     <a class="property" href="property.Command.args.html">args</a>
+  
+    <a class="property" href="property.Command.name.html">name</a>
   
   </div>
 </div>
@@ -145,6 +152,15 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.Command.parse.html">parse</a>
+  
+  </div>
+</div>
+
 
 
 
@@ -178,18 +194,12 @@ SPDX-License-Identifier: LGPL-2.1
         <pre><code>class Quarrel.Command : GObject.Object
 {
   GHashTable* subcommands,
-  GHashTable* shorts,
-  GHashTable* longs,
   QuarrelOpt* opts[],
   gint opts_length1,
-  gchar* argvec[],
-  gint argvec_length1,
   gchar* examples[],
   gint examples_length1,
   QuarrelCommandArg* arg_list[],
   gint arg_list_length1,
-  guint min_args,
-  guint max_args,
   gchar* rest_args_name,
   gchar* rest_args_description
 }</pre></code>
@@ -256,6 +266,27 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
     
 
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.Command.throwing.html">quarrel_command_throwing</a></h6>
+        <div class="docblock">
+          <p>The current command that threw an error while&nbsp;parsing.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
     
 
     
@@ -370,7 +401,7 @@ should be&nbsp;invoked.</p>
         </div>
       
         <div class="">
-          <h6><a href="method.Command.set_parent.html">quarrel_command_set_parent</a></h6>
+          <h6><a href="method.Command.get_about_text.html">quarrel_command_get_about_text</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -380,7 +411,7 @@ should be&nbsp;invoked.</p>
         </div>
       
         <div class="">
-          <h6><a href="method.Command.get_about_text.html">quarrel_command_get_about_text</a></h6>
+          <h6><a href="method.Command.get_args.html">quarrel_command_get_args</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -401,16 +432,6 @@ should be&nbsp;invoked.</p>
       
         <div class="">
           <h6><a href="method.Command.set_name.html">quarrel_command_set_name</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Command.get_args.html">quarrel_command_get_args</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -470,9 +491,9 @@ should be&nbsp;invoked.</p>
         </div>
       
         <div class="">
-          <h6><a href="property.Command.name.html">Quarrel.Command:name</a></h6>
+          <h6><a href="property.Command.args.html">Quarrel.Command:args</a></h6>
           <div class="docblock">
-            <p>Name of this command. The name of the top level command should be the name of the&nbsp;program.</p>
+            <p>Parsed positional&nbsp;arguments.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -480,9 +501,9 @@ should be&nbsp;invoked.</p>
         </div>
       
         <div class="">
-          <h6><a href="property.Command.args.html">Quarrel.Command:args</a></h6>
+          <h6><a href="property.Command.name.html">Quarrel.Command:name</a></h6>
           <div class="docblock">
-            <p>Get the parsed positional arguments. Guaranteed to be empty before&nbsp;calling <code>quarrel_command_parse()</code>.</p>
+            <p>Name of this command. The name of the top level command should be the name of the&nbsp;program.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -538,7 +559,13 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
       <div class="docblock">
         <pre><code>struct QuarrelCommandClass {
-  /* no available fields */
+  QuarrelCommand* (* parse) (
+    QuarrelCommand* self,
+    gchar** argv,
+    gint argv_length1,
+    GError** error
+  );
+  
 }</code></pre>
       </div>
 
@@ -547,9 +574,47 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       </div>
 
       
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parse: QuarrelCommand* (* parse) (
+    QuarrelCommand* self,
+    gchar** argv,
+    gint argv_length1,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        </dd>
+      </div>
+      
     </div>
     
 
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-parse"><a href="vfunc.Command.parse.html">Quarrel.CommandClass.parse</a></h6>
+        <div class="docblock">
+          <p>Parse <span class="caps">CLI</span> arguments. Not that the first&nbsp;argument <code>argv[0]</code> is ignored as it is assumed to be the name of this command. Returns the command that 
+should be&nbsp;invoked.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
     
 
     
@@ -575,6 +640,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
 
       
+<li class="toc-list-item"><a href="#type-functions"><span class="link-text">Functions</span></a></li>
+
 
       
 <li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
@@ -589,6 +656,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
 
       
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
 
     </ul>
   </nav>

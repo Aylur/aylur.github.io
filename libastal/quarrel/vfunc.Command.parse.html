@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Quarrel.Opt.parse</title>
+  <title>Quarrel.Command.parse</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="Quarrel.Opt.parse"/>
-  <meta priority="og:description" content="Reference for Quarrel.Opt.parse"/>
-  <meta name="twitter:title" content="Quarrel.Opt.parse"/>
-  <meta name="twitter:description" content="Reference for Quarrel.Opt.parse"/>
+  <meta property="og:title" content="Quarrel.Command.parse"/>
+  <meta property="og:description" content="Reference for Quarrel.Command.parse"/>
+  <meta name="twitter:title" content="Quarrel.Command.parse"/>
+  <meta name="twitter:description" content="Reference for Quarrel.Command.parse"/>
 
 
   
@@ -60,30 +60,14 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a href="class.Opt.html">Opt</a>
+    <a href="class.Command.html">Command</a>
   </div>
 </div>
 <div class="section">
-  <h5>Methods</h5>
+  <h5>Virtual methods</h5>
   <div class="links">
   
-    <a class="method current" href="method.Opt.parse.html">parse</a>
-  
-    <a class="method" href="method.Opt.get_description.html">get_description</a>
-  
-    <a class="method" href="method.Opt.set_description.html">set_description</a>
-  
-    <a class="method" href="method.Opt.get_name.html">get_name</a>
-  
-    <a class="method" href="method.Opt.set_name.html">set_name</a>
-  
-    <a class="method" href="method.Opt.get_long.html">get_long</a>
-  
-    <a class="method" href="method.Opt.set_long.html">set_long</a>
-  
-    <a class="method" href="method.Opt.get_short.html">get_short</a>
-  
-    <a class="method" href="method.Opt.set_short.html">set_short</a>
+    <a class="method current" href="vfunc.Command.parse.html">parse</a>
   
   </div>
 </div>
@@ -98,8 +82,8 @@ SPDX-License-Identifier: LGPL-2.1
     
 <section id="main" class="content">
   <header>
-    <h3>Method</h3>
-    <h1><a href="index.html">Quarrel</a><span class="sep"></span><a href="class.Opt.html">Opt</a><span class="sep"></span>parse</h1>
+    <h3>Virtual Method</h3>
+    <h1><a href="index.html">Quarrel</a><span class="sep"></span><a href="class.Command.html">Command</a><span class="sep"></span>parse</h1>
   </header>
 
   <section>
@@ -108,17 +92,18 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
 
     <div class="declaration toggle-wrapper">
-      <h4 style="display:flex;" id="declaration">
+      <h4 id="declaration">
         Declaration
-        <a class="anchor" href="#declaration"></a>
+        <a href="#declaration" class="anchor"></a>
         
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
-<span class="n">quarrel_opt_parse</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="n">QuarrelOpt</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="p">,</span>
+        <pre><code><div class="highlight"><pre><span></span><span class="n">QuarrelCommand</span><span class="o">*</span>
+<span class="n">parse</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">QuarrelCommand</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gchar</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gint</span><span class="w"> </span><span class="n">argv_length1</span><span class="p">,</span>
 <span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span>
 <span class="p">)</span>
 </pre></div>
@@ -127,21 +112,18 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
 
     <div class="description toggle-wrapper">
-      <h4 style="display:flex;" id="description">
+      <h4 id="description">
         Description
-        <a class="anchor" href="#description"></a>
+        <a href="#description" class="anchor"></a>
         
       </h4>
 
       <div class="docblock">
-        <p>Parse and store a value received for this&nbsp;option.</p>
+        <p>Parse <span class="caps">CLI</span> arguments. Not that the first&nbsp;argument <code>argv[0]</code> is ignored as it is assumed to be the name of this command. Returns the command that 
+should be&nbsp;invoked.</p>
       </div>
 
       <div class="docblock">
-        
-        
-        
-        
         
         
         
@@ -160,11 +142,26 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <dl class="arguments">
           
-
-          
-          <dt class="arg-name"><code>value</code></dt>
+          <dt class="arg-name"><code>argv</code></dt>
           <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
+            <p><em>Type:</em>&nbsp;An array of&nbsp;<code>gchar*</code></p>
+            <p>No description available.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            <tr><td>The length of the array is specified in the <code>argv_length1</code> argument.</td></tr>
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            <tr><td>Each element is a NUL terminated UTF-8 string.</td></tr>
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>argv_length1</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gint</code></p>
             <p>No description available.</p>
             <table>
             
@@ -174,8 +171,8 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             
-            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
-            <tr><td>The value is a NUL terminated UTF-8 string.</td></tr>
+            
+            
             </table>
           </dd>
           
@@ -188,7 +185,7 @@ SPDX-License-Identifier: LGPL-2.1
             <table>
               <tr><td>The argument can be <code>NULL</code>.</td></tr>
               <tr><td>If the return location is not <code>NULL</code>, then you must initialize it to a <code>NULL</code> <code>GError*</code>.</td></tr>
-              <tr><td>The argument will be left initialized to <code>NULL</code> by the method if there are no errors.</td></tr>
+              <tr><td>The argument will be left initialized to <code>NULL</code> by the virtual function if there are no errors.</td></tr>
               <tr><td>In case of error, the argument will be set to a newly allocated <code>GError</code>; the caller will take ownership of the data, and be responsible for freeing it.</td></tr>
             </table>
           </dd>
@@ -198,6 +195,32 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
     
 
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <div class="returns">
+          <div>
+            <p><em>Type:</em>&nbsp;<a href="class.Command.html"><code>QuarrelCommand</code></a></p>
+            <p>No description available.</p>
+          </div>
+          <div>
+            <table>
+            
+            
+            
+            <tr><td title="transfer: full">The caller of the method takes ownership of the returned data, and is responsible for freeing it.</td></tr>
+            
+            
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
     
 
   </section>
