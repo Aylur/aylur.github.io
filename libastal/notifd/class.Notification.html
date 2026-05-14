@@ -207,6 +207,8 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property" href="property.Notification.hints.html">hints</a>
   
+    <a class="property" href="property.Notification.extra-hints.html">extra-hints</a>
+  
     <a class="property" href="property.Notification.image.html">image</a>
   
     <a class="property" href="property.Notification.action-icons.html">action-icons</a>
@@ -947,8 +949,18 @@ the action&#8217;s&nbsp;id.</p>
         <div class="">
           <h6><a href="property.Notification.hints.html">AstalNotifd.Notification:hints</a></h6>
           <div class="docblock">
-            <p>Hints of the notification. Hints are a way to provide extra data to servers. To set hints on&nbsp;a <code>DRAFT</code> Notification use [method@
-AstalNotifd.Notification.set_hint] or the property setters for standard&nbsp;hints.</p>
+            <p>Hints of the notification. Hints are a way to provide extra data to servers. To set hints on&nbsp;a <code>DRAFT</code> notification use [method@
+AstalNotifd.Notification.set_hint] or the dedicated property setters for standard&nbsp;hints.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Notification.extra-hints.html">AstalNotifd.Notification:extra-hints</a></h6>
+          <div class="docblock">
+            <p>Extra hints that are merged&nbsp;with <code>AstalNotifdNotification:hints</code>.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1018,7 +1030,7 @@ AstalNotifd.Notification.set_hint] or the property setters for standard&nbsp;hin
         <div class="">
           <h6><a href="property.Notification.sound-name.html">AstalNotifd.Notification:sound-name</a></h6>
           <div class="docblock">
-            <p>Standard <code>sound-name</code> hint. A themeable named sound from to play when the notification pops&nbsp;up.</p>
+            <p>Standard <code>sound-name</code> hint. A themeable named sound to play when the notification pops&nbsp;up.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1028,7 +1040,7 @@ AstalNotifd.Notification.set_hint] or the property setters for standard&nbsp;hin
         <div class="">
           <h6><a href="property.Notification.suppress-sound.html">AstalNotifd.Notification:suppress-sound</a></h6>
           <div class="docblock">
-            <p>Standard <code>suppress-sound</code> hint. Indicates to suppress playing any&nbsp;sounds.</p>
+            <p>Standard <code>suppress-sound</code> hint. Indicates to suppress playing any&nbsp;sound.</p>
           </div>
           <div class="docblock">
             <p></p>

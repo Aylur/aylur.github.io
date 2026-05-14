@@ -87,6 +87,8 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="property current"href="property.Notification.hints.html">hints</a>
   
+    <a class="property"href="property.Notification.extra-hints.html">extra-hints</a>
+  
     <a class="property"href="property.Notification.image.html">image</a>
   
     <a class="property"href="property.Notification.action-icons.html">action-icons</a>
@@ -139,7 +141,7 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <pre><code>property hints: GLib.Variant [ read, write ]</code></pre>
+        <pre><code>property hints: GLib.Variant [ read ]</code></pre>
       </div>
     </div>
 
@@ -151,8 +153,8 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>Hints of the notification. Hints are a way to provide extra data to servers. To set hints on&nbsp;a <code>DRAFT</code> Notification use [method@
-AstalNotifd.Notification.set_hint] or the property setters for standard&nbsp;hints.</p>
+        <p>Hints of the notification. Hints are a way to provide extra data to servers. To set hints on&nbsp;a <code>DRAFT</code> notification use [method@
+AstalNotifd.Notification.set_hint] or the dedicated property setters for standard&nbsp;hints.</p>
       </div>
 
       <div class="docblock">
@@ -175,7 +177,7 @@ AstalNotifd.Notification.set_hint] or the property setters for standard&nbsp;hin
       <div class="docblock">
       <table>
         <tr><td>Readable</td><td><b>yes</b></td></tr>
-        <tr><td>Writable</td><td><b>yes</b></td></tr>
+        <tr><td>Writable</td><td><b>no</b></td></tr>
         <tr><td>Construct</td><td><b>no</b></td></tr>
         <tr><td>Construct only</td><td><b>no</b></td></tr>
       </table>
