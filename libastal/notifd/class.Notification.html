@@ -868,7 +868,7 @@ expiration should be left to the&nbsp;daemon.</p>
         <div class="">
           <h6><a href="property.Notification.time.html">AstalNotifd.Notification:time</a></h6>
           <div class="docblock">
-            <p>Unix time of when the notification was sent or&nbsp;received.</p>
+            <p>Unix time when the notification was sent or&nbsp;received.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -878,7 +878,7 @@ expiration should be left to the&nbsp;daemon.</p>
         <div class="">
           <h6><a href="property.Notification.id.html">AstalNotifd.Notification:id</a></h6>
           <div class="docblock">
-            <p>Id of the&nbsp;notification.</p>
+            <p><span class="caps">ID</span> of the&nbsp;notification.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -928,7 +928,7 @@ expiration should be left to the&nbsp;daemon.</p>
         <div class="">
           <h6><a href="property.Notification.expire-timeout.html">AstalNotifd.Notification:expire-timeout</a></h6>
           <div class="docblock">
-            <p>Time in milliseconds after the notification&nbsp;expires.</p>
+            <p>Time in milliseconds after which the notification&nbsp;expires.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -938,8 +938,7 @@ expiration should be left to the&nbsp;daemon.</p>
         <div class="">
           <h6><a href="property.Notification.actions.html">AstalNotifd.Notification:actions</a></h6>
           <div class="docblock">
-            <p>List&nbsp;of <code>AstalNotifdAction</code> of the notification. Can be invoked by&nbsp;calling <code>astal_notifd_notification_invoke()</code> with 
-the action&#8217;s&nbsp;id.</p>
+            <p>List&nbsp;of <code>AstalNotifdAction</code>s associated with the&nbsp;notification.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -949,7 +948,7 @@ the action&#8217;s&nbsp;id.</p>
         <div class="">
           <h6><a href="property.Notification.hints.html">AstalNotifd.Notification:hints</a></h6>
           <div class="docblock">
-            <p>Hints of the notification. Hints are a way to provide extra data to servers. To set hints on&nbsp;a <code>DRAFT</code> notification use [method@
+            <p>Notification hints. Hints are a way to provide extra data to servers. To set hints on&nbsp;a <code>DRAFT</code> notification, use [method@
 AstalNotifd.Notification.set_hint] or the dedicated property setters for standard&nbsp;hints.</p>
           </div>
           <div class="docblock">
@@ -970,7 +969,7 @@ AstalNotifd.Notification.set_hint] or the dedicated property setters for standar
         <div class="">
           <h6><a href="property.Notification.image.html">AstalNotifd.Notification:image</a></h6>
           <div class="docblock">
-            <p>Standard <code>image-path</code> hint. Path of an&nbsp;image.</p>
+            <p>Standard <code>image-path</code> hint. Path to an&nbsp;image.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -980,7 +979,7 @@ AstalNotifd.Notification.set_hint] or the dedicated property setters for standar
         <div class="">
           <h6><a href="property.Notification.action-icons.html">AstalNotifd.Notification:action-icons</a></h6>
           <div class="docblock">
-            <p>Standard <code>action-icons</code> hint. Indicates&nbsp;whether <code>AstalNotifdAction</code> identifier should be interpreted as a named&nbsp;icon.</p>
+            <p>Standard <code>action-icons</code> hint. Indicates&nbsp;whether <code>AstalNotifdAction</code> identifiers should be interpreted as named&nbsp;icons.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1010,7 +1009,7 @@ AstalNotifd.Notification.set_hint] or the dedicated property setters for standar
         <div class="">
           <h6><a href="property.Notification.resident.html">AstalNotifd.Notification:resident</a></h6>
           <div class="docblock">
-            <p>Standard <code>resident</code> hint. Indicates whether notification is kept after action&nbsp;invocation.</p>
+            <p>Standard <code>resident</code> hint. Indicates whether the notification is kept after action&nbsp;invocation.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1050,7 +1049,7 @@ AstalNotifd.Notification.set_hint] or the dedicated property setters for standar
         <div class="">
           <h6><a href="property.Notification.transient.html">AstalNotifd.Notification:transient</a></h6>
           <div class="docblock">
-            <p>Standard <code>transient</code> hint. Indicates that the notification should be excluded from&nbsp;persistency.</p>
+            <p>Standard <code>transient</code> hint. Indicates that the notification should be excluded from&nbsp;persistence.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -1112,7 +1111,7 @@ AstalNotifd.Notification.set_hint] or the dedicated property setters for standar
         <div class="">
           <h6><a href="signal.Notification.resolved.html">AstalNotifd.Notification::resolved</a></h6>
           <div class="docblock">
-            <p>Emitted when this this notification is&nbsp;resolved.</p>
+            <p>Emitted when this notification is&nbsp;resolved.</p>
           </div>
           <div class="docblock">
             <p></p>
