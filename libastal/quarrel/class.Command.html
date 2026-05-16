@@ -194,6 +194,8 @@ SPDX-License-Identifier: LGPL-2.1
         <pre><code>class Quarrel.Command : GObject.Object
 {
   GHashTable* subcommands,
+  QuarrelCommand* subcommand_list[],
+  gint subcommand_list_length1,
   QuarrelOpt* opts[],
   gint opts_length1,
   gchar* examples[],

@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalNotifd.Action</title>
+  <title>AstalBrightness.DeviceList</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalNotifd.Action"/>
-  <meta property="og:description" content="Reference for AstalNotifd.Action"/>
-  <meta name="twitter:title" content="AstalNotifd.Action"/>
-  <meta name="twitter:description" content="Reference for AstalNotifd.Action"/>
+  <meta property="og:title" content="AstalBrightness.DeviceList"/>
+  <meta property="og:description" content="Reference for AstalBrightness.DeviceList"/>
+  <meta name="twitter:title" content="AstalBrightness.DeviceList"/>
+  <meta name="twitter:description" content="Reference for AstalBrightness.DeviceList"/>
 
 
   
@@ -50,7 +50,7 @@ SPDX-License-Identifier: LGPL-2.1
       
       
       <div class="section namespace">
-        <h3><a href="index.html">AstalNotifd</a></h3>
+        <h3><a href="index.html">AstalBrightness</a></h3>
         <p>API Version: 0.1</p>
         
         <p>Library Version: 0.1.0</p>
@@ -60,21 +60,12 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a class="current" href="class.Action.html#description">Action</a>
+    <a class="current" href="class.DeviceList.html#description">DeviceList</a>
   </div>
 </div>
 
 
   
-<div class="section">
-  <h5>Constructors</h5>
-  <div class="links">
-  
-    <a class="ctor" href="ctor.Action.new.html">new</a>
-  
-  </div>
-</div>
-
 
 
   
@@ -85,11 +76,11 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Instance methods</h5>
   <div class="links">
   
-    <a class="method" href="method.Action.invoke.html">invoke</a>
+    <a class="method" href="method.DeviceList.get_device.html">get_device</a>
   
-    <a class="method" href="method.Action.get_id.html">get_id</a>
+    <a class="method" href="method.DeviceList.get_subsystem.html">get_subsystem</a>
   
-    <a class="method" href="method.Action.get_label.html">get_label</a>
+    <a class="method" href="method.DeviceList.get_devices.html">get_devices</a>
   
   </div>
 </div>
@@ -101,9 +92,9 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Properties</h5>
   <div class="links">
   
-    <a class="property" href="property.Action.id.html">id</a>
+    <a class="property" href="property.DeviceList.subsystem.html">subsystem</a>
   
-    <a class="property" href="property.Action.label.html">label</a>
+    <a class="property" href="property.DeviceList.devices.html">devices</a>
   
   </div>
 </div>
@@ -115,7 +106,9 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Signals</h5>
   <div class="links">
   
-    <a class="signal" href="signal.Action.invoked.html">invoked</a>
+    <a class="signal" href="signal.DeviceList.device-appeared.html">device-appeared</a>
+  
+    <a class="signal" href="signal.DeviceList.device-removed.html">device-removed</a>
   
   </div>
 </div>
@@ -140,7 +133,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Class</h3>
-    <h1 aria-label="Name"><a href="index.html">AstalNotifd</a><span class="sep" role="presentation"></span>Action</h1>
+    <h1 aria-label="Name"><a href="index.html">AstalBrightness</a><span class="sep" role="presentation"></span>DeviceList</h1>
   </header>
 
   <section>
@@ -156,13 +149,13 @@ SPDX-License-Identifier: LGPL-2.1
           
         </h4>
 
-        <pre><code>class AstalNotifd.Action : GObject.Object
-{
+        <pre><code>class AstalBrightness.DeviceList : GObject.Object
+  implements Gio.ListModel {
   /* No available fields */
 }</pre></code>
 
         <div class="docblock">
-          <p>Notification&nbsp;action.</p>
+          <p>A collection of devices of the same <a href="enum.Subsystem.html"><code>AstalBrightnessSubsystem</code></a>.</p>
         </div>
 
         <div class="docblock">
@@ -199,28 +192,24 @@ SPDX-License-Identifier: LGPL-2.1
     
 
     
-
-    
-    <div class="toggle-wrapper constructors">
-      <h4 id="constructors">
-        Constructors
-        <a href="#constructors" class="anchor"></a>
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
       </h4>
 
       <div class="docblock">
-      
-        <div class="">
-          <h6><a href="ctor.Action.new.html">astal_notifd_action_new</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
+        <ul>
+        
+          
+          <li class="interface"><a class="external" href="javascript:void(0)" data-link="iface.ListModel.html" data-namespace="Gio">GListModel</a></li>
+          
+        
+        </ul>
       </div>
     </div>
+    
+
     
 
     
@@ -235,18 +224,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="method.Action.invoke.html">astal_notifd_action_invoke</a></h6>
-          <div class="docblock">
-            <p>Invoke this action. Note that this method only notifies the client that this action was invoked by the user. For example, if this notification 
-persists beyond the lifetime of the sending application, this action will have no&nbsp;effect.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Action.get_id.html">astal_notifd_action_get_id</a></h6>
+          <h6><a href="method.DeviceList.get_device.html">astal_brightness_device_list_get_device</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -256,7 +234,17 @@ persists beyond the lifetime of the sending application, this action will have n
         </div>
       
         <div class="">
-          <h6><a href="method.Action.get_label.html">astal_notifd_action_get_label</a></h6>
+          <h6><a href="method.DeviceList.get_subsystem.html">astal_brightness_device_list_get_subsystem</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DeviceList.get_devices.html">astal_brightness_device_list_get_devices</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -282,6 +270,29 @@ persists beyond the lifetime of the sending application, this action will have n
       
 
       
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="iface.ListModel.html" data-namespace="Gio">GListModel</a> (5)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="method.ListModel.get_item.html">g_list_model_get_item</a></h6>
+            <div class="docblock">
+              <p>Get the item&nbsp;at <code>position</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="method.ListModel.get_item_type.html">g_list_model_get_item_type</a></h6>
+            <div class="docblock">
+              <p>Gets the type of the items&nbsp;in <code>list</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="method.ListModel.get_n_items.html">g_list_model_get_n_items</a></h6>
+            <div class="docblock">
+              <p>Gets the number of items&nbsp;in <code>list</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="method.ListModel.get_object.html">g_list_model_get_object</a></h6>
+            <div class="docblock">
+              <p>Get the item&nbsp;at <code>position</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="method.ListModel.items_changed.html">g_list_model_items_changed</a></h6>
+            <div class="docblock">
+              <p>Emits&nbsp;the <code>GListModel::items-changed</code> signal&nbsp;on <code>list</code>.</p>
+            </div>
+          </div>
+        </div>
+        
+      
     </div>
     
 
@@ -296,9 +307,9 @@ persists beyond the lifetime of the sending application, this action will have n
       <div class="docblock">
       
         <div class="">
-          <h6><a href="property.Action.id.html">AstalNotifd.Action:id</a></h6>
+          <h6><a href="property.DeviceList.subsystem.html">AstalBrightness.DeviceList:subsystem</a></h6>
           <div class="docblock">
-            <p><span class="caps">ID</span> of this&nbsp;action.</p>
+            No description available.
           </div>
           <div class="docblock">
             <p></p>
@@ -306,9 +317,9 @@ persists beyond the lifetime of the sending application, this action will have n
         </div>
       
         <div class="">
-          <h6><a href="property.Action.label.html">AstalNotifd.Action:label</a></h6>
+          <h6><a href="property.DeviceList.devices.html">AstalBrightness.DeviceList:devices</a></h6>
           <div class="docblock">
-            <p>Label displayed to the user for this&nbsp;action.</p>
+            <p>Get the full list of&nbsp;devices.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -322,6 +333,8 @@ persists beyond the lifetime of the sending application, this action will have n
         
       
 
+      
+        
       
 
     </div>
@@ -338,9 +351,19 @@ persists beyond the lifetime of the sending application, this action will have n
       <div class="docblock">
       
         <div class="">
-          <h6><a href="signal.Action.invoked.html">AstalNotifd.Action::invoked</a></h6>
+          <h6><a href="signal.DeviceList.device-appeared.html">AstalBrightness.DeviceList::device-appeared</a></h6>
           <div class="docblock">
-            <p>Emitted when the notification this action was added to invoked this&nbsp;action.</p>
+            <p>Emitted when a new sysfs device appears in the subsystem this collection is&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.DeviceList.device-removed.html">AstalBrightness.DeviceList::device-removed</a></h6>
+          <div class="docblock">
+            <p>Emitted when a sysfs device disappears in the subsystem this collection is&nbsp;for.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -365,6 +388,18 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
 
       
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="iface.ListModel.html" data-namespace="Gio">GListModel</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="signal.ListModel.items-changed.html">GListModel::items-changed</a></h6>
+            <div class="docblock">
+              <p>This signal is emitted whenever items were added to or removed&nbsp;from <code>list</code>.&nbsp;At <code>position</code>, <code>removed</code> items were removed&nbsp;and <code>added</code>
+items were added in their&nbsp;place.</p>
+            </div>
+          </div>
+        </div>
+        
+      
 
     </div>
     
@@ -377,7 +412,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       </h4>
 
       <div class="docblock">
-        <pre><code>struct AstalNotifdActionClass {
+        <pre><code>struct AstalBrightnessDeviceListClass {
   /* no available fields */
 }</code></pre>
       </div>
@@ -410,9 +445,9 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
       
       
+      <li class="toc-list-item"><a href="#implements"><span class="link-text">Implements</span></a></li>
       
-<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
-
+      
 
       
 

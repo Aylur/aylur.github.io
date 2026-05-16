@@ -66,15 +66,6 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
-<div class="section">
-  <h5>Constructors</h5>
-  <div class="links">
-  
-    <a class="ctor" href="ctor.Notifd.new.html">new</a>
-  
-  </div>
-</div>
-
 
 
   
@@ -182,7 +173,7 @@ SPDX-License-Identifier: LGPL-2.1
         </h4>
 
         <pre><code>class AstalNotifd.Notifd : GObject.Object
-{
+  implements Gio.ListModel {
   AstalNotifdDaemon* daemon,
   AstalNotifdProxy* proxy
 }</pre></code>
@@ -226,28 +217,24 @@ This class queues up to become the next daemon while acting as a proxy in the&nb
     
 
     
-
-    
-    <div class="toggle-wrapper constructors">
-      <h4 id="constructors">
-        Constructors
-        <a href="#constructors" class="anchor"></a>
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
       </h4>
 
       <div class="docblock">
-      
-        <div class="">
-          <h6><a href="ctor.Notifd.new.html">astal_notifd_notifd_new</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
+        <ul>
+        
+          
+          <li class="interface"><a class="external" href="javascript:void(0)" data-link="iface.ListModel.html" data-namespace="Gio">GListModel</a></li>
+          
+        
+        </ul>
       </div>
     </div>
+    
+
     
 
     
@@ -379,6 +366,29 @@ This class queues up to become the next daemon while acting as a proxy in the&nb
       
 
       
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="iface.ListModel.html" data-namespace="Gio">GListModel</a> (5)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="method.ListModel.get_item.html">g_list_model_get_item</a></h6>
+            <div class="docblock">
+              <p>Get the item&nbsp;at <code>position</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="method.ListModel.get_item_type.html">g_list_model_get_item_type</a></h6>
+            <div class="docblock">
+              <p>Gets the type of the items&nbsp;in <code>list</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="method.ListModel.get_n_items.html">g_list_model_get_n_items</a></h6>
+            <div class="docblock">
+              <p>Gets the number of items&nbsp;in <code>list</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="method.ListModel.get_object.html">g_list_model_get_object</a></h6>
+            <div class="docblock">
+              <p>Get the item&nbsp;at <code>position</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="method.ListModel.items_changed.html">g_list_model_items_changed</a></h6>
+            <div class="docblock">
+              <p>Emits&nbsp;the <code>GListModel::items-changed</code> signal&nbsp;on <code>list</code>.</p>
+            </div>
+          </div>
+        </div>
+        
+      
     </div>
     
 
@@ -443,6 +453,8 @@ is&nbsp;-1.</p>
       
 
       
+        
+      
 
     </div>
     
@@ -494,6 +506,18 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         
       
 
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="iface.ListModel.html" data-namespace="Gio">GListModel</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="Gio" data-link="signal.ListModel.items-changed.html">GListModel::items-changed</a></h6>
+            <div class="docblock">
+              <p>This signal is emitted whenever items were added to or removed&nbsp;from <code>list</code>.&nbsp;At <code>position</code>, <code>removed</code> items were removed&nbsp;and <code>added</code>
+items were added in their&nbsp;place.</p>
+            </div>
+          </div>
+        </div>
+        
       
 
     </div>
@@ -572,9 +596,9 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
       
       
+      <li class="toc-list-item"><a href="#implements"><span class="link-text">Implements</span></a></li>
       
-<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
-
+      
 
       
 <li class="toc-list-item"><a href="#type-functions"><span class="link-text">Functions</span></a></li>

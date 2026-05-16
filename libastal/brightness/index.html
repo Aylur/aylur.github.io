@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Quarrel &ndash; 0.1</title>
+  <title>AstalBrightness &ndash; 0.1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="Quarrel-0.1"/>
-  <meta property="og:description" content="Reference for Quarrel-0.1"/>
-  <meta name="twitter:title" content="Quarrel-0.1"/>
-  <meta name="twitter:description" content="Reference for Quarrel-0.1"/>
+  <meta property="og:title" content="AstalBrightness-0.1"/>
+  <meta property="og:description" content="Reference for AstalBrightness-0.1"/>
+  <meta name="twitter:title" content="AstalBrightness-0.1"/>
+  <meta name="twitter:description" content="Reference for AstalBrightness-0.1"/>
 
 
   
@@ -50,7 +50,7 @@ SPDX-License-Identifier: LGPL-2.1
       
       
       <div class="section namespace">
-        <h3><a href="index.html">Quarrel</a></h3>
+        <h3><a href="index.html">AstalBrightness</a></h3>
         <p>API Version: 0.1</p>
         
         <p>Library Version: 0.1.0</p>
@@ -66,19 +66,23 @@ SPDX-License-Identifier: LGPL-2.1
     <a href="#classes">Classes</a>
   
   
+    <a href="#interfaces">Interfaces</a>
   
   
   
   
   
+    <a href="#enums">Enumerations</a>
   
-    <a href="#domains">Error Domains</a>
+  
   
   
   
     <a href="#functions">Functions</a>
   
   
+  
+    <a href="#constants">Constants</a>
   
   </div>
 </div>
@@ -112,10 +116,10 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Namespace</h3>
-    <h1>Quarrel &ndash; 0.1</h1>
+    <h1>AstalBrightness &ndash; 0.1</h1>
 
     <div class="description">
-      <p>Command line argument parser.</p>
+      <p>Read and control device brightness</p>
     </div>
 
     <div class="meta info">
@@ -123,8 +127,8 @@ SPDX-License-Identifier: LGPL-2.1
         <tr><td><em>Version</em></td><td>0.1.0</td></tr>
         <tr><td><em>Authors</em></td><td>Aylur</td></tr>
         <tr><td><em>License</em></td><td>LGPL-2.1</td></tr>
-        <tr><td><em>Website</em></td><td><a href="https://astal.dev/guide/libraries/quarrel" class="external">https://astal.dev/guide/libraries/quarrel</a></td></tr>
-        <tr><td><em>Source</em></td><td><a href="https://github.com/Aylur/astal/tree/main/lib/quarrel" class="external">https://github.com/Aylur/astal/tree/main/lib/quarrel</a></td></tr>
+        <tr><td><em>Website</em></td><td><a href="https://astal.dev/guide/libraries/brightness" class="external">https://astal.dev/guide/libraries/brightness</a></td></tr>
+        <tr><td><em>Source</em></td><td><a href="https://github.com/Aylur/astal/tree/main/lib/brightness" class="external">https://github.com/Aylur/astal/tree/main/lib/brightness</a></td></tr>
       </table>
     </div>
 
@@ -135,10 +139,10 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       <table>
         
-        <tr><td>C headers</td><td><code>quarrel.h</code></td></tr>
+        <tr><td>C headers</td><td><code>astal-brightness.h</code></td></tr>
         
         
-        <tr><td>pkg-config files</td><td><code>quarrel</code></td></tr>
+        <tr><td>pkg-config files</td><td><code>astal-brightness</code></td></tr>
         
       </table>
       </div>
@@ -216,52 +220,12 @@ SPDX-License-Identifier: LGPL-2.1
           <tbody>
           
           <tr class="section-item">
-            <td><a title="Command" class="symbol" href="class.Command.html">Command</a></td>
+            <td><a title="Brightness" class="symbol" href="class.Brightness.html">Brightness</a></td>
             
           </tr>
           
           <tr class="section-item">
-            <td><a title="DoubleOpt" class="symbol" href="class.DoubleOpt.html">DoubleOpt</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FileArrayOpt" class="symbol" href="class.FileArrayOpt.html">FileArrayOpt</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FileOpt" class="symbol" href="class.FileOpt.html">FileOpt</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="Flag" class="symbol" href="class.Flag.html">Flag</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="IntOpt" class="symbol" href="class.IntOpt.html">IntOpt</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="Opt" class="symbol" href="class.Opt.html">Opt</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="SpecialFlag" class="symbol" href="class.SpecialFlag.html">SpecialFlag</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="StringArrayOpt" class="symbol" href="class.StringArrayOpt.html">StringArrayOpt</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="StringOpt" class="symbol" href="class.StringOpt.html">StringOpt</a></td>
+            <td><a title="DeviceList" class="symbol" href="class.DeviceList.html">DeviceList</a></td>
             
           </tr>
           
@@ -272,17 +236,11 @@ SPDX-License-Identifier: LGPL-2.1
   </section>
   
   
-  
-  
-  
-  
-  
-  
   <section>
     <div class="toggle-wrapper default-hide">
-      <h4 id="domains" class="section-header" style="display:flex;">
-        Error Domains
-        <a href="#domains" class="anchor"></a>
+      <h4 id="interfaces" class="section-header" style="display:flex;">
+        Interfaces
+        <a href="#interfaces" class="anchor"></a>
       </h4>
 
       <div class="docblock">
@@ -290,7 +248,7 @@ SPDX-License-Identifier: LGPL-2.1
           <tbody>
           
           <tr class="section-item">
-            <td><a title="ParseError" class="symbol" href="error.ParseError.html">ParseError</a></td>
+            <td><a title="Device" class="symbol" href="iface.Device.html">Device</a></td>
             
           </tr>
           
@@ -299,6 +257,34 @@ SPDX-License-Identifier: LGPL-2.1
       </div>
     </div>
   </section>
+  
+  
+  
+  
+  
+  <section>
+    <div class="toggle-wrapper default-hide">
+      <h4 id="enums" class="section-header" style="display:flex;">
+        Enumerations
+        <a href="#enums" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table style="display:block;">
+          <tbody>
+          
+          <tr class="section-item">
+            <td><a title="Subsystem" class="symbol" href="enum.Subsystem.html">Subsystem</a></td>
+            
+          </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+  
   
   
   
@@ -314,7 +300,7 @@ SPDX-License-Identifier: LGPL-2.1
           <tbody>
           
           <tr class="section-item">
-            <td><a title="help" class="symbol" href="func.help.html">help</a></td>
+            <td><a title="get_default" class="symbol" href="func.get_default.html">get_default</a></td>
             
           </tr>
           
@@ -325,6 +311,43 @@ SPDX-License-Identifier: LGPL-2.1
   </section>
   
   
+  
+  <section>
+    <div class="toggle-wrapper default-hide">
+      <h4 id="constants" class="section-header" style="display:flex;">
+        Constants
+        <a href="#constants" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table style="display:block;">
+          <tbody>
+          
+          <tr class="section-item">
+            <td><a title="MAJOR_VERSION" class="symbol" href="const.MAJOR_VERSION.html">MAJOR_VERSION</a></td>
+            
+          </tr>
+          
+          <tr class="section-item">
+            <td><a title="MICRO_VERSION" class="symbol" href="const.MICRO_VERSION.html">MICRO_VERSION</a></td>
+            
+          </tr>
+          
+          <tr class="section-item">
+            <td><a title="MINOR_VERSION" class="symbol" href="const.MINOR_VERSION.html">MINOR_VERSION</a></td>
+            
+          </tr>
+          
+          <tr class="section-item">
+            <td><a title="VERSION" class="symbol" href="const.VERSION.html">VERSION</a></td>
+            
+          </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
   
 </section>
 

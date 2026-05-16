@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalNotifd.Notifd.new</title>
+  <title>AstalBrightness.Device:brightness</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalNotifd.Notifd.new"/>
-  <meta property="og:description" content="Reference for AstalNotifd.Notifd.new"/>
-  <meta name="twitter:title" content="AstalNotifd.Notifd.new"/>
-  <meta name="twitter:description" content="Reference for AstalNotifd.Notifd.new"/>
+  <meta property="og:title" content="AstalBrightness.Device:brightness"/>
+  <meta property="og:description" content="Reference for property AstalBrightness.Device:brightness"/>
+  <meta name="twitter:title" content="AstalBrightness.Device:brightness"/>
+  <meta name="twitter:description" content="Reference for property AstalBrightness.Device:brightness"/>
 
 
   
@@ -50,7 +50,7 @@ SPDX-License-Identifier: LGPL-2.1
       
       
       <div class="section namespace">
-        <h3><a href="index.html">AstalNotifd</a></h3>
+        <h3><a href="index.html">AstalBrightness</a></h3>
         <p>API Version: 0.1</p>
         
         <p>Library Version: 0.1.0</p>
@@ -60,14 +60,22 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a href="class.Notifd.html">Notifd</a>
+    <a href="iface.Device.html">Device</a>
   </div>
 </div>
 <div class="section">
-  <h5>Constructors</h5>
+  <h5>Properties</h5>
   <div class="links">
   
-    <a class="method current" href="ctor.Notifd.new.html">new</a>
+    <a class="property"href="property.Device.subsystem.html">subsystem</a>
+  
+    <a class="property"href="property.Device.name.html">name</a>
+  
+    <a class="property current"href="property.Device.brightness.html">brightness</a>
+  
+    <a class="property"href="property.Device.real-brightness.html">real-brightness</a>
+  
+    <a class="property"href="property.Device.max-brightness.html">max-brightness</a>
   
   </div>
 </div>
@@ -82,8 +90,8 @@ SPDX-License-Identifier: LGPL-2.1
     
 <section id="main" class="content">
   <header>
-    <h3>Constructor</h3>
-    <h1><a href="index.html">AstalNotifd</a><span class="sep"></span><a href="class.Notifd.html">Notifd</a><span class="sep"></span>new</h1>
+    <h3>Property</h3>
+    <h1><a href="index.html">AstalBrightness</a><span class="sep"></span><a href="iface.Device.html">Device</a>:brightness</h1>
   </header>
 
   <section>
@@ -91,38 +99,30 @@ SPDX-License-Identifier: LGPL-2.1
       <p></p>
     </div>
     <div class="declaration toggle-wrapper">
-      <h4 id="declaration" style="display:flex;">
+      <h4 id="declaration">
         Declaration
         <a href="#declaration" class="anchor"></a>
-        
       </h4>
 
       <div class="docblock">
-        <pre><code><div class="highlight"><pre><span></span><span class="n">AstalNotifdNotifd</span><span class="o">*</span>
-<span class="n">astal_notifd_notifd_new</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="kt">void</span>
-<span class="p">)</span>
-</pre></div>
-</code></pre>
+        <pre><code>property brightness: float [ read, write ]</code></pre>
       </div>
     </div>
 
     <div class="description toggle-wrapper">
-      <h4 id="description" style="display:flex;">
+      <h4 style="display:flex;" id="description">
         Description
         <a href="#description" class="anchor"></a>
         
       </h4>
 
       <div class="docblock">
-        <p>No description available.</p>
+        <p>Brightness&nbsp;percentage: <code>real_brightness / max_brightness</code>.</p>
       </div>
 
       <div class="docblock">
-        
-        
-        
-        
+        <p>
+          Type:<code>gfloat</code></p>
         
         
         
@@ -131,35 +131,22 @@ SPDX-License-Identifier: LGPL-2.1
       
     </div>
 
-    
-
-    
-    <div class="return-value toggle-wrapper">
-      <h4 id="return-value">
-        Return value
-        <a href="#return-value" class="anchor"></a>
+    <div class="flags toggle-wrapper">
+      <h4 id="flags">
+        Flags
+        <a href="#flags" class="anchor"></a>
       </h4>
 
       <div class="docblock">
-        <div class="returns">
-          <div class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="class.Notifd.html"><code>AstalNotifdNotifd</code></a></p>
-            <p>No description available.</p>
-          </div>
-          <div>
-            <table>
-            
-            
-            
-            <tr><td title="transfer: full">The caller of the function takes ownership of the data, and is responsible for freeing it.</td></tr>
-            
-            
-            </table>
-          </div>
-        </div>
+      <table>
+        <tr><td>Readable</td><td><b>yes</b></td></tr>
+        <tr><td>Writable</td><td><b>yes</b></td></tr>
+        <tr><td>Construct</td><td><b>no</b></td></tr>
+        <tr><td>Construct only</td><td><b>no</b></td></tr>
+      </table>
       </div>
     </div>
-    
+
   </section>
 </section>
 
