@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalGreet.Request</title>
+  <title>AstalGreet.PostAuthMessage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalGreet.Request"/>
-  <meta property="og:description" content="Reference for AstalGreet.Request"/>
-  <meta name="twitter:title" content="AstalGreet.Request"/>
-  <meta name="twitter:description" content="Reference for AstalGreet.Request"/>
+  <meta property="og:title" content="AstalGreet.PostAuthMessage"/>
+  <meta property="og:description" content="Reference for AstalGreet.PostAuthMessage"/>
+  <meta name="twitter:title" content="AstalGreet.PostAuthMessage"/>
+  <meta name="twitter:description" content="Reference for AstalGreet.PostAuthMessage"/>
 
 
   
@@ -60,12 +60,21 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a class="current" href="class.Request.html#description">Request</a>
+    <a class="current" href="class.PostAuthMessage.html#description">PostAuthMessage</a>
   </div>
 </div>
 
 
   
+<div class="section">
+  <h5>Constructors</h5>
+  <div class="links">
+  
+    <a class="ctor" href="ctor.PostAuthMessage.new.html">new</a>
+  
+  </div>
+</div>
+
 
 
   
@@ -76,36 +85,34 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Instance methods</h5>
   <div class="links">
   
-    <a class="method" href="method.Request.payload.html">payload</a>
+    <a class="method" href="method.PostAuthMessage.get_response.html">get_response</a>
   
-    <a class="method" href="method.Request.send.html">send</a>
-  
-    <a class="method" href="method.Request.send_finish.html">send_finish</a>
+    <a class="method" href="method.PostAuthMessage.set_response.html">set_response</a>
   
   </div>
 </div>
 
-
-
-  
-
-
-  
-
-
-  
 
 
   
 <div class="section">
-  <h5>Virtual methods</h5>
+  <h5>Properties</h5>
   <div class="links">
   
-    <a class="method" href="vfunc.Request.payload.html">payload</a>
+    <a class="property" href="property.PostAuthMessage.response.html">response</a>
   
   </div>
 </div>
 
+
+
+  
+
+
+  
+
+
+  
 
 
 
@@ -120,7 +127,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Class</h3>
-    <h1 aria-label="Name"><a href="index.html">AstalGreet</a><span class="sep" role="presentation"></span>Request</h1>
+    <h1 aria-label="Name"><a href="index.html">AstalGreet</a><span class="sep" role="presentation"></span>PostAuthMessage</h1>
   </header>
 
   <section>
@@ -136,13 +143,14 @@ SPDX-License-Identifier: LGPL-2.1
           
         </h4>
 
-        <pre><code>abstract class AstalGreet.Request : GObject.Object
+        <pre><code>class AstalGreet.PostAuthMessage : AstalGreet.Request
 {
   /* No available fields */
 }</pre></code>
 
         <div class="docblock">
-          <p>Base Request&nbsp;type.</p>
+          <p>Responds to an authentication message. If the message is informational (info or error), then this message does not need a response. 
+The session is ready to be started if a success is&nbsp;returned.</p>
         </div>
 
         <div class="docblock">
@@ -168,6 +176,10 @@ SPDX-License-Identifier: LGPL-2.1
         <ul>
         
           
+          <li class="class"><a href="class.Request.html" title="Request">AstalGreetRequest</a></li>
+          
+        
+          
           <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
           
         
@@ -177,24 +189,30 @@ SPDX-License-Identifier: LGPL-2.1
     
 
     
-    <div class="descendants toggle-wrapper default-hide">
-      <h4 id="descendants">Descendants <a href="#descendants" class="anchor"></a></h4>
+
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
       <div class="docblock">
-        <ul>
-          <li class="class"><a href="class.CreateSession.html" title="CreateSession">AstalGreetCreateSession</a></li>
-        
-          <li class="class"><a href="class.PostAuthMessage.html" title="PostAuthMessage">AstalGreetPostAuthMessage</a></li>
-        
-          <li class="class"><a href="class.StartSession.html" title="StartSession">AstalGreetStartSession</a></li>
-        
-          <li class="class"><a href="class.CancelSession.html" title="CancelSession">AstalGreetCancelSession</a></li>
-        </ul>
+      
+        <div class="">
+          <h6><a href="ctor.PostAuthMessage.new.html">astal_greet_post_auth_message_new</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
       </div>
     </div>
-    
-
-    
-
     
 
     
@@ -209,7 +227,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="method.Request.payload.html">astal_greet_request_payload</a></h6>
+          <h6><a href="method.PostAuthMessage.get_response.html">astal_greet_post_auth_message_get_response</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -219,17 +237,7 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.Request.send.html">astal_greet_request_send</a></h6>
-          <div class="docblock">
-            <p>Send this request to&nbsp;greetd.</p>
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Request.send_finish.html">astal_greet_request_send_finish</a></h6>
+          <h6><a href="method.PostAuthMessage.set_response.html">astal_greet_post_auth_message_set_response</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -240,6 +248,35 @@ SPDX-License-Identifier: LGPL-2.1
       
       </div>
 
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.Request.html">AstalGreetRequest</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="method.Request.payload.html">astal_greet_request_payload</a></h6><div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Request.send.html">astal_greet_request_send</a></h6><div class="docblock">
+              <p>Send this request to&nbsp;greetd.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Request.send_finish.html">astal_greet_request_send_finish</a></h6><div class="docblock">
+              No description available.
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
       
         
         <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
@@ -259,6 +296,38 @@ SPDX-License-Identifier: LGPL-2.1
     
 
     
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.PostAuthMessage.response.html">AstalGreet.PostAuthMessage:response</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+        
+      
+
+      
+
+    </div>
+    
 
     
     <div class="signals toggle-wrapper">
@@ -269,6 +338,8 @@ SPDX-License-Identifier: LGPL-2.1
 
       
 
+      
+        
       
         
         <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
@@ -296,11 +367,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       </h4>
 
       <div class="docblock">
-        <pre><code>struct AstalGreetRequestClass {
-  JsonNode* (* payload) (
-    AstalGreetRequest* self
-  );
-  
+        <pre><code>struct AstalGreetPostAuthMessageClass {
+  /* no available fields */
 }</code></pre>
       </div>
 
@@ -309,43 +377,9 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       </div>
 
       
-      <div class="docblock">
-        <h6>Class members</h6>
-
-        <dl class="members">
-        
-          <dt><code>payload: JsonNode* (* payload) (
-    AstalGreetRequest* self
-  )</code></dt>
-          <dd><p>No description available.</p></dd>
-        
-        </dd>
-      </div>
-      
     </div>
     
 
-    
-    <div class="toggle-wrapper methods">
-      <h4 id="virtual-methods">
-        Virtual methods
-        <a href="#virtual-methods" class="anchor"></a>
-      </h4>
-
-      <div class="docblock">
-      
-      <div class="">
-        <h6 id="vfunc-payload"><a href="vfunc.Request.payload.html">AstalGreet.RequestClass.payload</a></h6>
-        <div class="docblock">
-          No description available.
-        </div>
-        <div class="docblock">
-          <p></p>
-        </div>
-      </div>
-      
-      </div>
-    </div>
     
 
     
@@ -367,6 +401,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
       
       
+<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
+
 
       
 
@@ -375,14 +411,14 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
 
       
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
 
       
 
       
 
       
-<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
-
 
     </ul>
   </nav>

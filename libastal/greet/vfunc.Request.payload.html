@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalGreet.Request:type-name</title>
+  <title>AstalGreet.Request.payload</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalGreet.Request:type-name"/>
-  <meta property="og:description" content="Reference for property AstalGreet.Request:type-name"/>
-  <meta name="twitter:title" content="AstalGreet.Request:type-name"/>
-  <meta name="twitter:description" content="Reference for property AstalGreet.Request:type-name"/>
+  <meta property="og:title" content="AstalGreet.Request.payload"/>
+  <meta property="og:description" content="Reference for AstalGreet.Request.payload"/>
+  <meta name="twitter:title" content="AstalGreet.Request.payload"/>
+  <meta name="twitter:description" content="Reference for AstalGreet.Request.payload"/>
 
 
   
@@ -64,10 +64,10 @@ SPDX-License-Identifier: LGPL-2.1
   </div>
 </div>
 <div class="section">
-  <h5>Properties</h5>
+  <h5>Virtual methods</h5>
   <div class="links">
   
-    <a class="property current"href="property.Request.type-name.html">type-name</a>
+    <a class="method current" href="vfunc.Request.payload.html">payload</a>
   
   </div>
 </div>
@@ -82,27 +82,34 @@ SPDX-License-Identifier: LGPL-2.1
     
 <section id="main" class="content">
   <header>
-    <h3>Property</h3>
-    <h1><a href="index.html">AstalGreet</a><span class="sep"></span><a href="class.Request.html">Request</a>:type-name</h1>
+    <h3>Virtual Method</h3>
+    <h1><a href="index.html">AstalGreet</a><span class="sep"></span><a href="class.Request.html">Request</a><span class="sep"></span>payload</h1>
   </header>
 
   <section>
     <div class="docblock">
       <p></p>
     </div>
+
     <div class="declaration toggle-wrapper">
       <h4 id="declaration">
         Declaration
         <a href="#declaration" class="anchor"></a>
+        
       </h4>
 
-      <div class="docblock">
-        <pre><code>property type-name: utf8 [ read ]</code></pre>
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="n">JsonNode</span><span class="o">*</span>
+<span class="n">payload</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">AstalGreetRequest</span><span class="o">*</span><span class="w"> </span><span class="n">self</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
       </div>
     </div>
 
     <div class="description toggle-wrapper">
-      <h4 style="display:flex;" id="description">
+      <h4 id="description">
         Description
         <a href="#description" class="anchor"></a>
         
@@ -113,8 +120,6 @@ SPDX-License-Identifier: LGPL-2.1
       </div>
 
       <div class="docblock">
-        <p>
-          Type:<code>gchar*</code></p>
         
         
         
@@ -123,21 +128,35 @@ SPDX-License-Identifier: LGPL-2.1
       
     </div>
 
-    <div class="flags toggle-wrapper">
-      <h4 id="flags">
-        Flags
-        <a href="#flags" class="anchor"></a>
+    
+
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
       </h4>
 
       <div class="docblock">
-      <table>
-        <tr><td>Readable</td><td><b>yes</b></td></tr>
-        <tr><td>Writable</td><td><b>no</b></td></tr>
-        <tr><td>Construct</td><td><b>no</b></td></tr>
-        <tr><td>Construct only</td><td><b>no</b></td></tr>
-      </table>
+        <div class="returns">
+          <div>
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="struct.Node.html" data-namespace="Json" class="external"><code>JsonNode</code></a></p>
+            <p>No description available.</p>
+          </div>
+          <div>
+            <table>
+            
+            
+            
+            <tr><td title="transfer: full">The caller of the method takes ownership of the returned data, and is responsible for freeing it.</td></tr>
+            
+            
+            </table>
+          </div>
+        </div>
       </div>
     </div>
+    
 
   </section>
 </section>

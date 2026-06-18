@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalGreet.Request.send</title>
+  <title>AstalGreet.PostAuthMessage.new</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta priority="og:title" content="AstalGreet.Request.send"/>
-  <meta priority="og:description" content="Reference for AstalGreet.Request.send"/>
-  <meta name="twitter:title" content="AstalGreet.Request.send"/>
-  <meta name="twitter:description" content="Reference for AstalGreet.Request.send"/>
+  <meta property="og:title" content="AstalGreet.PostAuthMessage.new"/>
+  <meta property="og:description" content="Reference for AstalGreet.PostAuthMessage.new"/>
+  <meta name="twitter:title" content="AstalGreet.PostAuthMessage.new"/>
+  <meta name="twitter:description" content="Reference for AstalGreet.PostAuthMessage.new"/>
 
 
   
@@ -60,18 +60,14 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a href="class.Request.html">Request</a>
+    <a href="class.PostAuthMessage.html">PostAuthMessage</a>
   </div>
 </div>
 <div class="section">
-  <h5>Methods</h5>
+  <h5>Constructors</h5>
   <div class="links">
   
-    <a class="method" href="method.Request.payload.html">payload</a>
-  
-    <a class="method current" href="method.Request.send.html">send</a>
-  
-    <a class="method" href="method.Request.send_finish.html">send_finish</a>
+    <a class="method current" href="ctor.PostAuthMessage.new.html">new</a>
   
   </div>
 </div>
@@ -86,28 +82,25 @@ SPDX-License-Identifier: LGPL-2.1
     
 <section id="main" class="content">
   <header>
-    <h3>Method</h3>
-    <h1><a href="index.html">AstalGreet</a><span class="sep"></span><a href="class.Request.html">Request</a><span class="sep"></span>send</h1>
+    <h3>Constructor</h3>
+    <h1><a href="index.html">AstalGreet</a><span class="sep"></span><a href="class.PostAuthMessage.html">PostAuthMessage</a><span class="sep"></span>new</h1>
   </header>
 
   <section>
     <div class="docblock">
       <p></p>
     </div>
-
     <div class="declaration toggle-wrapper">
-      <h4 style="display:flex;" id="declaration">
+      <h4 id="declaration" style="display:flex;">
         Declaration
-        <a class="anchor" href="#declaration"></a>
+        <a href="#declaration" class="anchor"></a>
         
       </h4>
 
-      <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
-<span class="n">astal_greet_request_send</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="n">AstalGreetRequest</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
-<span class="w">  </span><span class="n">GAsyncReadyCallback</span><span class="w"> </span><span class="n">_callback_</span><span class="p">,</span>
-<span class="w">  </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">_callback__target</span>
+      <div class="docblock">
+        <pre><code><div class="highlight"><pre><span></span><span class="n">AstalGreetPostAuthMessage</span><span class="o">*</span>
+<span class="n">astal_greet_post_auth_message_new</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">response</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -115,14 +108,14 @@ SPDX-License-Identifier: LGPL-2.1
     </div>
 
     <div class="description toggle-wrapper">
-      <h4 style="display:flex;" id="description">
+      <h4 id="description" style="display:flex;">
         Description
-        <a class="anchor" href="#description"></a>
+        <a href="#description" class="anchor"></a>
         
       </h4>
 
       <div class="docblock">
-        <p>Send this request to&nbsp;greetd.</p>
+        <p>No description available.</p>
       </div>
 
       <div class="docblock">
@@ -148,11 +141,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
         <dl class="arguments">
           
-
-          
-          <dt class="arg-name"><code>_callback_</code></dt>
+          <dt class="arg-name"><code>response</code></dt>
           <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="callback.AsyncReadyCallback.html" data-namespace="Gio" class="external"><code>GAsyncReadyCallback</code></a></p>
+            <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
             <p>No description available.</p>
             <table>
             
@@ -162,25 +153,8 @@ SPDX-License-Identifier: LGPL-2.1
             
             
             
-            
-            
-            </table>
-          </dd>
-          
-          <dt class="arg-name"><code>_callback__target</code></dt>
-          <dd class="arg-description">
-            <p><em>Type:</em>&nbsp;<code>void*</code></p>
-            <p>No description available.</p>
-            <table>
-            
-            <tr><td>The argument can be <code>NULL</code>.</td></tr>
-            
-            
-            
-            
-            
-            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
-            
+            <tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            <tr><td>The value is a NUL terminated UTF-8 string.</td></tr>
             </table>
           </dd>
           
@@ -192,7 +166,32 @@ SPDX-License-Identifier: LGPL-2.1
     
 
     
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
 
+      <div class="docblock">
+        <div class="returns">
+          <div class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.PostAuthMessage.html"><code>AstalGreetPostAuthMessage</code></a></p>
+            <p>No description available.</p>
+          </div>
+          <div>
+            <table>
+            
+            
+            
+            <tr><td title="transfer: full">The caller of the function takes ownership of the data, and is responsible for freeing it.</td></tr>
+            
+            
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </section>
 </section>
 

@@ -7,7 +7,7 @@ SPDX-License-Identifier: LGPL-2.1
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AstalGreet.PostAuthMesssage</title>
+  <title>AstalGreet.Greeter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -18,10 +18,10 @@ SPDX-License-Identifier: LGPL-2.1
   
 
   
-  <meta property="og:title" content="AstalGreet.PostAuthMesssage"/>
-  <meta property="og:description" content="Reference for AstalGreet.PostAuthMesssage"/>
-  <meta name="twitter:title" content="AstalGreet.PostAuthMesssage"/>
-  <meta name="twitter:description" content="Reference for AstalGreet.PostAuthMesssage"/>
+  <meta property="og:title" content="AstalGreet.Greeter"/>
+  <meta property="og:description" content="Reference for AstalGreet.Greeter"/>
+  <meta name="twitter:title" content="AstalGreet.Greeter"/>
+  <meta name="twitter:description" content="Reference for AstalGreet.Greeter"/>
 
 
   
@@ -60,7 +60,7 @@ SPDX-License-Identifier: LGPL-2.1
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a class="current" href="class.PostAuthMesssage.html#description">PostAuthMesssage</a>
+    <a class="current" href="class.Greeter.html#description">Greeter</a>
   </div>
 </div>
 
@@ -70,7 +70,7 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Constructors</h5>
   <div class="links">
   
-    <a class="ctor" href="ctor.PostAuthMesssage.new.html">new</a>
+    <a class="ctor" href="ctor.Greeter.new.html">new</a>
   
   </div>
 </div>
@@ -85,28 +85,42 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Instance methods</h5>
   <div class="links">
   
-    <a class="method" href="method.PostAuthMesssage.get_response.html">get_response</a>
+    <a class="method" href="method.Greeter.create_session.html">create_session</a>
   
-    <a class="method" href="method.PostAuthMesssage.set_response.html">set_response</a>
+    <a class="method" href="method.Greeter.post_auth.html">post_auth</a>
+  
+    <a class="method" href="method.Greeter.start_session.html">start_session</a>
+  
+    <a class="method" href="method.Greeter.start_session_finish.html">start_session_finish</a>
   
   </div>
 </div>
 
+
+
+  
 
 
   
 <div class="section">
-  <h5>Properties</h5>
+  <h5>Signals</h5>
   <div class="links">
   
-    <a class="property" href="property.PostAuthMesssage.response.html">response</a>
+    <a class="signal" href="signal.Greeter.visible-request.html">visible-request</a>
+  
+    <a class="signal" href="signal.Greeter.secret-request.html">secret-request</a>
+  
+    <a class="signal" href="signal.Greeter.info-message.html">info-message</a>
+  
+    <a class="signal" href="signal.Greeter.error-message.html">error-message</a>
+  
+    <a class="signal" href="signal.Greeter.cancelled.html">cancelled</a>
+  
+    <a class="signal" href="signal.Greeter.authenticated.html">authenticated</a>
   
   </div>
 </div>
 
-
-
-  
 
 
   
@@ -127,7 +141,7 @@ SPDX-License-Identifier: LGPL-2.1
 <section id="main" class="content">
   <header>
     <h3>Class</h3>
-    <h1 aria-label="Name"><a href="index.html">AstalGreet</a><span class="sep" role="presentation"></span>PostAuthMesssage</h1>
+    <h1 aria-label="Name"><a href="index.html">AstalGreet</a><span class="sep" role="presentation"></span>Greeter</h1>
   </header>
 
   <section>
@@ -143,14 +157,13 @@ SPDX-License-Identifier: LGPL-2.1
           
         </h4>
 
-        <pre><code>class AstalGreet.PostAuthMesssage : AstalGreet.Request
+        <pre><code>class AstalGreet.Greeter : GObject.Object
 {
   /* No available fields */
 }</pre></code>
 
         <div class="docblock">
-          <p>Answers an authentication message. If the message was informative (info, error), then a response does not need to be set in this 
-message. The session is ready to be started if a success is&nbsp;returned.</p>
+          <p>Object that allows login flows to be implemented using&nbsp;signals.</p>
         </div>
 
         <div class="docblock">
@@ -176,10 +189,6 @@ message. The session is ready to be started if a success is&nbsp;returned.</p>
         <ul>
         
           
-          <li class="class"><a href="class.Request.html" title="Request">AstalGreetRequest</a></li>
-          
-        
-          
           <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
           
         
@@ -202,7 +211,7 @@ message. The session is ready to be started if a success is&nbsp;returned.</p>
       <div class="docblock">
       
         <div class="">
-          <h6><a href="ctor.PostAuthMesssage.new.html">astal_greet_post_auth_messsage_new</a></h6>
+          <h6><a href="ctor.Greeter.new.html">astal_greet_greeter_new</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -227,9 +236,9 @@ message. The session is ready to be started if a success is&nbsp;returned.</p>
       <div class="docblock">
       
         <div class="">
-          <h6><a href="method.PostAuthMesssage.get_response.html">astal_greet_post_auth_messsage_get_response</a></h6>
+          <h6><a href="method.Greeter.create_session.html">astal_greet_greeter_create_session</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Create a session and start the authentication&nbsp;flow.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -237,7 +246,28 @@ message. The session is ready to be started if a success is&nbsp;returned.</p>
         </div>
       
         <div class="">
-          <h6><a href="method.PostAuthMesssage.set_response.html">astal_greet_post_auth_messsage_set_response</a></h6>
+          <h6><a href="method.Greeter.post_auth.html">astal_greet_greeter_post_auth</a></h6>
+          <div class="docblock">
+            <p>Respond&nbsp;to <code>AstalGreetGreeter::visible-request</code> or <code>AstalGreetGreeter::secret-request</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Greeter.start_session.html">astal_greet_greeter_start_session</a></h6>
+          <div class="docblock">
+            <p>Start the session&nbsp;after <code>AstalGreetGreeter::authenticated</code> is emitted. The greeter process must terminate after this method 
+yields in order for the session to&nbsp;start.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Greeter.start_session_finish.html">astal_greet_greeter_start_session_finish</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -248,35 +278,6 @@ message. The session is ready to be started if a success is&nbsp;returned.</p>
       
       </div>
 
-      
-        
-        <div class="toggle-wrapper default-hide ancestor-methods">
-          <h5 style="display:block;">Methods inherited from <a href="class.Request.html">AstalGreetRequest</a> (3)</h5><div class="docblock">
-          
-            <h6><a href="method.Request.send.html">astal_greet_request_send</a></h6><div class="docblock">
-              <p>Send this request to&nbsp;greetd.</p>
-            </div>
-            <div class="docblock">
-              <p></p>
-            </div>
-            
-            <h6><a href="method.Request.send_finish.html">astal_greet_request_send_finish</a></h6><div class="docblock">
-              No description available.
-            </div>
-            <div class="docblock">
-              <p></p>
-            </div>
-            
-            <h6><a href="method.Request.get_type_name.html">astal_greet_request_get_type_name</a></h6><div class="docblock">
-              No description available.
-            </div>
-            <div class="docblock">
-              <p></p>
-            </div>
-            
-          </div>
-        </div>
-        
       
         
         <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
@@ -296,51 +297,6 @@ message. The session is ready to be started if a success is&nbsp;returned.</p>
     
 
     
-    <div class="toggle-wrapper properties">
-      <h4 id="properties">
-        Properties
-        <a href="#properties" class="anchor"></a>
-      </h4>
-
-      
-      <div class="docblock">
-      
-        <div class="">
-          <h6><a href="property.PostAuthMesssage.response.html">AstalGreet.PostAuthMesssage:response</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-      </div>
-      
-
-      
-        
-        <div class="toggle-wrapper default-hide ancestor-properties">
-          <h5 style="display:block;">Properties inherited from <a href="class.Request.html">AstalGreetRequest</a> (1)</h5><div class="docblock">
-          
-            <h6><a href="property.Request.type-name.html">AstalGreet.Request:type-name</a></h6><div class="docblock">
-              No description available.
-            </div>
-            <div class="docblock">
-              <p></p>
-            </div>
-            
-          </div>
-        </div>
-        
-      
-        
-      
-
-      
-
-    </div>
-    
 
     
     <div class="signals toggle-wrapper">
@@ -350,9 +306,71 @@ message. The session is ready to be started if a success is&nbsp;returned.</p>
       </h4>
 
       
-
+      <div class="docblock">
       
-        
+        <div class="">
+          <h6><a href="signal.Greeter.visible-request.html">AstalGreet.Greeter::visible-request</a></h6>
+          <div class="docblock">
+            <p>Respond&nbsp;with <code>astal_greet_greeter_post_auth()</code>. Emitted when input is required from the user. The response is not secret and can be&nbsp;visible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Greeter.secret-request.html">AstalGreet.Greeter::secret-request</a></h6>
+          <div class="docblock">
+            <p>Respond&nbsp;with <code>astal_greet_greeter_post_auth()</code>. Emitted when input is required from the user. The response is secret and should be&nbsp;invisible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Greeter.info-message.html">AstalGreet.Greeter::info-message</a></h6>
+          <div class="docblock">
+            <p>Information that should be shown to the&nbsp;user.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Greeter.error-message.html">AstalGreet.Greeter::error-message</a></h6>
+          <div class="docblock">
+            <p>Error message that should be shown to the&nbsp;user.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Greeter.cancelled.html">AstalGreet.Greeter::cancelled</a></h6>
+          <div class="docblock">
+            <p>Emitted when the session is cancelled due to an error. The login can be restarted&nbsp;with <code>astal_greet_greeter_create_session()</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Greeter.authenticated.html">AstalGreet.Greeter::authenticated</a></h6>
+          <div class="docblock">
+            <p>Emitted on successful authentication to indicate that the session can be started&nbsp;using <code>astal_greet_greeter_start_session()</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
       
         
         <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
@@ -380,7 +398,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       </h4>
 
       <div class="docblock">
-        <pre><code>struct AstalGreetPostAuthMesssageClass {
+        <pre><code>struct AstalGreetGreeterClass {
   /* no available fields */
 }</code></pre>
       </div>
@@ -424,10 +442,10 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
 
       
-<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
-
 
       
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
 
       
 
