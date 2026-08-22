@@ -126,7 +126,9 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>Emitted after a new <a href="class.Output.html"><code>AstalWlOutput</code></a> has been created and&nbsp;bound.</p>
+        <p>Emitted after a new <a href="class.Output.html"><code>AstalWlOutput</code></a> has been created and bound, note that when this signal is emitted, the output might not have 
+received all events yet, so its properties might no have been set to the correct values yet. If you are only interested ni outputs that have been 
+fully initialized, use the ListModel&nbsp;api.</p>
       </div>
 
       <div class="docblock">

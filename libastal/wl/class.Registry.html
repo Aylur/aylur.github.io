@@ -104,6 +104,12 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Registry.get_display.html">get_display</a>
   
+    <a class="method" href="method.Registry.roundtrip.html">roundtrip</a>
+  
+    <a class="method" href="method.Registry.roundtrip_async.html">roundtrip_async</a>
+  
+    <a class="method" href="method.Registry.roundtrip_finish.html">roundtrip_finish</a>
+  
     <a class="method" href="method.Registry.find_globals.html">find_globals</a>
   
     <a class="method" href="method.Registry.get_global_by_id.html">get_global_by_id</a>
@@ -120,12 +126,27 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Registry.get_seat_by_wl_seat.html">get_seat_by_wl_seat</a>
   
+    <a class="method" href="method.Registry.get_output_list_model.html">get_output_list_model</a>
+  
+    <a class="method" href="method.Registry.get_seat_list_model.html">get_seat_list_model</a>
+  
   </div>
 </div>
 
 
 
   
+<div class="section">
+  <h5>Properties</h5>
+  <div class="links">
+  
+    <a class="property" href="property.Registry.output-list-model.html">output-list-model</a>
+  
+    <a class="property" href="property.Registry.seat-list-model.html">seat-list-model</a>
+  
+  </div>
+</div>
+
 
 
   
@@ -338,6 +359,36 @@ The first call connects to the Wayland display and sets up the&nbsp;underlying <
         </div>
       
         <div class="">
+          <h6><a href="method.Registry.roundtrip.html">astal_wl_registry_roundtrip</a></h6>
+          <div class="docblock">
+            <p>Block until all pending requests have been handled by the compositor. Returns the number of dispatched&nbsp;events.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Registry.roundtrip_async.html">astal_wl_registry_roundtrip_async</a></h6>
+          <div class="docblock">
+            <p>Makes an asynchronous roundtrip invoking the callback when done without blocking in the main&nbsp;thread.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Registry.roundtrip_finish.html">astal_wl_registry_roundtrip_finish</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
           <h6><a href="method.Registry.find_globals.html">astal_wl_registry_find_globals</a></h6>
           <div class="docblock">
             <p>Returns a list of globals, optionally filtered by interface name.&nbsp;If <code>null</code> is passed, all globals are&nbsp;returned.</p>
@@ -417,6 +468,26 @@ The first call connects to the Wayland display and sets up the&nbsp;underlying <
           </div>
         </div>
       
+        <div class="">
+          <h6><a href="method.Registry.get_output_list_model.html">astal_wl_registry_get_output_list_model</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Registry.get_seat_list_model.html">astal_wl_registry_get_seat_list_model</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
       </div>
 
       
@@ -437,6 +508,46 @@ The first call connects to the Wayland display and sets up the&nbsp;underlying <
     </div>
     
 
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.Registry.output-list-model.html">AstalWl.Registry:output-list-model</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Registry.seat-list-model.html">AstalWl.Registry:seat-list-model</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+
+    </div>
     
 
     
@@ -472,7 +583,9 @@ The first call connects to the Wayland display and sets up the&nbsp;underlying <
         <div class="">
           <h6><a href="signal.Registry.output-added.html">AstalWl.Registry::output-added</a></h6>
           <div class="docblock">
-            <p>Emitted after a&nbsp;new <code>AstalWlOutput</code> has been created and&nbsp;bound.</p>
+            <p>Emitted after a&nbsp;new <code>AstalWlOutput</code> has been created and bound, note that when this signal is emitted, the output might not have 
+received all events yet, so its properties might no have been set to the correct values yet. If you are only interested ni outputs that have been 
+fully initialized, use the ListModel&nbsp;api.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -585,6 +698,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
 
       
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
 
       
 <li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>

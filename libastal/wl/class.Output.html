@@ -142,6 +142,17 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.Output.invalidate.html">invalidate</a>
+  
+    <a class="signal" href="signal.Output.changed.html">changed</a>
+  
+  </div>
+</div>
+
 
 
   
@@ -180,7 +191,7 @@ SPDX-License-Identifier: LGPL-2.1
 
         <pre><code>class AstalWl.Output : GObject.Object
 {
-  /* No available fields */
+  AstalWlRectangle* pending_geometry
 }</pre></code>
 
         <div class="docblock">
@@ -536,6 +547,30 @@ This class listens to&nbsp;Wayland <code>wl_output</code> and&nbsp;optional <cod
       </h4>
 
       
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.Output.invalidate.html">AstalWl.Output::invalidate</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Output.changed.html">AstalWl.Output::changed</a></h6>
+          <div class="docblock">
+            <p>Emitted whenever there were changes on any&nbsp;property.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
 
       
         
@@ -610,6 +645,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
 
       
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
 
       
 
