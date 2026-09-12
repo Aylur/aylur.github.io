@@ -72,9 +72,31 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Notification.get_idle.html">get_idle</a>
+  
+    <a class="method" href="method.Notification.get_timeout.html">get_timeout</a>
+  
+  </div>
+</div>
+
 
 
   
+<div class="section">
+  <h5>Properties</h5>
+  <div class="links">
+  
+    <a class="property" href="property.Notification.idle.html">idle</a>
+  
+    <a class="property" href="property.Notification.timeout.html">timeout</a>
+  
+  </div>
+</div>
+
 
 
   
@@ -182,6 +204,26 @@ SPDX-License-Identifier: LGPL-2.1
 
       <div class="docblock">
       
+        <div class="">
+          <h6><a href="method.Notification.get_idle.html">astal_idle_notify_notification_get_idle</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Notification.get_timeout.html">astal_idle_notify_notification_get_timeout</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
       </div>
 
       
@@ -203,6 +245,46 @@ SPDX-License-Identifier: LGPL-2.1
     
 
     
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.Notification.idle.html">AstalIdleNotify.Notification:idle</a></h6>
+          <div class="docblock">
+            <p>Whether or not the system has been idle for at least the amount given by the&nbsp;timeout.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Notification.timeout.html">AstalIdleNotify.Notification:timeout</a></h6>
+          <div class="docblock">
+            <p>The timeout this notification has been constructed&nbsp;with.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+
+    </div>
+    
 
     
     <div class="signals toggle-wrapper">
@@ -217,7 +299,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="signal.Notification.idled.html">AstalIdleNotify.Notification::idled</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Emitted when the seat has been inactive for at least the duration of the timout of this&nbsp;Notification.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -227,7 +309,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="signal.Notification.resumed.html">AstalIdleNotify.Notification::resumed</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Emitted when the seat stops being&nbsp;inactive.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -302,8 +384,12 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
 
       
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
 
       
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
 
       
 <li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
