@@ -84,8 +84,6 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Wifi.get_device.html">get_device</a>
   
-    <a class="method" href="method.Wifi.set_device.html">set_device</a>
-  
     <a class="method" href="method.Wifi.get_active_connection.html">get_active_connection</a>
   
     <a class="method" href="method.Wifi.get_active_access_point.html">get_active_access_point</a>
@@ -213,7 +211,7 @@ SPDX-License-Identifier: LGPL-2.1
 }</pre></code>
 
         <div class="docblock">
-          <p>No description available.</p>
+          <p>Proxy for the main wireless&nbsp;device.</p>
         </div>
 
         <div class="docblock">
@@ -267,7 +265,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Wifi.scan.html">astal_network_wifi_scan</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Request a scan for access points. Does nothing while a scan is already in progress or when there is no&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -277,7 +275,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.Wifi.deactivate_connection.html">astal_network_wifi_deactivate_connection</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Disconnect the active connection of the&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -296,16 +294,6 @@ SPDX-License-Identifier: LGPL-2.1
       
         <div class="">
           <h6><a href="method.Wifi.get_device.html">astal_network_wifi_get_device</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
-          <h6><a href="method.Wifi.set_device.html">astal_network_wifi_set_device</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -487,7 +475,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.device.html">AstalNetwork.Wifi:device</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The underlying wireless&nbsp;device, <code>null</code> when there is&nbsp;none.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -497,7 +485,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.active-connection.html">AstalNetwork.Wifi:active-connection</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The active connection of the&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -507,7 +495,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.active-access-point.html">AstalNetwork.Wifi:active-access-point</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The access point the device is connected&nbsp;to.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -517,7 +505,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.access-points.html">AstalNetwork.Wifi:access-points</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The access points the device can see. Access points without an ssid, such as hidden networks, are not&nbsp;listed.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -527,7 +515,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.enabled.html">AstalNetwork.Wifi:enabled</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Whether wireless is&nbsp;enabled.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -537,7 +525,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.internet.html">AstalNetwork.Wifi:internet</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The state of the active&nbsp;connection.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -547,7 +535,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.bandwidth.html">AstalNetwork.Wifi:bandwidth</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The channel bandwidth of the active access point in&nbsp;MHz.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -557,7 +545,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.ssid.html">AstalNetwork.Wifi:ssid</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The ssid of the active access&nbsp;point.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -567,7 +555,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.strength.html">AstalNetwork.Wifi:strength</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The signal strength of the active access point in&nbsp;percent.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -577,7 +565,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.frequency.html">AstalNetwork.Wifi:frequency</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The frequency of the active access point in&nbsp;MHz.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -587,7 +575,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.state.html">AstalNetwork.Wifi:state</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The state of the&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -597,7 +585,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.icon-name.html">AstalNetwork.Wifi:icon-name</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Icon name representing the state and signal strength of the&nbsp;connection.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -607,7 +595,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.is-hotspot.html">AstalNetwork.Wifi:is-hotspot</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Whether the device is sharing its connection as a&nbsp;hotspot.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -617,7 +605,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wifi.scanning.html">AstalNetwork.Wifi:scanning</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Whether a scan requested&nbsp;with <code>astal_network_wifi_scan()</code> is in&nbsp;progress.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -649,7 +637,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="signal.Wifi.access-point-added.html">AstalNetwork.Wifi::access-point-added</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Emitted when an access point becomes&nbsp;visible.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -659,7 +647,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="signal.Wifi.access-point-removed.html">AstalNetwork.Wifi::access-point-removed</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Emitted when an access point is no longer&nbsp;visible.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -669,7 +657,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="signal.Wifi.state-changed.html">AstalNetwork.Wifi::state-changed</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Emitted when the state of the device&nbsp;changes.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -707,7 +695,15 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
       <div class="docblock">
         <pre><code>struct AstalNetworkWifiClass {
-  /* no available fields */
+  void (* wifi_access_point_added) (
+    AstalNetworkWifi* self,
+    AstalNetworkAccessPoint* ap
+  );
+  void (* wifi_access_point_removed) (
+    AstalNetworkWifi* self,
+    AstalNetworkAccessPoint* ap
+  );
+  
 }</code></pre>
       </div>
 
@@ -715,6 +711,26 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <p>No description available.</p>
       </div>
 
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>access_point_added: void (* wifi_access_point_added) (
+    AstalNetworkWifi* self,
+    AstalNetworkAccessPoint* ap
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>access_point_removed: void (* wifi_access_point_removed) (
+    AstalNetworkWifi* self,
+    AstalNetworkAccessPoint* ap
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        </dd>
+      </div>
       
     </div>
     

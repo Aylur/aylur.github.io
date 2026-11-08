@@ -66,15 +66,6 @@ SPDX-License-Identifier: LGPL-2.1
 
 
   
-<div class="section">
-  <h5>Constructors</h5>
-  <div class="links">
-  
-    <a class="ctor" href="ctor.Network.new.html">new</a>
-  
-  </div>
-</div>
-
 
 
   
@@ -176,7 +167,7 @@ SPDX-License-Identifier: LGPL-2.1
 }</pre></code>
 
         <div class="docblock">
-          <p>No description available.</p>
+          <p>A simple abstraction over NetworkManager. Exposes the main wifi and wired devices and the overall network&nbsp;state.</p>
         </div>
 
         <div class="docblock">
@@ -215,27 +206,6 @@ SPDX-License-Identifier: LGPL-2.1
     
 
     
-    <div class="toggle-wrapper constructors">
-      <h4 id="constructors">
-        Constructors
-        <a href="#constructors" class="anchor"></a>
-      </h4>
-
-      <div class="docblock">
-      
-        <div class="">
-          <h6><a href="ctor.Network.new.html">astal_network_network_new</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-      </div>
-    </div>
-    
 
     
     <div class="toggle-wrapper methods">
@@ -249,7 +219,7 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="">
         <h6><a href="type_func.Network.get_default.html">astal_network_network_get_default</a></h6>
         <div class="docblock">
-          No description available.
+          <p>Get the singleton&nbsp;instance.</p>
         </div>
         <div class="docblock">
           <p></p>
@@ -362,7 +332,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Network.client.html">AstalNetwork.Network:client</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The underlying NetworkManager&nbsp;client.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -372,7 +342,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Network.wifi.html">AstalNetwork.Network:wifi</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Proxy for the main wireless device. It is always present,&nbsp;its <code>AstalNetworkWifi:device</code> is <code>null</code> when there is no wifi&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -382,7 +352,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Network.wired.html">AstalNetwork.Network:wired</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Proxy for the main ethernet device. It is always present,&nbsp;its <code>AstalNetworkWired:device</code> is <code>null</code> when there is no ethernet&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -392,7 +362,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Network.primary.html">AstalNetwork.Network:primary</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The type of the connection NetworkManager uses for the default&nbsp;route.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -402,7 +372,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Network.connectivity.html">AstalNetwork.Network:connectivity</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The connectivity&nbsp;state.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -412,7 +382,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Network.state.html">AstalNetwork.Network:state</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The overall networking&nbsp;state.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -501,8 +471,6 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
       
       
-<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
-
 
       
 <li class="toc-list-item"><a href="#type-functions"><span class="link-text">Functions</span></a></li>

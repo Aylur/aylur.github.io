@@ -67,8 +67,6 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Methods</h5>
   <div class="links">
   
-    <a class="method" href="method.AccessPoint.get_connections.html">get_connections</a>
-  
     <a class="method" href="method.AccessPoint.get_path.html">get_path</a>
   
     <a class="method current" href="method.AccessPoint.activate.html">activate</a>
@@ -96,6 +94,10 @@ SPDX-License-Identifier: LGPL-2.1
     <a class="method" href="method.AccessPoint.get_rsn_flags.html">get_rsn_flags</a>
   
     <a class="method" href="method.AccessPoint.get_wpa_flags.html">get_wpa_flags</a>
+  
+    <a class="method" href="method.AccessPoint.get_connections.html">get_connections</a>
+  
+    <a class="method" href="method.AccessPoint.get_active.html">get_active</a>
   
     <a class="method" href="method.AccessPoint.get_requires_password.html">get_requires_password</a>
   
@@ -151,8 +153,9 @@ SPDX-License-Identifier: LGPL-2.1
       </h4>
 
       <div class="docblock">
-        <p>Activates the first connection associated with this AccessPoint or creates a new SimpleConnection using &#8220;wpa-psk&#8221; and activates it. 
-Returns whether the connection is the new active&nbsp;connection.</p>
+        <p>Activates the first saved connection of this access point, or creates and activates a new one if there is none. When a password is given it is 
+saved to the connection, it is ignored for open networks. Enterprise (802.1X) networks need an already configured connection. Resolves once 
+the connection is activated and throws an <a href="error.ActivationError.html"><code>AstalNetworkActivationError</code></a> if the activation&nbsp;fails.</p>
       </div>
 
       <div class="docblock">

@@ -78,7 +78,7 @@ SPDX-License-Identifier: LGPL-2.1
   
     <a class="method" href="method.Wired.get_device.html">get_device</a>
   
-    <a class="method" href="method.Wired.set_device.html">set_device</a>
+    <a class="method" href="method.Wired.get_active_connection.html">get_active_connection</a>
   
     <a class="method" href="method.Wired.get_speed.html">get_speed</a>
   
@@ -99,6 +99,8 @@ SPDX-License-Identifier: LGPL-2.1
   <div class="links">
   
     <a class="property" href="property.Wired.device.html">device</a>
+  
+    <a class="property" href="property.Wired.active-connection.html">active-connection</a>
   
     <a class="property" href="property.Wired.speed.html">speed</a>
   
@@ -152,11 +154,11 @@ SPDX-License-Identifier: LGPL-2.1
 
         <pre><code>class AstalNetwork.Wired : GObject.Object
 {
-  NMActiveConnection* connection
+  /* No available fields */
 }</pre></code>
 
         <div class="docblock">
-          <p>No description available.</p>
+          <p>Proxy for the main ethernet&nbsp;device.</p>
         </div>
 
         <div class="docblock">
@@ -218,7 +220,7 @@ SPDX-License-Identifier: LGPL-2.1
         </div>
       
         <div class="">
-          <h6><a href="method.Wired.set_device.html">astal_network_wired_set_device</a></h6>
+          <h6><a href="method.Wired.get_active_connection.html">astal_network_wired_get_active_connection</a></h6>
           <div class="docblock">
             No description available.
           </div>
@@ -300,7 +302,17 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wired.device.html">AstalNetwork.Wired:device</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The underlying ethernet&nbsp;device, <code>null</code> when there is&nbsp;none.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Wired.active-connection.html">AstalNetwork.Wired:active-connection</a></h6>
+          <div class="docblock">
+            <p>The active connection of the&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -310,7 +322,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wired.speed.html">AstalNetwork.Wired:speed</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The speed of the link in&nbsp;Mb/s.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -320,7 +332,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wired.internet.html">AstalNetwork.Wired:internet</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The state of the active&nbsp;connection.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -330,7 +342,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wired.state.html">AstalNetwork.Wired:state</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The state of the&nbsp;device.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -340,7 +352,7 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="property.Wired.icon-name.html">AstalNetwork.Wired:icon-name</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Icon name representing the state of the&nbsp;connection.</p>
           </div>
           <div class="docblock">
             <p></p>

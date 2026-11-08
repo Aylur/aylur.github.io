@@ -76,8 +76,6 @@ SPDX-License-Identifier: LGPL-2.1
   <h5>Instance methods</h5>
   <div class="links">
   
-    <a class="method" href="method.AccessPoint.get_connections.html">get_connections</a>
-  
     <a class="method" href="method.AccessPoint.get_path.html">get_path</a>
   
     <a class="method" href="method.AccessPoint.activate.html">activate</a>
@@ -105,6 +103,10 @@ SPDX-License-Identifier: LGPL-2.1
     <a class="method" href="method.AccessPoint.get_rsn_flags.html">get_rsn_flags</a>
   
     <a class="method" href="method.AccessPoint.get_wpa_flags.html">get_wpa_flags</a>
+  
+    <a class="method" href="method.AccessPoint.get_connections.html">get_connections</a>
+  
+    <a class="method" href="method.AccessPoint.get_active.html">get_active</a>
   
     <a class="method" href="method.AccessPoint.get_requires_password.html">get_requires_password</a>
   
@@ -141,6 +143,10 @@ SPDX-License-Identifier: LGPL-2.1
     <a class="property" href="property.AccessPoint.rsn-flags.html">rsn-flags</a>
   
     <a class="property" href="property.AccessPoint.wpa-flags.html">wpa-flags</a>
+  
+    <a class="property" href="property.AccessPoint.connections.html">connections</a>
+  
+    <a class="property" href="property.AccessPoint.active.html">active</a>
   
     <a class="property" href="property.AccessPoint.requires-password.html">requires-password</a>
   
@@ -194,7 +200,7 @@ SPDX-License-Identifier: LGPL-2.1
 }</pre></code>
 
         <div class="docblock">
-          <p>No description available.</p>
+          <p>A wifi access point visible to the <a href="class.Wifi.html"><code>AstalNetworkWifi</code></a>&nbsp;device.</p>
         </div>
 
         <div class="docblock">
@@ -246,19 +252,9 @@ SPDX-License-Identifier: LGPL-2.1
       <div class="docblock">
       
         <div class="">
-          <h6><a href="method.AccessPoint.get_connections.html">astal_network_access_point_get_connections</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          <div class="docblock">
-            <p></p>
-          </div>
-        </div>
-      
-        <div class="">
           <h6><a href="method.AccessPoint.get_path.html">astal_network_access_point_get_path</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Get the DBus object path of the access&nbsp;point.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -268,8 +264,9 @@ SPDX-License-Identifier: LGPL-2.1
         <div class="">
           <h6><a href="method.AccessPoint.activate.html">astal_network_access_point_activate</a></h6>
           <div class="docblock">
-            <p>Activates the first connection associated with this AccessPoint or creates a new SimpleConnection using &#8220;wpa-psk&#8221; and activates it. 
-Returns whether the connection is the new active&nbsp;connection.</p>
+            <p>Activates the first saved connection of this access point, or creates and activates a new one if there is none. When a password is given it is 
+saved to the connection, it is ignored for open networks. Enterprise (802.1X) networks need an already configured connection. Resolves once 
+the connection is activated and throws&nbsp;an <code>AstalNetworkActivationError</code> if the activation&nbsp;fails.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -397,6 +394,26 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         </div>
       
         <div class="">
+          <h6><a href="method.AccessPoint.get_connections.html">astal_network_access_point_get_connections</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.AccessPoint.get_active.html">astal_network_access_point_get_active</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
           <h6><a href="method.AccessPoint.get_requires_password.html">astal_network_access_point_get_requires_password</a></h6>
           <div class="docblock">
             No description available.
@@ -449,7 +466,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.bandwidth.html">AstalNetwork.AccessPoint:bandwidth</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The channel bandwidth in&nbsp;MHz.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -459,7 +476,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.bssid.html">AstalNetwork.AccessPoint:bssid</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The hardware address of the access&nbsp;point.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -469,7 +486,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.frequency.html">AstalNetwork.AccessPoint:frequency</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The frequency in&nbsp;MHz.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -479,7 +496,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.last-seen.html">AstalNetwork.AccessPoint:last-seen</a></h6>
           <div class="docblock">
-            No description available.
+            <p>When the access point was last seen in a scan, in seconds&nbsp;of <code>CLOCK_BOOTTIME</code>, or -1 if it was never&nbsp;seen.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -489,7 +506,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.max-bitrate.html">AstalNetwork.AccessPoint:max-bitrate</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The maximum bitrate in&nbsp;kb/s.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -499,7 +516,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.strength.html">AstalNetwork.AccessPoint:strength</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The signal strength in&nbsp;percent.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -509,7 +526,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.icon-name.html">AstalNetwork.AccessPoint:icon-name</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Icon name representing the signal&nbsp;strength.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -519,7 +536,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.mode.html">AstalNetwork.AccessPoint:mode</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The mode of the access point, such as infrastructure or&nbsp;ad-hoc.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -529,7 +546,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.flags.html">AstalNetwork.AccessPoint:flags</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The capabilities of the access&nbsp;point.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -539,7 +556,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.rsn-flags.html">AstalNetwork.AccessPoint:rsn-flags</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The <span class="caps">WPA2</span>/<span class="caps">WPA3</span> (<span class="caps">RSN</span>) security&nbsp;capabilities.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -549,7 +566,27 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.wpa-flags.html">AstalNetwork.AccessPoint:wpa-flags</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The <span class="caps">WPA</span> security&nbsp;capabilities.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.AccessPoint.connections.html">AstalNetwork.AccessPoint:connections</a></h6>
+          <div class="docblock">
+            <p>The saved connections that can be used with this access&nbsp;point.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.AccessPoint.active.html">AstalNetwork.AccessPoint:active</a></h6>
+          <div class="docblock">
+            <p>Whether this is the access point the wifi device is connected&nbsp;to.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -559,7 +596,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.requires-password.html">AstalNetwork.AccessPoint:requires-password</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Whether connecting needs a password: <span class="caps">WPA</span>/<span class="caps">WPA2</span>/<span class="caps">WPA3</span> personal, <span class="caps">WEP</span> and enterprise&nbsp;networks.</p>
           </div>
           <div class="docblock">
             <p></p>
@@ -569,7 +606,7 @@ Returns whether the connection is the new active&nbsp;connection.</p>
         <div class="">
           <h6><a href="property.AccessPoint.ssid.html">AstalNetwork.AccessPoint:ssid</a></h6>
           <div class="docblock">
-            No description available.
+            <p>The name of the&nbsp;network.</p>
           </div>
           <div class="docblock">
             <p></p>
